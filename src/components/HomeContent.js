@@ -1,5 +1,9 @@
-export default function Main() {
-  return (
+export default function HomeContent() {
+
+    
+
+
+    return (
     
   <main>  
       <div class="home_menu">
@@ -13,4 +17,3 @@ export default function Main() {
 
   )
 }
-

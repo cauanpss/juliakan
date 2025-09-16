@@ -1,19 +1,17 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-// import About from './pages/About';
-// import Services from './pages/Services';
-// import Contact from './pages/Contact';
+import Projects from './pages/Projects';
 import './App.css';
+
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        {/* <Route path="/sobre" element={<About />} /> */}
-        {/* <Route path="/servicos" element={<Services />} /> */}
-        {/* <Route path="/contato" element={<Contact />} /> */}
+    <Router> {/* faz o browser reconhecer a rota como parte do projeto */}
+      <Routes> {/* DIV de rotas ("Container")  */}
+        <Route path="/" element={<Home />} /> {/* Cada rota se comporta como um caminho do projeto e reonhece como página (index é "/" )  */}
+        <Route path="/projects" element={<Projects /> } />
+        
       </Routes>
     </Router>
   );

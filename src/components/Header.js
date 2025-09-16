@@ -6,9 +6,10 @@ export default function Header() {
       </div>
   
       <nav class = "nav_desktop">
-          <li><a ><strong>Projetos</strong></a></li>
-          <li><a ><strong>Sobre mim</strong></a></li>
-          <li><a ><strong>Contato</strong></a></li>
+          <a href="/projects"  ><strong>Projetos</strong></a>
+          <a href="/" target="_blank" ><strong>Home</strong></a>
+          <a ><strong>Sobre mim</strong></a>
+          <a ><strong>Contato</strong></a>
       </nav>
   </header>
   )
