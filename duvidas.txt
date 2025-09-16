@@ -1,0 +1,2 @@
+import react no cabeçalho do componente PORQUE????? 
+pra escrever JS puro preciso importar algo:?
