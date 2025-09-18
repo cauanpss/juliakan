@@ -1,2 +1,5 @@
 import react no cabeçalho do componente PORQUE????? 
+- versões antigas do react era necessário importar react, agora o Babel do Create React App e afins ja reconhecem como React.
+
 pra escrever JS puro preciso importar algo:?
+- Não precisa, basta apenas estar num arquivo .js ou dentro de uma tag script num html.
