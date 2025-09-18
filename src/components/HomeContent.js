@@ -9,7 +9,11 @@ export default function HomeContent() {
    
     return (
     
-  <main>  
+  <main>
+    
+      <div class="logo">
+          <h1>Julia Kan</h1>
+      </div>  
       <div class="home_menu">
           <div class="button_container">
             <button onClick = {redirecionamentoExterno} class="visual_arts">Artes Visuais</button>
