@@ -15,13 +15,16 @@ const hoverCardProps = {
 
 
 export default function Projects() {
-  
+
+  const array = Array.from(12)
+
   return (
     <div>
         <Header />
-        <HoverCard 
-          {...hoverCardProps}
-        />
+        {array.forEach(element => {
+          
+        })}
+        <HoverCard {...hoverCardProps} />
         <Footer />
     </div>
 
