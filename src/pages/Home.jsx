@@ -1,4 +1,3 @@
-import React from "react";
 import "../components/styles.css"
 import HomeContent from "../components/HomeContent";
 

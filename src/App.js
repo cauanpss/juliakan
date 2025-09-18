@@ -3,7 +3,6 @@ import PageLayout from './layout/PageLayout';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 
-import './App.css';
 
 
 function App() {
