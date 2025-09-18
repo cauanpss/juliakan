@@ -1,0 +1,150 @@
+/* Reset geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+/* Header */
+header{    
+    border: red;
+    display:flex;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.nav_desktop {
+    background-color: blueviolet;
+    display: flex;
+    list-style: none;
+    justify-content:center ;
+    padding: 30px;
+    gap:20px;
+}
+
+
+.logo {
+    background-color: aqua;
+    padding: 30px;
+}
+
+/* Main */
+
+main{
+    display: flex;
+    border: 2px solid red;
+    justify-content: space-between;
+}
+
+.home_menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(122, 148, 96);
+    align-items: center;
+    justify-content:center;
+    padding-top: 190px;
+    padding-bottom: 190px;
+    gap: 20px;
+}
+
+.button_container {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.separador {
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 0 10px;
+    background: transparent;
+
+}
+
+.visual_arts .performing-arts {
+    width: 200px;
+    padding: 26px 0;
+
+}
+ 
+/* Footer */
+
+footer{
+    display: flex; 
+    border: 2px solid red;
+    justify-content:space-between;
+
+}
+
+.footer{
+    border:2px solid  red;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 80px;
+}
+
+.copyright{
+    background-color: green;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.footer_social {
+    background-color: pink;
+    display: flex;
+    justify-content:flex-end;
+    padding-right: 70px;
+    gap: 20px;
+}
+
+/* HoverCard */
+.hover-card {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+.hover-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease; /* suaviza a troca de imagens */
+  border-radius: 16px;
+}
+
+.hover-card:hover {
+  transform: scale(1.03);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 1rem;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
