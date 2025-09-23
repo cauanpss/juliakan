@@ -1,3 +1,4 @@
+import Header from "../components/Header"
 import HoverCard from "../components/HoverCard";
 import importAll from "../util/importAll";
 import TranslateButtons from "../components/TranslateButton";
@@ -54,6 +55,7 @@ export default function Projects() {
     return (
         <>
             <TranslateButtons />
+            <Header />
 
             <div className="hoverCard-containers">
                 {hoverCardData.map((props, index) => (

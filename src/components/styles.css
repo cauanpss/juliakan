@@ -12,7 +12,7 @@ body {
     align-content: center;
 }
 
-/* Header */
+/* Header z-index com 2 digitos */ 
 header {
     border: red;
     flex-direction: column;
@@ -21,13 +21,14 @@ header {
     position: fixed;
     width: 100%;
     justify-content: space-between;
+    z-index: 10;
 }
 
 .nav-desktop {
     background-color: blueviolet;
     display: flex;
     list-style: none;
-    justify-content: center;
+    justify-content: start;
     padding: 30px;
     gap: 20px;
 }
@@ -72,32 +73,7 @@ main {
     gap: 20px;
 }
 
-.translate {
-    display: flex;
-    position: absolute;
-    top: 0px;
-    right: 10px; 
-    gap: 3px;
-}
 
-.translate .separador {
-    margin-top: 10px;
-    font-size: 20px ;
-}
-
-.translate button{
-    width: auto;
-    border: none;
-    padding: 2px 6px;
-    margin: 0px;
-    background-color: transparent;
-    transition: color 0.5s ease;
-}
-
-.translate button:hover{
-    color: rgba(0, 0, 0, 0.616);
-    cursor: pointer;
-}
 
 .button-container {
     display: flex;
@@ -142,7 +118,34 @@ main {
     text-align: left;
     padding: 26px 0;
 }
+/* Translate Button z-index com 3 digitos */
+.translate {
+    display: flex;
+    position: fixed;
+    top: 0px;
+    right: 10px; 
+    gap: 3px;
+    z-index: 100;
+}
 
+.translate .separador {
+    margin-top: 10px;
+    font-size: 20px ;
+}
+
+.translate button{
+    width: auto;
+    border: none;
+    padding: 2px 6px;
+    margin: 0px;
+    background-color: transparent;
+    transition: color 0.5s ease;
+}
+
+.translate button:hover{
+    color: rgba(0, 0, 0, 0.616);
+    cursor: pointer;
+}
 
 /* Footer */
 
@@ -174,25 +177,24 @@ footer {
     gap: 20px;
 }
 
-/* HoverCard */
+/* HoverCard z-index com 1 digito */
 
 .hoverCard-containers {
     border: 2px solid red ;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top:200px ;
     justify-content: center;
-    gap: 40px;
-    padding: 20px;
+    gap: 50px;
+    justify-self: center;
 }
 
 .hover-card {
     border: solid 2px red;
     position: relative;
-    width: calc(50% - 20px);
-    margin-left: px;
-    min-width: 300px;
+    width: 500px;
+    height: 300px;
     aspect-ratio: 1/1;
-    height: 250px;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -200,6 +202,7 @@ footer {
     cursor: pointer;
     /* border-radius: 16px; */
     transition: transform 0.3s ease;
+    z-index: 1;
 }
 
 .hover-card img {
@@ -210,12 +213,12 @@ footer {
     transition: opacity 0.5s ease-in-out; /* suaviza a troca de imagens */
     /* border-radius: 16px; */
     opacity: 0;
-    z-index: 1
+    z-index: 2
 }
 
 .hover-card img.active {
     opacity: 1;
-    z-index: 2;
+    z-index: 3;
 }
 
 
@@ -224,7 +227,7 @@ footer {
 }
 
 .overlay {
-    z-index: 10;
+    z-index: 12;
     position: absolute;
     bottom: 0;
     width: 100%;
