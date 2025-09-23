@@ -74,15 +74,22 @@ main {
 
 .translate {
     display: flex;
-    align-self: flex-end;
     position: absolute;
+    top: 0px;
+    right: 10px; 
     gap: 3px;
 }
 
+.translate .separador {
+    margin-top: 10px;
+    font-size: 20px ;
+}
+
 .translate button{
-    width: 30px;
-    padding: 5px;
+    width: auto;
     border: none;
+    padding: 2px 6px;
+    margin: 0px;
     background-color: transparent;
     transition: color 0.5s ease;
 }
@@ -93,7 +100,6 @@ main {
 }
 
 .button_container {
-    font-weight: bold;
     display: flex;
     align-items: center;
     padding: 15px;
@@ -101,6 +107,7 @@ main {
 }
 
 .button_container button {
+    width: 330px;
     font-weight: bold;
     border: none;
     background-color: transparent;
@@ -116,19 +123,26 @@ main {
 }
 
 .separador {
-    font-weight: bold;
     color: rgb(0, 0, 0);
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 350;
     margin-bottom: 15px;
     background: transparent;
     font-size: 85px;
 }
 
-.visual_arts .performing-arts {
+.visual_arts {
     width: 200px;
+    text-align: right;
     padding: 26px 0;
 }
+
+.performing_arts {
+    width: 200px;
+    text-align: left;
+    padding: 26px 0;
+}
+
 
 /* Footer */
 
