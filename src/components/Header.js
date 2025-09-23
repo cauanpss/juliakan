@@ -1,7 +1,7 @@
 export default function Header() {
     return (
         <header>
-            <nav class="nav_desktop">
+            <nav class="nav-desktop">
                 <a href="/" target="">
                     <strong>Home</strong>
                 </a>

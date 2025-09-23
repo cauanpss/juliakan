@@ -4,7 +4,7 @@ export default function Footer() {
             <div class="copyright">
                 <h4>© 2023 Julia Kan. Todos os direitos reservados</h4>
             </div>
-            <div class="footer_social">
+            <div class="footer-social">
                 <a
                     class="instagram"
                     href="https://www.instagram.com/juliakan___/"

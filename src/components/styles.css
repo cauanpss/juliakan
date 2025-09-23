@@ -23,7 +23,7 @@ header {
     justify-content: space-between;
 }
 
-.nav_desktop {
+.nav-desktop {
     background-color: blueviolet;
     display: flex;
     list-style: none;
@@ -57,7 +57,7 @@ main {
     justify-content: space-between;
 }
 
-.home_menu {
+.home-menu {
     flex: 1;
     width: 100%;
     display: flex;
@@ -99,14 +99,14 @@ main {
     cursor: pointer;
 }
 
-.button_container {
+.button-container {
     display: flex;
     align-items: center;
     padding: 15px;
     border-radius: 20px;
 }
 
-.button_container button {
+.button-container button {
     width: 330px;
     font-weight: bold;
     border: none;
@@ -118,7 +118,7 @@ main {
     border-radius: 15px;
 }
 
-.button_container button:hover {
+.button-container button:hover {
     color: rgba(0, 0, 0, 0.74);
 }
 
@@ -131,13 +131,13 @@ main {
     font-size: 85px;
 }
 
-.visual_arts {
+.visual-arts {
     width: 200px;
     text-align: right;
     padding: 26px 0;
 }
 
-.performing_arts {
+.performing-arts {
     width: 200px;
     text-align: left;
     padding: 26px 0;
@@ -166,7 +166,7 @@ footer {
     padding-bottom: 30px;
 }
 
-.footer_social {
+.footer-social {
     background-color: pink;
     display: flex;
     justify-content: flex-end;
