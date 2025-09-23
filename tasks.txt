@@ -1,5 +1,4 @@
 Home:
-- implementar tradução via i18next + Botão funcional
 - Implementar Darkmode + Botão funcional
 
 Projects:
