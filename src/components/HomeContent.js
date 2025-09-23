@@ -16,11 +16,6 @@ export default function HomeContent() {
 
     return (
         <main>
-            <div class="translate">
-                <button onClick={() => setLanguage(i18n, "pt")}>pt</button>
-                <div class="separador">/</div>
-                <button onClick={() => setLanguage(i18n, "en")}>en</button>
-            </div>
             <div class="logo">
                 <h1>Julia Kan</h1>
             </div>
