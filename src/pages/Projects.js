@@ -10,22 +10,15 @@ const images = importAll(
 const hoverCardProps = {
   images: images,
   text: "Algum texto descritivo",
-  interval: 3000
+  interval: 1000
 };
 
 
 export default function Projects() {
 
-  const array = Array.from(12)
-
   return (
     <div>
-        <Header />
-        {array.forEach(element => {
-          
-        })}
         <HoverCard {...hoverCardProps} />
-        <Footer />
     </div>
 
   )
