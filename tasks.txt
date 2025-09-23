@@ -1,0 +1,9 @@
+Home:
+- implementar tradução via i18next + Botão funcional
+- Implementar Darkmode + Botão funcional
+
+Projects:
+- Layout da página 
+- Resolver como adicionar conteúdos diferentes para diferentes HoverCards
+- Criar rota para para interação com HoverCard
+- 
