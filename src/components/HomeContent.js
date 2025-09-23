@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom" 
+
 export default function HomeContent() {
    
     function redirecionamentoExterno() {
@@ -17,8 +19,13 @@ export default function HomeContent() {
       <div class="home_menu">
           <div class="button_container">
             <button onClick = {redirecionamentoExterno} class="visual_arts">Artes Visuais</button>
+            
             <div class="separador">/</div>
-            <button class="performing_arts"> Artes cênicas</button>
+              
+            <Link to="/projects">  
+                <button class="performing_arts"> Artes cênicas</button>
+            </Link>
+          
           </div>
       </div>        
   </main>

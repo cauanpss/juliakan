@@ -1,3 +1,3 @@
-export default function importAll(r) {
-  return r.keys().map(r);
+export default function importAll(fotos) {
+  return fotos.keys().map(fotos);
 }

@@ -15,6 +15,8 @@ body {
 /* Header */
 header{    
     border: red;
+    flex-direction: column;
+    flex-wrap: wrap;
     display:flex;
     position: fixed;
     width: 100%;
@@ -33,23 +35,39 @@ header{
 
 
 .logo {
-    background-color: aqua;
+    font-size: 20px;
+    position: absolute;
+    align-self: flex-start;
+    background-color: transparent;
     padding: 30px;
+    
 }
+
+/* .logo h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000;
+} */
 
 /* Main */
 
 main{
-    display: flex;
     border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     justify-content: space-between;
 }
 
 .home_menu {
+    flex: 1;
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: rgb(122, 148, 96);
+    background-image: url(C:\Users\Cauan\projetos_vscode\juliakan\src\assets\images\baú.jpg);
+    background-size: cover;
+    background-position: center;
     align-items: center;
     justify-content:center;
     padding-top: 190px;
@@ -64,13 +82,29 @@ main{
     border-radius: 20px;
 }
 
+.button_container button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 30px;
+    transition: color 0.3s ease;
+    padding: 6px;
+    border-radius: 15px;
+}
+
+
+.button_container button:hover {
+    color: rgba(0, 0, 0, 0.74)
+}
+
+
 .separador {
     color: rgb(0, 0, 0);
     font-size: 1.5rem;
     font-weight: 300;
-    padding: 0 10px;
+    margin-bottom: 15px;
     background: transparent;
-
+    font-size: 85px;
 }
 
 .visual_arts .performing-arts {
@@ -112,39 +146,39 @@ footer{
 
 /* HoverCard */
 .hover-card {
-  position: relative;
-  width: 250px;
-  height: 250px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  border-radius: 16px;
-  transition: transform 0.3s ease;
+    position: relative;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
 }
 
 .hover-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: opacity 0.5s ease; /* suaviza a troca de imagens */
-  border-radius: 16px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease; /* suaviza a troca de imagens */
+    border-radius: 16px;
 }
 
 .hover-card:hover {
-  transform: scale(1.03);
+    transform: scale(1.03);
 }
 
 .overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 10px;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  font-size: 1rem;
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 1rem;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
 }
