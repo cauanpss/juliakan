@@ -1,5 +1,3 @@
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 import HoverCard from "../components/HoverCard";
 import importAll from "../util/importAll";
 import TranslateButtons from "../components/TranslateButton";
@@ -31,12 +29,25 @@ const card4Images = importAll(
     /\.(png|jpe?g)$/
 );
 
+const card5Images = importAll(
+    require.context("../assets/images/Projeto_5_NomeDoProjeto"),
+    false,
+    /\.(png|jpe?g)$/
+);
+const card6Images = importAll(
+    require.context("../assets/images/Projeto_6_NomeDoProjeto"),
+    false,
+    /\.(png|jpe?g)$/
+);
+
 //configurações do card
 const hoverCardData = [
     { images: card1Images, text: "TextoDoProjeto", interval: 1200 },
     { images: card2Images, text: "TextoDoProjeto", interval: 1200 },
     { images: card3Images, text: "TextoDoProjeto", interval: 1200 },
     { images: card4Images, text: "TextoDoProjeto", interval: 1200 },
+    { images: card5Images, text: "TextoDoProjeto", interval: 1200 },
+    { images: card6Images, text: "TextoDoProjeto", interval: 1200 },
 ];
 
 export default function Projects() {

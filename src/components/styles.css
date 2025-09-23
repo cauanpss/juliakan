@@ -180,21 +180,25 @@ footer {
     border: 2px solid red ;
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
     justify-content: center;
+    gap: 40px;
     padding: 20px;
 }
 
 .hover-card {
+    border: solid 2px red;
     position: relative;
-    width: 250px;
+    width: calc(50% - 20px);
+    margin-left: px;
+    min-width: 300px;
+    aspect-ratio: 1/1;
     height: 250px;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    border-radius: 16px;
+    /* border-radius: 16px; */
     transition: transform 0.3s ease;
 }
 
@@ -204,7 +208,7 @@ footer {
     height: 100%;
     object-fit: cover;
     transition: opacity 0.5s ease-in-out; /* suaviza a troca de imagens */
-    border-radius: 16px;
+    /* border-radius: 16px; */
     opacity: 0;
     z-index: 1
 }
@@ -229,6 +233,6 @@ footer {
     background: rgba(0, 0, 0, 0.6);
     color: white;
     font-size: 1rem;
-    border-bottom-left-radius: 16px;
-    border-bottom-right-radius: 16px;
+    /* border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px; */
 }
