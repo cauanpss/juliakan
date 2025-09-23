@@ -29,7 +29,14 @@ export default function HoverCard({ images, text, interval }) {
             onMouseEnter={startSlideshow}
             onMouseLeave={stopSlideshow}
         >
-            <img src={images[currentIndex]} alt={text} />
+            {images.map((img, index) => (
+                <img
+                    key={index}
+                    src={img}
+                    alt={text}
+                    className={index === currentIndex ? "active" : ""}
+                />
+            ))}{" "}
             <div className="overlay">{text}</div>
         </div>
     );
