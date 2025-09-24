@@ -14,31 +14,45 @@ body {
 
 /* Header z-index com 2 digitos */ 
 header {
-    border: red;
+    border: 2px solid red;
+    display: flex;
+    position: fixed;
     flex-direction: column;
     flex-wrap: wrap;
     display: flex;
-    position: fixed;
     width: 100%;
     justify-content: space-between;
     z-index: 10;
 }
 
 .nav-desktop {
-    background-color: blueviolet;
     display: flex;
     list-style: none;
-    justify-content: start;
-    padding: 30px;
+    justify-content: flex-end;
+    margin-top: 30px;
+    padding: 15px;
     gap: 20px;
+    font-size: 18px;
+}
+
+.nav-desktop a{
+    
+    color:black;
+    text-decoration: none;
+}
+
+.nav-desktop a.active{
+    color: purple;
 }
 
 .logo {
+    color:black;
     font-size: 20px;
     position: absolute;
     align-self: flex-start;
     background-color: transparent;
     padding: 30px;
+    text-decoration: none;
 }
 
 /* .logo h1 {
@@ -227,6 +241,7 @@ footer {
 }
 
 .overlay {
+    opacity: 0;
     z-index: 12;
     position: absolute;
     bottom: 0;
@@ -236,6 +251,11 @@ footer {
     background: rgba(0, 0, 0, 0.6);
     color: white;
     font-size: 1rem;
+    transition: opacity 0.5s ease-in-out;
     /* border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px; */
 }
+
+.hover-card:hover .overlay {
+    opacity: 1;
+    }

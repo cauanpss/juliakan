@@ -1,4 +1,4 @@
-import Header from "../components/Header"
+import Header from "../components/Header";
 import HoverCard from "../components/HoverCard";
 import importAll from "../util/importAll";
 import TranslateButtons from "../components/TranslateButton";

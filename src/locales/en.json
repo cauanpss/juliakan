@@ -1,4 +1,8 @@
 {
     "arts": "Visual Arts",
-    "performing": "Performing Arts"
+    "performing": "Performing Arts",
+    "home" : "Home",
+    "projects" : "Projects",
+    "about-me" : "About me",
+    "contact" : "Contact"
 }

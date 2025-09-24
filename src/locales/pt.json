@@ -1,4 +1,9 @@
 {
     "arts": "Artes Visuais",
-    "performing": "Artes Cênicas"
+    "performing": "Artes Cênicas",
+    "home" : "Pagina Inicial",
+    "projects" : "Projetos",
+    "about-me" : "Sobre mim",
+    "contact" : "Contato"
 }
+

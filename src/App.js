@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
+import AboutMe from "./page/AboutMe"
 import "./App.css";
 
 function App() {
@@ -12,9 +13,11 @@ function App() {
             <Routes>
                 {" "}
                 {/* DIV de rotas ("Container")  */}
-                <Route path="/" element={<Home />} />{" "}
                 {/* Cada rota se comporta como um caminho do projeto e reonhece como página (index é "/" )  */}
+                <Route path="/" element={<Home />} />{" "}
                 <Route path="/projects" element={<Projects />} />
+                <Route path="/about" element={<AboutMe />} />
+                
             </Routes>
         </Router>
     );
