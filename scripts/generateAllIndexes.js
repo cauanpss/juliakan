@@ -1,61 +1,48 @@
 const fs = require("fs");
 const path = require("path");
 
-// Pasta principal com as subpastas de imagens
-const mainVisualArtsFolder = path.join(__dirname, "../src/assets/images/VisualArts");
+const root = "../src/assets/images";
+const visualArtsPath = 'VisualArts';
+const performingPath = 'PerformingArts';
 
-// Lê todas as subpastas de VisualArts
+const regexMatch = /\.(png|jpe?g)$/
+const regexReplace = /\W|(png|jpe?g)/g
+
+const visualArtsFolder = path.join(__dirname, `${root}/${visualArtsPath}`);
+const performingFolder = path.join(__dirname, `${root}/${performingPath}`);
+
+function mappingSubFolders(folderName, subFolderName) {
+    const folderPath = path.join(folderName, subFolderName);
+
+        // Pega apenas arquivos de imagem
+        const files = fs
+            .readdirSync(folderPath)
+            .filter((f) => f.match(regexMatch));
+
+        // Cria conteúdo do index.js
+        const content =
+            files.map((f) => `import ${f.replace(regexReplace, "")} from "./${f}";`).join("\n") +
+            `\n\nconst projeto${subFolderName.charAt(0).toUpperCase() + subFolderName.slice(1)} = [${files.map((f) => f.replace(regexReplace, "")).join(", ")}]` +
+            `\n\nexport default projeto${subFolderName}` +
+            `\n\nexport {${files.map((f) => f.replace(regexReplace, "")).join(", ")}};`;
+
+        // Salva o index.js na subpasta
+        fs.writeFileSync(path.join(folderPath, "index.js"), content);
+
+        console.log(`Index gerado para a pasta ${subFolderName}`);
+}
+
+/* Lê arquivos da pasta VisualArts */
 const subVisualArtsFolders = fs
-    .readdirSync(mainVisualArtsFolder)
-    .filter((f) => fs.statSync(path.join(mainVisualArtsFolder, f)).isDirectory());
+    .readdirSync(visualArtsFolder)
+    .filter((f) => fs.statSync(path.join(visualArtsFolder, f)).isDirectory());
+/* Faz o mapeamento */
+subVisualArtsFolders.forEach((subFolderName) => mappingSubFolders(visualArtsFolder, subFolderName));
 
-subVisualArtsFolders.forEach((folderName) => {
-    const folderPath = path.join(mainVisualArtsFolder, folderName);
-
-    // Pega apenas arquivos de imagem
-    const files = fs
-        .readdirSync(folderPath)
-        .filter((f) => f.match(/\.(png|jpe?g)$/));
-
-    // Cria conteúdo do index.js
-    const content =
-        files
-            .map((f) => `import ${f.replace(/\W/g, "_")} from "./${f}";`)
-            .join("\n") +
-        "\n\nexport default [" +
-        files.map((f) => f.replace(/\W/g, "_")).join(", ") +
-        "];";
-
-    // Salva o index.js na subpasta
-    fs.writeFileSync(path.join(folderPath, "index.js"), content);
-
-    console.log(`Index gerado para a pasta ${folderName}`);
-});
-
-const mainPerformingArts = path.join(__dirname, "../src/assets/images/PerformingArts");
-
-// Lê todas as subpastas de Perfoming Arts
+/* Lê arquivos da past PerformingArts */
 const subPerformingArtsFolders = fs
-    .readdirSync(mainPerformingArts)
-    .filter((f) => fs.statSync(path.join(mainPerformingArts, f)).isDirectory());
+    .readdirSync(performingFolder)
+    .filter((f) => fs.statSync(path.join(performingFolder, f)).isDirectory());
+/* Faz o mapeamento */
+subPerformingArtsFolders.forEach((subFolderName) => mappingSubFolders(performingFolder, subFolderName));
 
-subPerformingArtsFolders.forEach((folderName) => {
-    const folderPath = path.join(mainPerformingArts, folderName);
-
-    // Pega apenas arquivos de imagem
-    const files = fs
-        .readdirSync(folderPath)
-        .filter((f) => f.match(/\.(png|jpe?g)$/));
-
-    // Cria conteúdo do index.js
-    const content =
-        files.map((f) => `import ${f.replace(/\W|(png|jpe?g)/g, "")} from "./${f}";`).join("\n") +
-        `\n\nconst projeto${folderName.charAt(0).toUpperCase() + folderName.slice(1)} = [${files.map((f) => f.replace(/\W|(png|jpe?g)/g, "")).join(", ")}]` +
-        `\n\nexport default projeto${folderName}` +
-        `\n\nexport {${files.map((f) => f.replace(/\W|(png|jpe?g)/g, "")).join(", ")}};`;
-
-    // Salva o index.js na subpasta
-    fs.writeFileSync(path.join(folderPath, "index.js"), content);
-
-    console.log(`Index gerado para a pasta ${folderName}`);
-});

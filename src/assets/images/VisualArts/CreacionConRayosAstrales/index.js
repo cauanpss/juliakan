@@ -1,18 +1,22 @@
-import creacions1_jpg from "./creacions1.jpg";
-import creacions10_jpg from "./creacions10.jpg";
-import creacions11_jpg from "./creacions11.jpg";
-import creacions12_jpg from "./creacions12.jpg";
-import creacions13_jpg from "./creacions13.jpg";
-import creacions14_jpg from "./creacions14.jpg";
-import creacions15_jpg from "./creacions15.jpg";
-import creacions16_jpg from "./creacions16.jpg";
-import creacions2_jpg from "./creacions2.jpg";
-import creacions3_jpg from "./creacions3.jpg";
-import creacions4_jpg from "./creacions4.jpg";
-import creacions5_jpg from "./creacions5.jpg";
-import creacions6_jpg from "./creacions6.jpg";
-import creacions7_jpg from "./creacions7.jpg";
-import creacions8_jpg from "./creacions8.jpg";
-import creacions9_jpg from "./creacions9.jpg";
+import creacions1 from "./creacions1.jpg";
+import creacions10 from "./creacions10.jpg";
+import creacions11 from "./creacions11.jpg";
+import creacions12 from "./creacions12.jpg";
+import creacions13 from "./creacions13.jpg";
+import creacions14 from "./creacions14.jpg";
+import creacions15 from "./creacions15.jpg";
+import creacions16 from "./creacions16.jpg";
+import creacions2 from "./creacions2.jpg";
+import creacions3 from "./creacions3.jpg";
+import creacions4 from "./creacions4.jpg";
+import creacions5 from "./creacions5.jpg";
+import creacions6 from "./creacions6.jpg";
+import creacions7 from "./creacions7.jpg";
+import creacions8 from "./creacions8.jpg";
+import creacions9 from "./creacions9.jpg";
 
-export default [creacions1_jpg, creacions10_jpg, creacions11_jpg, creacions12_jpg, creacions13_jpg, creacions14_jpg, creacions15_jpg, creacions16_jpg, creacions2_jpg, creacions3_jpg, creacions4_jpg, creacions5_jpg, creacions6_jpg, creacions7_jpg, creacions8_jpg, creacions9_jpg];
+const projetoCreacionConRayosAstrales = [creacions1, creacions10, creacions11, creacions12, creacions13, creacions14, creacions15, creacions16, creacions2, creacions3, creacions4, creacions5, creacions6, creacions7, creacions8, creacions9]
+
+export default projetoCreacionConRayosAstrales
+
+export {creacions1, creacions10, creacions11, creacions12, creacions13, creacions14, creacions15, creacions16, creacions2, creacions3, creacions4, creacions5, creacions6, creacions7, creacions8, creacions9};
