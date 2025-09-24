@@ -7,7 +7,12 @@
     --color-black: #161616; 
     
     --font-text: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    --font-accent: 'DM Mono','Courier New', Courier, monospace
+    --font-accent: 'DM Mono','Courier New', Courier, monospace;
+
+    /* --hover-card-height: 300px; */
+    --hover-card-height: 480px;
+    /* --hover-card-width: 500px; */
+    --hover-card-width: 720px;
 }
 
 * {
@@ -209,26 +214,32 @@ footer {
 /* main */
 .hoverCard-containers {
     /* border: 2px solid red ; */
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 50px;
     margin-top:200px ;
-    justify-content: center;
+    justify-items: center;
+    padding: 0 10%;
     gap: 2.5em 4em;
     /* gap: 30px; */
     justify-self: center;
+}
+
+.hoverCard-containers.onHover {
+    background-color: #000;
+    /* opacity: 0.5; */
 }
 
 /* Hover Card */
 .hover-card {
     /* background-color: black; */
     display: flex;
-    padding: 0.4em;
     border: solid 1px rgba(0, 0, 0, 0.171);
     position: relative;
-    width: 500px;
-    height: 300px;
-    aspect-ratio: 1/1;
+    width: var(--hover-card-width);
+    height: var(--hover-card-height);
+    /* aspect-ratio: 1/1; */
     overflow: hidden;
     justify-content: center;
     align-items: center;

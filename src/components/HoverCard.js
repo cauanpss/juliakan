@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./styles.css";
 
-export default function HoverCard({ images, text, interval }) {
+export default function HoverCard({ images, text, interval, onHover }) {
     useEffect(() => {
         const handleContextMenu = (e) => e.preventDefault();
         document.addEventListener("contextmenu", handleContextMenu);
@@ -31,6 +31,8 @@ export default function HoverCard({ images, text, interval }) {
         return () => stopSlideshow();
     }, []);
 
+    const imageRef = useRef()
+
     return (
         <div
             className="hover-card"
@@ -42,7 +44,10 @@ export default function HoverCard({ images, text, interval }) {
                     key={index}
                     src={img}
                     alt={text}
+                    ref={imageRef}
                     className={index === currentIndex ? "active" : ""}
+                    onMouseOver={onHover(true)}
+                    onMouseLeave={onHover(false)}
                 />
             ))}{" "}
             <div className="overlay flex-column">{text}</div>
