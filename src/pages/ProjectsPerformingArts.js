@@ -1,46 +1,15 @@
 import Header from "../components/Header";
 import HoverCard from "../components/HoverCard";
-import importAll from "../util/importAll";
+// import importAll from "../util/importAll";
 import TranslateButtons from "../components/TranslateButton";
 import { useTranslation } from "react-i18next";
+import card1Images from "../assets/images/PerformingArts/Projeto_1_NomeDoProjeto"
+import card2Images from "../assets/images/PerformingArts/Projeto_2_NomeDoProjeto"
+import card3Images from "../assets/images/PerformingArts/Projeto_3_NomeDoProjeto"
+import card4Images from "../assets/images/PerformingArts/Projeto_4_NomeDoProjeto"
+import card5Images from "../assets/images/PerformingArts/Projeto_5_NomeDoProjeto"
+import card6Images from "../assets/images/PerformingArts/Projeto_6_NomeDoProjeto"
 
-//importAll de cada card (uma variável para cada card)
-const card1Images = importAll(
-    require.context(
-        "../assets/images/PerformingArts/Projeto_1_NomeDoProjeto",
-        false,
-        /\.(png|jpe?g)$/
-    )
-);
-
-const card2Images = importAll(
-    require.context("../assets/images/PerformingArts/Projeto_2_NomeDoProjeto"),
-    false,
-    /\.(png|jpe?g)$/
-);
-
-const card3Images = importAll(
-    require.context("../assets/images/PerformingArts/Projeto_3_NomeDoProjeto"),
-    false,
-    /\.(png|jpe?g)$/
-);
-
-const card4Images = importAll(
-    require.context("../assets/images/PerformingArts/Projeto_4_NomeDoProjeto"),
-    false,
-    /\.(png|jpe?g)$/
-);
-
-const card5Images = importAll(
-    require.context("../assets/images/PerformingArts/Projeto_5_NomeDoProjeto"),
-    false,
-    /\.(png|jpe?g)$/
-);
-const card6Images = importAll(
-    require.context("../assets/images/PerformingArts/Projeto_6_NomeDoProjeto"),
-    false,
-    /\.(png|jpe?g)$/
-);
 
 //configurações do card
 const hoverCardData = [

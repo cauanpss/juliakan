@@ -2,15 +2,45 @@ const fs = require("fs");
 const path = require("path");
 
 // Pasta principal com as subpastas de imagens
-const mainFolder = path.join(__dirname, "../src/assets/images/VisualArts");
+const mainVisualArtsFolder = path.join(__dirname, "../src/assets/images/VisualArts");
 
 // Lê todas as subpastas de VisualArts
-const subfolders = fs
-    .readdirSync(mainFolder)
-    .filter((f) => fs.statSync(path.join(mainFolder, f)).isDirectory());
+const subVisualArtsFolders = fs
+    .readdirSync(mainVisualArtsFolder)
+    .filter((f) => fs.statSync(path.join(mainVisualArtsFolder, f)).isDirectory());
 
-subfolders.forEach((folderName) => {
-    const folderPath = path.join(mainFolder, folderName);
+subVisualArtsFolders.forEach((folderName) => {
+    const folderPath = path.join(mainVisualArtsFolder, folderName);
+
+    // Pega apenas arquivos de imagem
+    const files = fs
+        .readdirSync(folderPath)
+        .filter((f) => f.match(/\.(png|jpe?g)$/));
+
+    // Cria conteúdo do index.js
+    const content =
+        files
+            .map((f) => `import ${f.replace(/\W/g, "_")} from "./${f}";`)
+            .join("\n") +
+        "\n\nexport default [" +
+        files.map((f) => f.replace(/\W/g, "_")).join(", ") +
+        "];";
+
+    // Salva o index.js na subpasta
+    fs.writeFileSync(path.join(folderPath, "index.js"), content);
+
+    console.log(`Index gerado para a pasta ${folderName}`);
+});
+
+const mainPerformingArts = path.join(__dirname, "../src/assets/images/PerformingArts");
+
+// Lê todas as subpastas de Perfoming Arts
+const subPerformingArtsFolders = fs
+    .readdirSync(mainPerformingArts)
+    .filter((f) => fs.statSync(path.join(mainPerformingArts, f)).isDirectory());
+
+subPerformingArtsFolders.forEach((folderName) => {
+    const folderPath = path.join(mainPerformingArts, folderName);
 
     // Pega apenas arquivos de imagem
     const files = fs
