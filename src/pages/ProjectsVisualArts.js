@@ -22,7 +22,7 @@ const cardHorizons = importAll(
 );
 
 const cardCreacionConRayosAstrales = importAll(
-    require.context("../assets/images/VisualArts/CreacionConRalesAstrales"),
+    require.context("../assets/images/VisualArts/CreacionConRayosAstrales"),
     false,
     /\.(png|jpe?g)$/
 );
@@ -54,9 +54,9 @@ const hoverCardData = [
         text: "CardImaginarySpaces",
         interval: 1200,
     },
-    
+
     { images: cardHorizons, text: "CardHorizons", interval: 1200 },
-    
+
     {
         images: cardCreacionConRayosAstrales,
         text: "CardCreacionConRayosAstrales",
