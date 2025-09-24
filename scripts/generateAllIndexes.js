@@ -44,5 +44,4 @@ const subPerformingArtsFolders = fs
     .readdirSync(performingFolder)
     .filter((f) => fs.statSync(path.join(performingFolder, f)).isDirectory());
 /* Faz o mapeamento */
-subPerformingArtsFolders.forEach((subFolderName) => mappingSubFolders(performingFolder, subFolderName));
-
+subPerformingArtsFolders.forEach((subFolderName) => mappingSubFolders(performingFolder, subFolderName))

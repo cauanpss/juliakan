@@ -30,7 +30,6 @@ const hoverCardData = [
     { images: cardBau, text: "CardBau", interval: 1200 },
 ];
 
-
 export default function ProjectsVisualArts() {
     const { t } = useTranslation();
     const mainContainer = useRef();
