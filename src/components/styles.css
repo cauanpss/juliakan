@@ -1,18 +1,21 @@
 /* Reset geral */
-:root{
-    font-family: 'DM Mono','Courier New', Courier, monospace ;
-    font-weight: bold;
-    color: #000;
-    
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root{     
     --color-black: #161616; 
-    
     --font-text: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     --font-accent: 'DM Mono','Courier New', Courier, monospace;
 
-    /* --hover-card-height: 300px; */
-    --hover-card-height: 480px;
-    /* --hover-card-width: 500px; */
-    --hover-card-width: 720px;
+    --hover-card-height: 300px;
+    /* --hover-card-height: 480px; */
+    --hover-card-width: 500px;
+    /* --hover-card-width: 720px; */
 }
 
 * {
@@ -221,7 +224,7 @@ footer {
     justify-items: center;
     padding: 0 10%;
     gap: 2.5em 4em;
-    /* gap: 30px; */
+    gap: 20px;
     justify-self: center;
 }
 
@@ -239,25 +242,23 @@ main.onHover .hoverCard-containers>.hover-card.active {
 }
 /* Hover Card */
 .hover-card {
-    /* background-color: black; */
     display: flex;
     border: solid 1px rgba(0, 0, 0, 0.171);
     position: relative;
     width: var(--hover-card-width);
     height: var(--hover-card-height);
-    /* aspect-ratio: 1/1; */
+    aspect-ratio: 13/9;
     overflow: hidden;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    /* border-radius: 16px; */
     transition: transform 0.3s ease;
     z-index: 1;
 }
-.hover-card:hover {
-    transform: scale(1.15); /* previous: scale(1.03) */
-}
 
+.hover-card:hover {
+    transform: scale(1.08); 
+}
 
 .hover-card img {
     position: absolute;
@@ -265,7 +266,6 @@ main.onHover .hoverCard-containers>.hover-card.active {
     height: 100%;
     object-fit: cover;
     transition: opacity 0.25s ease-out; /* suaviza a troca de imagens */
-    /* border-radius: 16px; */
     opacity: 0;
     z-index: 2
 }
@@ -274,9 +274,6 @@ main.onHover .hoverCard-containers>.hover-card.active {
     opacity: 1;
     z-index: 3;
 }
-
-
-
 
 .overlay {
     opacity: 0;
@@ -287,13 +284,11 @@ main.onHover .hoverCard-containers>.hover-card.active {
     padding: 10px;
     text-align: center;
     font-family: var(--font-accent);
-    /* vertical-align: middle; */ /* nao funciona em position: absolute */
     background: rgba(233, 233, 233, 0.6);
     color: black;
-    font-size: 3rem;
-    transition: opacity 0.5s ease-in-out
-    /* border-bottom-left-radius: 16px;
-    border-bottom-right-radius: 16px; */
+    font-size: 1.5rem;
+    transition: opacity 0.5s ease-in-out;
+    font-weight: bold;
 }
 
 .flex-column {
