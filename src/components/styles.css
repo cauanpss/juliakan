@@ -14,7 +14,7 @@ body {
 
 /* Header z-index com 2 digitos */ 
 header {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: flex;
     position: fixed;
     flex-direction: column;
@@ -65,7 +65,7 @@ header {
 /* Main */
 
 main {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -77,7 +77,7 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-image: url(C:\Users\Cauan\projetos_vscode\juliakan\src\assets\images\Projeto_1_NomeDoProjeto\baú.jpg);
+    background-image: url(C:\Users\Cauan\projetos_vscode\juliakan\src\assets\images\PerformingArts\Projeto_1_NomeDoProjeto\baú.jpg);
     background-size: cover;
     background-position: center;
     align-items: center;
@@ -194,7 +194,7 @@ footer {
 /* HoverCard z-index com 1 digito */
 
 .hoverCard-containers {
-    border: 2px solid red ;
+    /* border: 2px solid red ; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 50px;
@@ -205,7 +205,9 @@ footer {
 }
 
 .hover-card {
-    border: solid 2px red;
+    /* background-color: black; */
+    padding: 0.4em;
+    border: solid 1px rgba(0, 0, 0, 0.171);
     position: relative;
     width: 500px;
     height: 300px;

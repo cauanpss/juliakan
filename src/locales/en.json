@@ -4,5 +4,12 @@
     "home" : "Home",
     "Projects" : "Projects",
     "about-me" : "About me",
-    "contact" : "Contact"
+    "contact" : "Contact",
+    "CardProjectTela" : "Tela",
+    "CardImaginarySpaces" : "Imaginary Spaces",
+    "CardCreacionConRayosAstrales" : "Creacíon con Rayos Astrales",
+    "CardHorizons": "Horizons",
+    "CardClippings" : "Clippings",
+    "CardBlanca" : "Blanca",
+    "CardBau" : "Bau"
 }

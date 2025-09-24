@@ -5,51 +5,63 @@ import TranslateButtons from "../components/TranslateButton";
 import { useTranslation } from "react-i18next";
 
 //importAll de cada card (uma variável para cada card)
-const card1Images = importAll(
-    require.context(
-        "../assets/images/Projeto_1_NomeDoProjeto",
-        false,
-        /\.(png|jpe?g)$/
-    )
+const card1Tela = importAll(
+    require.context("../assets/images/VisualArts/Tela", false, /\.(png|jpe?g)$/)
 );
 
-const card2Images = importAll(
-    require.context("../assets/images/Projeto_2_NomeDoProjeto"),
+const cardImaginarySpaces = importAll(
+    require.context("../assets/images/VisualArts/ImaginarySpaces"),
     false,
     /\.(png|jpe?g)$/
 );
 
-const card3Images = importAll(
-    require.context("../assets/images/Projeto_3_NomeDoProjeto"),
+const cardHorizons = importAll(
+    require.context("../assets/images/VisualArts/Horizons"),
     false,
     /\.(png|jpe?g)$/
 );
 
-const card4Images = importAll(
-    require.context("../assets/images/Projeto_4_NomeDoProjeto"),
+const cardCreacionConRayosAstrales = importAll(
+    require.context("../assets/images/VisualArts/CreacionConRalesAstrales"),
     false,
     /\.(png|jpe?g)$/
 );
 
-const card5Images = importAll(
-    require.context("../assets/images/Projeto_5_NomeDoProjeto"),
+const cardClippings = importAll(
+    require.context("../assets/images/VisualArts/Clippings"),
     false,
     /\.(png|jpe?g)$/
 );
-const card6Images = importAll(
-    require.context("../assets/images/Projeto_6_NomeDoProjeto"),
+
+const cardBlanca = importAll(
+    require.context("../assets/images/VisualArts/Blanca"),
+    false,
+    /\.(png|jpe?g)$/
+);
+
+const cardBau = importAll(
+    require.context("../assets/images/VisualArts/Bau"),
     false,
     /\.(png|jpe?g)$/
 );
 
 //configurações do card
 const hoverCardData = [
-    { images: card1Images, text: "TextoDoProjeto", interval: 1200 },
-    { images: card2Images, text: "TextoDoProjeto", interval: 1200 },
-    { images: card3Images, text: "TextoDoProjeto", interval: 1200 },
-    { images: card4Images, text: "TextoDoProjeto", interval: 1200 },
-    { images: card5Images, text: "TextoDoProjeto", interval: 1200 },
-    { images: card6Images, text: "TextoDoProjeto", interval: 1200 },
+    { images: card1Tela, text: "CardProjectTela", interval: 1200 },
+    {
+        images: cardImaginarySpaces,
+        text: "CardImaginarySpaces",
+        interval: 1200,
+    },
+    { images: cardHorizons, text: "CardHorizons", interval: 1200 },
+    {
+        images: cardCreacionConRayosAstrales,
+        text: "CardCreacionConRayosAstrales",
+        interval: 1200,
+    },
+    { images: cardClippings, text: "CardClippings", interval: 1200 },
+    { images: cardBlanca, text: "CardBlanca", interval: 1200 },
+    { images: cardBau, text: "CardBau", interval: 1200 },
 ];
 
 export default function ProjectsVisualArts() {
@@ -66,7 +78,7 @@ export default function ProjectsVisualArts() {
                         key={index}
                         images={props.images}
                         interval={props.interval}
-                        text={t(`ProjectsVisualArts.${props.key}`)}
+                        text={t(props.text)}
                     />
                 ))}
             </div>

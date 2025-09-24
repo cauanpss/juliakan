@@ -4,7 +4,13 @@
     "home" : "Pagina Inicial",
     "Projects" : "Projetos",
     "about-me" : "Sobre mim",
-    "contact" : "Contato"
-    
+    "contact" : "Contato",
+    "CardProjectTela" : "Tela",
+    "CardImaginarySpaces" : "Espaços Imaginarios",
+    "CardCreacionConRayosAstrales" : "Creacíon con Rayos Astrales",
+    "CardHorizons": "Horizons",
+    "CardClippings" : "Clippings",
+    "CardBlanca" : "Blanca",
+    "CardBau" : "Bau"
 }
 

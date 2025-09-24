@@ -7,37 +7,37 @@ import { useTranslation } from "react-i18next";
 //importAll de cada card (uma variável para cada card)
 const card1Images = importAll(
     require.context(
-        "../assets/images/Projeto_1_NomeDoProjeto",
+        "../assets/images/PerformingArts/Projeto_1_NomeDoProjeto",
         false,
         /\.(png|jpe?g)$/
     )
 );
 
 const card2Images = importAll(
-    require.context("../assets/images/Projeto_2_NomeDoProjeto"),
+    require.context("../assets/images/PerformingArts/Projeto_2_NomeDoProjeto"),
     false,
     /\.(png|jpe?g)$/
 );
 
 const card3Images = importAll(
-    require.context("../assets/images/Projeto_3_NomeDoProjeto"),
+    require.context("../assets/images/PerformingArts/Projeto_3_NomeDoProjeto"),
     false,
     /\.(png|jpe?g)$/
 );
 
 const card4Images = importAll(
-    require.context("../assets/images/Projeto_4_NomeDoProjeto"),
+    require.context("../assets/images/PerformingArts/Projeto_4_NomeDoProjeto"),
     false,
     /\.(png|jpe?g)$/
 );
 
 const card5Images = importAll(
-    require.context("../assets/images/Projeto_5_NomeDoProjeto"),
+    require.context("../assets/images/PerformingArts/Projeto_5_NomeDoProjeto"),
     false,
     /\.(png|jpe?g)$/
 );
 const card6Images = importAll(
-    require.context("../assets/images/Projeto_6_NomeDoProjeto"),
+    require.context("../assets/images/PerformingArts/Projeto_6_NomeDoProjeto"),
     false,
     /\.(png|jpe?g)$/
 );
@@ -52,7 +52,7 @@ const hoverCardData = [
     { images: card6Images, text: "TextoDoProjeto", interval: 1200 },
 ];
 
-export default function ProjectsVisualArts() {
+export default function ProjectsPerformingArts() {
     const { t } = useTranslation();
 
     return (
