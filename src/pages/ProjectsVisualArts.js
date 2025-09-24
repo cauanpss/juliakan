@@ -1,51 +1,16 @@
 import Header from "../components/Header";
 import HoverCard from "../components/HoverCard";
-import importAll from "../util/importAll";
+// import importAll from "../util/importAll";
 import TranslateButtons from "../components/TranslateButton";
 import { useTranslation } from "react-i18next";
+import card1Tela from "../assets/images/VisualArts/Tela";
+import cardClippings from "../assets/images/VisualArts/Clippings";
+import cardImaginarySpaces from "../assets/images/VisualArts/ImaginarySpaces";
+import cardHorizons from "../assets/images/VisualArts/Horizons";
+import cardCreacionConRayosAstrales from "../assets/images/VisualArts/CreacionConRayosAstrales";
+import cardBlanca from "../assets/images/VisualArts/Blanca";
+import cardBau from "../assets/images/VisualArts/Bau";
 
-//importAll de cada card (uma variável para cada card)
-const card1Tela = importAll(
-    require.context("../assets/images/VisualArts/Tela", false, /\.(png|jpe?g)$/)
-);
-
-const cardImaginarySpaces = importAll(
-    require.context("../assets/images/VisualArts/ImaginarySpaces"),
-    false,
-    /\.(png|jpe?g)$/
-);
-
-const cardHorizons = importAll(
-    require.context("../assets/images/VisualArts/Horizons"),
-    false,
-    /\.(png|jpe?g)$/
-);
-
-const cardCreacionConRayosAstrales = importAll(
-    require.context("../assets/images/VisualArts/CreacionConRayosAstrales"),
-    false,
-    /\.(png|jpe?g)$/
-);
-
-const cardClippings = importAll(
-    require.context("../assets/images/VisualArts/Clippings"),
-    false,
-    /\.(png|jpe?g)$/
-);
-
-const cardBlanca = importAll(
-    require.context("../assets/images/VisualArts/Blanca"),
-    false,
-    /\.(png|jpe?g)$/
-);
-
-const cardBau = importAll(
-    require.context("../assets/images/VisualArts/Bau"),
-    false,
-    /\.(png|jpe?g)$/
-);
-
-//configurações do card (ordenamento dos cards na tela inclusive)
 const hoverCardData = [
     { images: cardClippings, text: "CardClippings", interval: 1200 },
     { images: card1Tela, text: "CardProjectTela", interval: 1200 },
@@ -54,9 +19,7 @@ const hoverCardData = [
         text: "CardImaginarySpaces",
         interval: 1200,
     },
-
     { images: cardHorizons, text: "CardHorizons", interval: 1200 },
-
     {
         images: cardCreacionConRayosAstrales,
         text: "CardCreacionConRayosAstrales",
@@ -65,6 +28,7 @@ const hoverCardData = [
     { images: cardBlanca, text: "CardBlanca", interval: 1200 },
     { images: cardBau, text: "CardBau", interval: 1200 },
 ];
+
 
 export default function ProjectsVisualArts() {
     const { t } = useTranslation();
