@@ -2,6 +2,14 @@ import React, { useState, useEffect, useRef } from "react";
 import "./styles.css";
 
 export default function HoverCard({ images, text, interval }) {
+    useEffect(() => {
+        const handleContextMenu = (e) => e.preventDefault();
+        document.addEventListener("contextmenu", handleContextMenu);
+        return () => {
+            document.removeEventListener("contextmenu", handleContextMenu);
+        };
+    }, []);
+
     const [currentIndex, setCurrentIndex] = useState(0);
     const intervalRef = useRef(null);
 

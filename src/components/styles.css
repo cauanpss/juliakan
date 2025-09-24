@@ -12,6 +12,12 @@ body {
     align-content: center;
 }
 
+:root{
+    font-family: 'DM Mono','Courier New', Courier, monospace ;
+    font-weight: bold;
+    color: #000;}
+
+
 /* Header z-index com 2 digitos */ 
 header {
     /* border: 2px solid red; */
@@ -55,12 +61,12 @@ header {
     text-decoration: none;
 }
 
-/* .logo h1 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #000;
-} */
+/*Julia Kan config text*/
+.logo h1 {
+    font-family: 'DM Mono','Courier New', Courier, monospace ;
+    font-weight: bold;
+    color: #000;
+}
 
 /* Main */
 
@@ -96,6 +102,7 @@ main {
     border-radius: 20px;
 }
 
+
 .button-container button {
     width: 330px;
     font-weight: bold;
@@ -122,12 +129,15 @@ main {
 }
 
 .visual-arts {
+    font-family: 'DM Mono','Courier New', Courier, monospace ;
     width: 200px;
     text-align: right;
     padding: 26px 0;
 }
 
 .performing-arts {
+    font-family: 'DM Mono','Courier New', Courier, monospace ;
+    color: #000;
     width: 200px;
     text-align: left;
     padding: 26px 0;
@@ -206,6 +216,7 @@ footer {
 
 .hover-card {
     /* background-color: black; */
+    display: flex;
     padding: 0.4em;
     border: solid 1px rgba(0, 0, 0, 0.171);
     position: relative;
@@ -213,7 +224,6 @@ footer {
     height: 300px;
     aspect-ratio: 1/1;
     overflow: hidden;
-    display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -221,6 +231,8 @@ footer {
     transition: transform 0.3s ease;
     z-index: 1;
 }
+
+
 
 .hover-card img {
     position: absolute;

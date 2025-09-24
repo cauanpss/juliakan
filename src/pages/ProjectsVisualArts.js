@@ -45,21 +45,23 @@ const cardBau = importAll(
     /\.(png|jpe?g)$/
 );
 
-//configurações do card
+//configurações do card (ordenamento dos cards na tela inclusive)
 const hoverCardData = [
+    { images: cardClippings, text: "CardClippings", interval: 1200 },
     { images: card1Tela, text: "CardProjectTela", interval: 1200 },
     {
         images: cardImaginarySpaces,
         text: "CardImaginarySpaces",
         interval: 1200,
     },
+    
     { images: cardHorizons, text: "CardHorizons", interval: 1200 },
+    
     {
         images: cardCreacionConRayosAstrales,
         text: "CardCreacionConRayosAstrales",
         interval: 1200,
     },
-    { images: cardClippings, text: "CardClippings", interval: 1200 },
     { images: cardBlanca, text: "CardBlanca", interval: 1200 },
     { images: cardBau, text: "CardBau", interval: 1200 },
 ];
