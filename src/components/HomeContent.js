@@ -4,15 +4,6 @@ import { useTranslation } from "react-i18next";
 export default function HomeContent() {
     const { t, i18n } = useTranslation();
 
-    function redirecionamentoExterno() {
-        const resposta = window.confirm(
-            "Você está sendo redirecionado para um link externo. Deseja continuar?"
-        );
-        if (resposta) {
-            window.open("https://juliakan.hotglue.me/", "_blank");
-        }
-    }
-
     return (
         <main>
             <Link to="/" className="logo">
@@ -20,16 +11,16 @@ export default function HomeContent() {
             </Link>
             <div class="home-menu">
                 <div class="button-container">
-                    <button
-                        onClick={redirecionamentoExterno}
-                        class="visual-arts"
-                    >
+                    <Link to="/ProjectsVisualArts">
+                        <button class="visual-arts">
                         {t("arts")}
-                    </button>
+                        </button>
+                        
+                    </Link>
 
                     <div class="separador">/</div>
 
-                    <Link to="/projects">
+                    <Link to="/ProjectsPerformingArts">
                         <button class="performing-arts">
                             {" "}
                             {t("performing")}

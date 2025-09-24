@@ -1,7 +1,7 @@
 Home:
 - Implementar Darkmode + Botão funcional
 
-Projects:
+ProjectsVisualArts:
 - Layout da página 
 - Resolver como adicionar conteúdos diferentes para diferentes HoverCards
 - Criar rota para para interação com HoverCard

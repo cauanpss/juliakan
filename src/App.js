@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Projects from "./pages/Projects";
-import AboutMe from "./pages/AboutMe";
+import ProjectsVisualArts from "./pages/ProjectsVisualArts";
+import AboutMe from "./pages/AboutMeVisualArts";
 import "./App.css";
 
 function App() {
@@ -15,7 +15,10 @@ function App() {
                 {/* DIV de rotas ("Container")  */}
                 {/* Cada rota se comporta como um caminho do projeto e reonhece como página (index é "/" )  */}
                 <Route path="/" element={<Home />} />{" "}
-                <Route path="/projects" element={<Projects />} />
+                <Route
+                    path="/ProjectsVisualArts"
+                    element={<ProjectsVisualArts />}
+                />
                 <Route path="/about" element={<AboutMe />} />
             </Routes>
         </Router>

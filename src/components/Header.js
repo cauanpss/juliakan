@@ -11,8 +11,8 @@ export default function Header() {
                 <h1>Julia Kan</h1>
             </Link>
             <nav class="nav-desktop">
-                <NavLink to="/projects" target="">
-                    <strong>{t("projects")}</strong>
+                <NavLink to="/ProjectsVisualArts" target="">
+                    <strong>{t("Projects")}</strong>
                 </NavLink>
                 <NavLink to="/about">
                     <strong>{t("about-me")}</strong>

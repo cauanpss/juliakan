@@ -66,7 +66,7 @@ export default function ProjectsVisualArts() {
                         key={index}
                         images={props.images}
                         interval={props.interval}
-                        text={t(`ProjectsVisualArts.${props.key}`)}
+                        text={t(`projects.${props.key}`)}
                     />
                 ))}
             </div>
