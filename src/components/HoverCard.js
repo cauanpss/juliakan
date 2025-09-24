@@ -45,7 +45,7 @@ export default function HoverCard({ images, text, interval }) {
                     className={index === currentIndex ? "active" : ""}
                 />
             ))}{" "}
-            <div className="overlay">{text}</div>
+            <div className="overlay flex-column">{text}</div>
         </div>
     );
 }

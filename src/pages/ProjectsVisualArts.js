@@ -32,13 +32,13 @@ const hoverCardData = [
 
 export default function ProjectsVisualArts() {
     const { t } = useTranslation();
-
+    
     return (
         <>
             <TranslateButtons />
             <Header />
 
-            <div className="hoverCard-containers">
+            <main className="hoverCard-containers">
                 {hoverCardData.map((props, index) => (
                     <HoverCard
                         key={index}
@@ -47,7 +47,7 @@ export default function ProjectsVisualArts() {
                         text={t(props.text)}
                     />
                 ))}
-            </div>
+            </main>
         </>
     );
 }
