@@ -2,18 +2,13 @@ import React, { useState, useEffect, useRef } from "react";
 import "./styles.css";
 
 export default function HoverCard({ images, text, interval, onHover }) {
-    useEffect(() => {
-        const handleContextMenu = (e) => e.preventDefault();
-        document.addEventListener("contextmenu", handleContextMenu);
-        return () => {
-            document.removeEventListener("contextmenu", handleContextMenu);
-        };
-    }, []);
-
+    const [isActiveCard, setAsActiveCard] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
     const intervalRef = useRef(null);
 
     function startSlideshow() {
+        onHover(true);
+        setAsActiveCard(true);
         if (!intervalRef.current) {
             intervalRef.current = setInterval(() => {
                 setCurrentIndex((prev) => (prev + 1) % images.length);
@@ -22,20 +17,28 @@ export default function HoverCard({ images, text, interval, onHover }) {
     }
 
     function stopSlideshow() {
+        onHover(false);
+        setAsActiveCard(false);
+
         clearInterval(intervalRef.current);
         intervalRef.current = null;
+
     }
 
     useEffect(() => {
-        // Limpa intervalo ao desmontar o componente
-        return () => stopSlideshow();
-    }, []);
+        const handleContextMenu = (e) => e.preventDefault();
+        document.addEventListener("contextmenu", handleContextMenu);
+        document.removeEventListener("contextmenu", handleContextMenu);
+        stopSlideshow();
+
+        
+    }, [isActiveCard]);
 
     const imageRef = useRef()
 
     return (
         <div
-            className="hover-card"
+            className={`hover-card ${isActiveCard ? " hovered" : ""}`}
             onMouseEnter={startSlideshow}
             onMouseLeave={stopSlideshow}
         >
@@ -46,10 +49,8 @@ export default function HoverCard({ images, text, interval, onHover }) {
                     alt={text}
                     ref={imageRef}
                     className={index === currentIndex ? "active" : ""}
-                    onMouseOver={onHover(true)}
-                    onMouseLeave={onHover(false)}
                 />
-            ))}{" "}
+            ))}
             <div className="overlay flex-column">{text}</div>
         </div>
     );

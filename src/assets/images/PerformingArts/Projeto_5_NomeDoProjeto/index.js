@@ -1,8 +1,8 @@
-import hp4_png from "./hp4.png";
-import hp5_png from "./hp5.png";
+import hp4 from "./hp4.png";
+import hp5 from "./hp5.png";
 
-const Projeto_5_NomeDoProjeto = [hp4_png, hp5_png];
+const projetoProjeto_5_NomeDoProjeto = [hp4, hp5]
 
-export default Projeto_5_NomeDoProjeto;
+export default projetoProjeto_5_NomeDoProjeto
 
-export {hp4_png, hp5_png};
+export {hp4, hp5};

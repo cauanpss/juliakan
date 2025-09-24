@@ -47,16 +47,18 @@ export default function ProjectsVisualArts() {
             <TranslateButtons />
             <Header />
 
-            <main className="hoverCard-containers" ref={mainContainer}>
-                {hoverCardData.map((props, index) => (
-                    <HoverCard
-                        key={index}
-                        images={props.images}
-                        interval={props.interval}
-                        text={t(props.text)}
-                        onHover={handleOnHover}
-                    />
-                ))}
+            <main ref={mainContainer}>
+                <div className="hoverCard-containers" >
+                    {hoverCardData.map((props, index) => (
+                        <HoverCard
+                            key={index}
+                            images={props.images}
+                            interval={props.interval}
+                            text={t(props.text)}
+                            onHover={handleOnHover}
+                        />
+                    ))}
+                </div>
             </main>
         </>
     );

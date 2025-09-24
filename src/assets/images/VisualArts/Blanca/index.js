@@ -1,18 +1,14 @@
-import blanca1 from "./blanca1.jpg";
-import blanca10 from "./blanca10.jpg";
-import blanca11 from "./blanca11.jpg";
-import blanca12 from "./blanca12.jpg";
-import blanca2 from "./blanca2.jpg";
-import blanca3 from "./blanca3.jpg";
-import blanca4 from "./blanca4.jpg";
-import blanca5 from "./blanca5.jpg";
-import blanca6 from "./blanca6.jpg";
-import blanca7 from "./blanca7.jpg";
-import blanca8 from "./blanca8.jpg";
-import blanca9 from "./blanca9.jpg";
+import blanca1_jpg from "./blanca1.jpg";
+import blanca10_jpg from "./blanca10.jpg";
+import blanca11_jpg from "./blanca11.jpg";
+import blanca12_jpg from "./blanca12.jpg";
+import blanca2_jpg from "./blanca2.jpg";
+import blanca3_jpg from "./blanca3.jpg";
+import blanca4_jpg from "./blanca4.jpg";
+import blanca5_jpg from "./blanca5.jpg";
+import blanca6_jpg from "./blanca6.jpg";
+import blanca7_jpg from "./blanca7.jpg";
+import blanca8_jpg from "./blanca8.jpg";
+import blanca9_jpg from "./blanca9.jpg";
 
-const projetoBlanca = [blanca1, blanca10, blanca11, blanca12, blanca2, blanca3, blanca4, blanca5, blanca6, blanca7, blanca8, blanca9];
-
-export default projetoBlanca;
-
-export {blanca1, blanca10, blanca11, blanca12, blanca2, blanca3, blanca4, blanca5, blanca6, blanca7, blanca8, blanca9};
+export default [blanca1_jpg, blanca10_jpg, blanca11_jpg, blanca12_jpg, blanca2_jpg, blanca3_jpg, blanca4_jpg, blanca5_jpg, blanca6_jpg, blanca7_jpg, blanca8_jpg, blanca9_jpg];

@@ -1,8 +1,8 @@
-import img2_jpg from "./img2.jpg";
-import img3_jpeg from "./img3.jpeg";
+import img2 from "./img2.jpg";
+import img3 from "./img3.jpeg";
 
-const Projeto_6_NomeDoProjeto = [img2_jpg, img3_jpeg];
+const projetoProjeto_6_NomeDoProjeto = [img2, img3]
 
-export default Projeto_6_NomeDoProjeto;
+export default projetoProjeto_6_NomeDoProjeto
 
-export {img2_jpg, img3_jpeg}
+export {img2, img3};
