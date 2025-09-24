@@ -42,7 +42,7 @@ header {
 }
 
 .nav-desktop a.active{
-    color: purple;
+    color: rgb(151, 0, 0);
 }
 
 .logo {
@@ -197,6 +197,7 @@ footer {
     border: 2px solid red ;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    margin: 50px;
     margin-top:200px ;
     justify-content: center;
     gap: 50px;

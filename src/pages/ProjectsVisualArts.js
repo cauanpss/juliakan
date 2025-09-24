@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import HoverCard from "../components/HoverCard";
 import importAll from "../util/importAll";
 import TranslateButtons from "../components/TranslateButton";
+import { useTranslation } from "react-i18next";
 
 //importAll de cada card (uma variável para cada card)
 const card1Images = importAll(
@@ -52,6 +53,8 @@ const hoverCardData = [
 ];
 
 export default function Projects() {
+    const { t } = useTranslation();
+
     return (
         <>
             <TranslateButtons />
@@ -59,7 +62,12 @@ export default function Projects() {
 
             <div className="hoverCard-containers">
                 {hoverCardData.map((props, index) => (
-                    <HoverCard key={index} {...props} />
+                    <HoverCard
+                        key={index}
+                        images={props.images}
+                        interval={props.interval}
+                        text={t(`projects.${props.key}`)}
+                    />
                 ))}
             </div>
         </>

@@ -15,9 +15,9 @@ export default function HomeContent() {
 
     return (
         <main>
-            <div class="logo">
+            <Link to="/" className="logo">
                 <h1>Julia Kan</h1>
-            </div>
+            </Link>
             <div class="home-menu">
                 <div class="button-container">
                     <button
