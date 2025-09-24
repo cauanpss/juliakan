@@ -1,8 +1,6 @@
 import Header from "../components/Header";
 import HoverCard from "../components/HoverCard";
-import TranslateButtons from "../components/TranslateButton";
-import { useTranslation } from "react-i18next";
-
+// import importAll from "../util/importAll";
 // Cada pasta de imagens já possui um index.js gerado pelo script
 import cardProjeto1 from "../assets/images/PerformingArts/Projeto_1_NomeDoProjeto";
 import cardProjeto2 from "../assets/images/PerformingArts/Projeto_2_NomeDoProjeto";

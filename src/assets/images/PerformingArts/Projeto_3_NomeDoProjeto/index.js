@@ -1,4 +1,8 @@
-import xurek1_jpg from "./xurek1.jpg";
-import xurek2_jpg from "./xurek2.jpg";
+import xurek1 from "./xurek1.jpg";
+import xurek2 from "./xurek2.jpg";
 
-export default [xurek1_jpg, xurek2_jpg];
+const projetoProjeto_3_NomeDoProjeto = [xurek1, xurek2]
+
+export default projetoProjeto_3_NomeDoProjeto
+
+export {xurek1, xurek2};

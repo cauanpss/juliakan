@@ -10,6 +10,7 @@ import cardHorizons from "../assets/images/VisualArts/Horizons";
 import cardCreacionConRayosAstrales from "../assets/images/VisualArts/CreacionConRayosAstrales";
 import cardBlanca from "../assets/images/VisualArts/Blanca";
 import cardBau from "../assets/images/VisualArts/Bau";
+import { useRef } from "react";
 
 const hoverCardData = [
     { images: cardClippings, text: "CardClippings", interval: 1200 },
@@ -31,22 +32,33 @@ const hoverCardData = [
 
 export default function ProjectsVisualArts() {
     const { t } = useTranslation();
+    const mainContainer = useRef();
+    
+    function handleOnHover(isHovering) {
+        isHovering ?
+        mainContainer.current?.classList.add("onHover") :
+        mainContainer.current?.classList.remove("onHover");
+    }
+
 
     return (
         <>
             <TranslateButtons />
             <Header />
 
-            <div className="hoverCard-containers">
-                {hoverCardData.map((props, index) => (
-                    <HoverCard
-                        key={index}
-                        images={props.images}
-                        interval={props.interval}
-                        text={t(props.text)}
-                    />
-                ))}
-            </div>
+            <main ref={mainContainer}>
+                <div className="hoverCard-containers" >
+                    {hoverCardData.map((props, index) => (
+                        <HoverCard
+                            key={index}
+                            images={props.images}
+                            interval={props.interval}
+                            text={t(props.text)}
+                            onHover={handleOnHover}
+                        />
+                    ))}
+                </div>
+            </main>
         </>
     );
 }

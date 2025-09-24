@@ -1,12 +1,16 @@
-import tela1_jpg from "./tela1.jpg";
-import tela10_jpg from "./tela10.jpg";
-import tela11_jpg from "./tela11.jpg";
-import tela2_jpg from "./tela2.jpg";
-import tela3_png from "./tela3.png";
-import tela4_jpg from "./tela4.jpg";
-import tela5_jpg from "./tela5.jpg";
-import tela6_jpg from "./tela6.jpg";
-import tela8_jpg from "./tela8.jpg";
-import tela9_jpg from "./tela9.jpg";
+import tela1 from "./tela1.jpg";
+import tela10 from "./tela10.jpg";
+import tela11 from "./tela11.jpg";
+import tela2 from "./tela2.jpg";
+import tela3 from "./tela3.png";
+import tela4 from "./tela4.jpg";
+import tela5 from "./tela5.jpg";
+import tela6 from "./tela6.jpg";
+import tela8 from "./tela8.jpg";
+import tela9 from "./tela9.jpg";
 
-export default [tela1_jpg, tela10_jpg, tela11_jpg, tela2_jpg, tela3_png, tela4_jpg, tela5_jpg, tela6_jpg, tela8_jpg, tela9_jpg];
+const projetoTela = [tela1, tela10, tela11, tela2, tela3, tela4, tela5, tela6, tela8, tela9]
+
+export default projetoTela
+
+export {tela1, tela10, tela11, tela2, tela3, tela4, tela5, tela6, tela8, tela9};

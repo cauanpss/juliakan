@@ -1,4 +1,8 @@
-import burrodexurek1_jpg from "./burrodexurek1.jpg";
-import burrodexurek3_jpg from "./burrodexurek3.jpg";
+import burrodexurek1 from "./burrodexurek1.jpg";
+import burrodexurek3 from "./burrodexurek3.jpg";
 
-export default [burrodexurek1_jpg, burrodexurek3_jpg];
+const projetoProjeto_4_NomeDoProjeto = [burrodexurek1, burrodexurek3]
+
+export default projetoProjeto_4_NomeDoProjeto
+
+export {burrodexurek1, burrodexurek3};

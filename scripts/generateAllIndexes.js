@@ -1,38 +1,47 @@
 const fs = require("fs");
 const path = require("path");
 
-const mainFolder = path.join(__dirname, "../src/assets/images");
+const root = "../src/assets/images";
+const visualArtsPath = 'VisualArts';
+const performingPath = 'PerformingArts';
 
-// Função recursiva para percorrer a árvore
-function processFolder(folderPath) {
-    const entries = fs.readdirSync(folderPath);
+const regexMatch = /\.(png|jpe?g)$/
+const regexReplace = /\W|(png|jpe?g)/g
 
-    const subfolders = entries.filter((f) =>
-        fs.statSync(path.join(folderPath, f)).isDirectory()
-    );
+const visualArtsFolder = path.join(__dirname, `${root}/${visualArtsPath}`);
+const performingFolder = path.join(__dirname, `${root}/${performingPath}`);
 
-    if (subfolders.length > 0) {
-        // Ainda tem subpastas → desce recursivamente
-        subfolders.forEach((sub) => processFolder(path.join(folderPath, sub)));
-    } else {
-        // Pasta final → gerar index.js
-        const files = entries.filter((f) => f.match(/\.(png|jpe?g)$/));
+function mappingSubFolders(folderName, subFolderName) {
+    const folderPath = path.join(folderName, subFolderName);
 
-        if (files.length === 0) return; // não gera se não tiver imagens
+        // Pega apenas arquivos de imagem
+        const files = fs
+            .readdirSync(folderPath)
+            .filter((f) => f.match(regexMatch));
 
+        // Cria conteúdo do index.js
         const content =
-            files
-                .map((f) => `import ${f.replace(/\W/g, "_")} from "./${f}";`)
-                .join("\n") +
-            "\n\nexport default [" +
-            files.map((f) => f.replace(/\W/g, "_")).join(", ") +
-            "];";
+            files.map((f) => `import ${f.replace(regexReplace, "")} from "./${f}";`).join("\n") +
+            `\n\nconst projeto${subFolderName.charAt(0).toUpperCase() + subFolderName.slice(1)} = [${files.map((f) => f.replace(regexReplace, "")).join(", ")}]` +
+            `\n\nexport default projeto${subFolderName}` +
+            `\n\nexport {${files.map((f) => f.replace(regexReplace, "")).join(", ")}};`;
 
+        // Salva o index.js na subpasta
         fs.writeFileSync(path.join(folderPath, "index.js"), content);
 
-        console.log(`Index gerado em: ${folderPath}`);
-    }
+        console.log(`Index gerado para a pasta ${subFolderName}`);
 }
 
-// Começa pelo diretório raiz
-processFolder(mainFolder);
+/* Lê arquivos da pasta VisualArts */
+const subVisualArtsFolders = fs
+    .readdirSync(visualArtsFolder)
+    .filter((f) => fs.statSync(path.join(visualArtsFolder, f)).isDirectory());
+/* Faz o mapeamento */
+subVisualArtsFolders.forEach((subFolderName) => mappingSubFolders(visualArtsFolder, subFolderName));
+
+/* Lê arquivos da past PerformingArts */
+const subPerformingArtsFolders = fs
+    .readdirSync(performingFolder)
+    .filter((f) => fs.statSync(path.join(performingFolder, f)).isDirectory());
+/* Faz o mapeamento */
+subPerformingArtsFolders.forEach((subFolderName) => mappingSubFolders(performingFolder, subFolderName))

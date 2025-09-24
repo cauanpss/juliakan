@@ -1,15 +1,18 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-export default function HomeContent() {
-    const { t, i18n } = useTranslation();
+import { bau } from "../assets/images/PerformingArts/Projeto_1_NomeDoProjeto";
 
+export default function HomeContent() {
+    // const { t, i18n } = useTranslation();
+    const {t} = useTranslation();
+    
     return (
         <main>
             <Link to="/" className="logo">
                 <h1>Julia Kan</h1>
             </Link>
-            <div class="home-menu">
+            <div class="home-menu" style={{backgroundImage: `url(${bau})`}}>
                 <div class="button-container">
                     <Link to="/ProjectsVisualArts">
                         <button class="visual-arts">

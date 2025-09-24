@@ -3,14 +3,15 @@ import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 export default function Header() {
-    const { t, i18n } = useTranslation();
+    // const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     return (
         <header>
             <Link to="/" className="logo">
                 <h1>Julia Kan</h1>
             </Link>
-            <nav class="nav-desktop">
+            <nav className="nav-desktop">
                 <NavLink to="/ProjectsVisualArts" target="">
                     <strong>{t("Projects")}</strong>
                 </NavLink>

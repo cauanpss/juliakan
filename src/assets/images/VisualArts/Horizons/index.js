@@ -1,3 +1,7 @@
-import Horizons1_png from "./Horizons1.png";
+import Horizons1 from "./Horizons1.png";
 
-export default [Horizons1_png];
+const projetoHorizons = [Horizons1]
+
+export default projetoHorizons
+
+export {Horizons1};

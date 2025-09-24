@@ -1,4 +1,8 @@
-import ba__jpg from "./baú.jpg";
-import img1_jpg from "./img1.jpg";
+import bau from "./bau.jpg";
+import img1 from "./img1.jpg";
 
-export default [ba__jpg, img1_jpg];
+const projetoProjeto_1_NomeDoProjeto = [bau, img1]
+
+export default projetoProjeto_1_NomeDoProjeto
+
+export {bau, img1};

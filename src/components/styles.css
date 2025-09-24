@@ -1,4 +1,20 @@
 /* Reset geral */
+:root{
+    font-family: 'DM Mono','Courier New', Courier, monospace ;
+    font-weight: bold;
+    color: #000;
+    
+    --color-black: #161616; 
+    
+    --font-text: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    --font-accent: 'DM Mono','Courier New', Courier, monospace;
+
+    /* --hover-card-height: 300px; */
+    --hover-card-height: 480px;
+    /* --hover-card-width: 500px; */
+    --hover-card-width: 720px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,12 +27,6 @@ body {
     flex-direction: column;
     align-content: center;
 }
-
-:root{
-    font-family: 'DM Mono','Courier New', Courier, monospace ;
-    font-weight: bold;
-    color: #000;}
-
 
 /* Header z-index com 2 digitos */ 
 header {
@@ -43,7 +53,7 @@ header {
 
 .nav-desktop a{
     
-    color:black;
+    color:var(--color-black);
     text-decoration: none;
 }
 
@@ -65,7 +75,7 @@ header {
 .logo h1 {
     font-family: 'DM Mono','Courier New', Courier, monospace ;
     font-weight: bold;
-    color: #000;
+    color: var(--color-black);
 }
 
 /* Main */
@@ -83,7 +93,6 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-image: url(C:\Users\Cauan\projetos_vscode\juliakan\src\assets\images\PerformingArts\Projeto_1_NomeDoProjeto\baú.jpg);
     background-size: cover;
     background-position: center;
     align-items: center;
@@ -137,7 +146,7 @@ main {
 
 .performing-arts {
     font-family: 'DM Mono','Courier New', Courier, monospace ;
-    color: #000;
+    color: var(--color-black);
     width: 200px;
     text-align: left;
     padding: 26px 0;
@@ -202,27 +211,41 @@ footer {
 }
 
 /* HoverCard z-index com 1 digito */
-
+/* main */
 .hoverCard-containers {
     /* border: 2px solid red ; */
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin: 50px;
-    margin-top:200px ;
-    justify-content: center;
-    gap: 30px;
+    margin-top:200px;
+    justify-items: center;
+    padding: 0 10%;
+    gap: 2.5em 4em;
+    /* gap: 30px; */
     justify-self: center;
 }
 
+main.onHover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: all 0.15s ease-out;
+}
+
+main.onHover .hoverCard-containers>.hover-card {
+    /* opacity: 0.2; */
+}
+
+main.onHover .hoverCard-containers>.hover-card.active {
+    opacity: 1;
+}
+/* Hover Card */
 .hover-card {
     /* background-color: black; */
     display: flex;
-    padding: 0.4em;
     border: solid 1px rgba(0, 0, 0, 0.171);
     position: relative;
-    width: 500px;
-    height: 300px;
-    aspect-ratio: 1/1;
+    width: var(--hover-card-width);
+    height: var(--hover-card-height);
+    /* aspect-ratio: 1/1; */
     overflow: hidden;
     justify-content: center;
     align-items: center;
@@ -231,7 +254,9 @@ footer {
     transition: transform 0.3s ease;
     z-index: 1;
 }
-
+.hover-card:hover {
+    transform: scale(1.15); /* previous: scale(1.03) */
+}
 
 
 .hover-card img {
@@ -239,7 +264,7 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: opacity 0.5s ease-in-out; /* suaviza a troca de imagens */
+    transition: opacity 0.25s ease-out; /* suaviza a troca de imagens */
     /* border-radius: 16px; */
     opacity: 0;
     z-index: 2
@@ -251,26 +276,32 @@ footer {
 }
 
 
-.hover-card:hover {
-    transform: scale(1.03);
-}
+
 
 .overlay {
     opacity: 0;
     z-index: 12;
     position: absolute;
-    bottom: 0;
+    height: 100%;
     width: 100%;
     padding: 10px;
     text-align: center;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    font-size: 1rem;
-    transition: opacity 0.5s ease-in-out;
+    font-family: var(--font-accent);
+    /* vertical-align: middle; */ /* nao funciona em position: absolute */
+    background: rgba(233, 233, 233, 0.6);
+    color: black;
+    font-size: 3rem;
+    transition: opacity 0.5s ease-in-out
     /* border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px; */
 }
 
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .hover-card:hover .overlay {
-    opacity: 1;
-    }
+    opacity: 0.6;
+}
