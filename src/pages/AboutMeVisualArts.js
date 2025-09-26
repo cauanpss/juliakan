@@ -7,7 +7,7 @@ export default function Home() {
     return (
         <div>
             <TranslateButtons />
-            <Header />
+            <Header />g
         </div>
     );
 }
