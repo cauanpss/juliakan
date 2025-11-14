@@ -8,12 +8,13 @@ import dataHorizons from "./dataHorizons";
 import dataImaginarySpaces from "./dataImaginarySpaces";
 import dataTela from "./dataTela";
 
+//ordem de export dita a ordem de exibição dos hovercards
 export const projectDetails = {
-    clippings: dataClippings,
     bau: dataBau,
+    imaginarySpaces: dataImaginarySpaces,
     blanca: dataBlanca,
     creacionConRayosAstrales: dataCreacionConRayosAstrales,
+    clippings: dataClippings,
     horizons: dataHorizons,
-    imaginarySpaces: dataImaginarySpaces,
     tela: dataTela,
 };

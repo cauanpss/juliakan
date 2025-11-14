@@ -1,0 +1,281 @@
+JULIAKAN/
+├── .gitignore
+├── .prettierrc.json
+├── README.md
+├── deprecated.md
+├── duvidas.txt
+├── package-lock.json
+├── package.json
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+├── scripts
+│   ├── generateAllIndexes.js
+│   └── generateStructure.js
+├── src
+│   ├── App.css
+│   ├── App.js
+│   ├── App.test.js
+│   ├── assets
+│   │   └── images
+│   │       ├── PerformingArts
+│   │       │   ├── Projeto_1_NomeDoProjeto
+│   │       │   │   ├── bau.jpg
+│   │       │   │   ├── img1.jpg
+│   │       │   │   └── index.js
+│   │       │   ├── Projeto_2_NomeDoProjeto
+│   │       │   │   ├── hp1.jpg
+│   │       │   │   ├── hp2.jpg
+│   │       │   │   ├── hp3.jpg
+│   │       │   │   └── index.js
+│   │       │   ├── Projeto_3_NomeDoProjeto
+│   │       │   │   ├── index.js
+│   │       │   │   ├── xurek1.jpg
+│   │       │   │   └── xurek2.jpg
+│   │       │   ├── Projeto_4_NomeDoProjeto
+│   │       │   │   ├── burrodexurek1.jpg
+│   │       │   │   ├── burrodexurek3.jpg
+│   │       │   │   └── index.js
+│   │       │   ├── Projeto_5_NomeDoProjeto
+│   │       │   │   ├── hp4.png
+│   │       │   │   ├── hp5.png
+│   │       │   │   └── index.js
+│   │       │   └── Projeto_6_NomeDoProjeto
+│   │       │       ├── img2.jpg
+│   │       │       ├── img3.jpeg
+│   │       │       └── index.js
+│   │       ├── Projetos_Pessoais
+│   │       │   └── Projetos_Pessoais
+│   │       │       ├── 00 Cenografia MASTER_compressed.pdf
+│   │       │       ├── 02 - PLANTA 2.jpg
+│   │       │       ├── 04-CORTE BB.jpg
+│   │       │       ├── 05-PORTAS.jpg
+│   │       │       ├── 18-DK9A6898.jpg
+│   │       │       ├── 1dia baixa res story-2.jpg
+│   │       │       ├── 20191107_100825.jpg
+│   │       │       ├── 20191107_100910.jpg
+│   │       │       ├── 20191109_144547.jpg
+│   │       │       ├── 3d_ODBr_03.png
+│   │       │       ├── 3d_ODBr_04.png
+│   │       │       ├── 3d_ODBr_06.png
+│   │       │       ├── 76-DK9A0380.jpg
+│   │       │       ├── 7T4A2448_FOTO_Caio_Lirio_ig_caiolirio.jpg
+│   │       │       ├── 7T4A2791_FOTO_Caio_Lirio_ig_caiolirio.jpg
+│   │       │       ├── COZINHA.png
+│   │       │       ├── Captura de tela 2021-12-12 085546.jpg
+│   │       │       ├── Captura de tela 2021-12-12 085756.jpg
+│   │       │       ├── Captura de tela 2021-12-12 090437.jpg
+│   │       │       ├── Captura de tela 2021-12-21 142531.jpg
+│   │       │       ├── Captura de tela 2021-12-21 142843.jpg
+│   │       │       ├── Captura de tela 2022-02-01 211456.jpg
+│   │       │       ├── Captura de tela 2022-02-01 212030.jpg
+│   │       │       ├── Captura de tela 2022-02-01 212151.jpg
+│   │       │       ├── Captura de tela 2022-02-01 213139.jpg
+│   │       │       ├── Captura de tela 2022-08-17 121226.jpg
+│   │       │       ├── Captura de tela 2022-10-01 102929.jpg
+│   │       │       ├── Captura de tela 2022-11-25 163201.jpg
+│   │       │       ├── Captura de tela 2022-11-25 163417.jpg
+│   │       │       ├── Captura de tela 2022-11-25 163509.jpg
+│   │       │       ├── Captura de tela 2022-11-25 163924.jpg
+│   │       │       ├── Carnaval GN_09.jpg
+│   │       │       ├── DSC06288.jpg
+│   │       │       ├── DSC06367.jpg
+│   │       │       ├── DSC_4927.jpg
+│   │       │       ├── ENTRADA CASA MICHELLINI2.png
+│   │       │       ├── ILE - Colunas surdo.jpg
+│   │       │       ├── ILE - Parede surdos.jpg
+│   │       │       ├── ILE CROQUI 3.0.jpg
+│   │       │       ├── IMG_2123.jpg
+│   │       │       ├── IMG_2136.jpg
+│   │       │       ├── IMG_2155.jpg
+│   │       │       ├── Imagem do WhatsApp de 2024-07-19 à(s) 18.30.04_a40ad319.jpg
+│   │       │       ├── Imagem do WhatsApp de 2024-07-19 à(s) 18.32.11_88c6c378.jpg
+│   │       │       ├── Imagem do WhatsApp de 2025-06-13 à(s) 16.19.00_02251334.jpg
+│   │       │       ├── OLA_Pocket_Show-7.jpg
+│   │       │       ├── OLA_pocket_show01.jpg
+│   │       │       ├── PORT-100-20.jpg
+│   │       │       ├── PORT-100-22.jpg
+│   │       │       ├── PORT-100-25.jpg
+│   │       │       ├── Proposta9_TARDE_JuliaKan.jpg
+│   │       │       ├── Render_09.png
+│   │       │       ├── SALA3.png
+│   │       │       ├── TRATADA-6.jpg
+│   │       │       ├── TRATADA-8.jpg
+│   │       │       ├── UHUHUH-100-12.jpg
+│   │       │       ├── UHUHUH-100-13.jpg
+│   │       │       ├── UHUHUH-100-14.jpg
+│   │       │       ├── UNIDAS03.png
+│   │       │       ├── WhatsApp Image 2021-09-12 at 15.58.36.jpg
+│   │       │       ├── WhatsApp Image 2021-11-20 at 15.47.22 (2).jpg
+│   │       │       ├── WhatsApp Image 2022-04-18 at 17.17.45 (1).jpg
+│   │       │       ├── WhatsApp Image 2022-04-18 at 17.17.45.jpg
+│   │       │       ├── WhatsApp Image 2023-11-16 at 21.25.05 (1).jpg
+│   │       │       ├── WhatsApp Image 2023-11-16 at 21.25.05.jpg
+│   │       │       ├── WhatsApp Image 2023-11-16 at 21.25.53.jpg
+│   │       │       ├── WhatsApp Image 2023-11-16 at 21.31.17.jpg
+│   │       │       ├── WhatsApp Image 2023-11-16 at 21.41.38.jpg
+│   │       │       ├── WhatsApp Image 2023-11-16 at 21.44.58.jpg
+│   │       │       ├── WhatsApp Image 2023-11-16 at 21.49.04.jpg
+│   │       │       ├── WhatsApp Image 2023-11-16 at 21.50.18.jpg
+│   │       │       ├── WhatsApp Image 2023-11-16 at 21.50.34.jpg
+│   │       │       ├── WhatsApp Image 2023-11-16 at 22.11.55.jpg
+│   │       │       ├── WhatsApp Image 2023-11-16 at 22.13.05.jpg
+│   │       │       ├── WhatsApp Image 2023-11-16 at 22.13.20.jpg
+│   │       │       ├── WhatsApp Image 2023-11-16 at 22.21.52.jpg
+│   │       │       ├── aprendendo futebol01.jpg
+│   │       │       ├── croqui pedro carchanjo0001 (1).tif
+│   │       │       ├── croqui pedro carchanjo0001.tif
+│   │       │       ├── expografia ediane 4.jpg
+│   │       │       ├── expografia ediane.jpg
+│   │       │       ├── geral-19.jpg
+│   │       │       ├── image (1).png
+│   │       │       ├── image (2).png
+│   │       │       ├── image (3).png
+│   │       │       ├── image (4).png
+│   │       │       ├── image (5).png
+│   │       │       ├── image (6).png
+│   │       │       ├── image (7).png
+│   │       │       ├── image (8).png
+│   │       │       ├── image (9).png
+│   │       │       ├── image.png
+│   │       │       ├── img20210906_19455590.jpg
+│   │       │       ├── img20211129_17353169.jpg
+│   │       │       ├── img23 (13).jpg
+│   │       │       ├── img23 (14).jpg
+│   │       │       ├── img23 (19).jpg
+│   │       │       ├── ola fluxus.jpg
+│   │       │       ├── ola fluxus0001.jpg
+│   │       │       ├── png (1).png
+│   │       │       ├── png (2).png
+│   │       │       └── png.png
+│   │       └── VisualArts
+│   │           ├── Bau
+│   │           │   ├── bau1.jpg
+│   │           │   ├── bau2.jpg
+│   │           │   ├── bau3.png
+│   │           │   ├── bau4.png
+│   │           │   ├── bau5.png
+│   │           │   ├── bau6.png
+│   │           │   ├── bau7.png
+│   │           │   ├── bau8.png
+│   │           │   ├── bau9.png
+│   │           │   └── index.js
+│   │           ├── Blanca
+│   │           │   ├── blanca1.jpg
+│   │           │   ├── blanca10.jpg
+│   │           │   ├── blanca11.jpg
+│   │           │   ├── blanca12.jpg
+│   │           │   ├── blanca2.jpg
+│   │           │   ├── blanca3.jpg
+│   │           │   ├── blanca4.jpg
+│   │           │   ├── blanca5.jpg
+│   │           │   ├── blanca6.jpg
+│   │           │   ├── blanca7.jpg
+│   │           │   ├── blanca8.jpg
+│   │           │   ├── blanca9.jpg
+│   │           │   └── index.js
+│   │           ├── Clippings
+│   │           │   ├── clippings1.jpg
+│   │           │   ├── clippings10.jpg
+│   │           │   ├── clippings11.jpg
+│   │           │   ├── clippings2.jpg
+│   │           │   ├── clippings3.jpg
+│   │           │   ├── clippings4.jpg
+│   │           │   ├── clippings5.jpg
+│   │           │   ├── clippings6.jpg
+│   │           │   ├── clippings7.jpg
+│   │           │   ├── clippings8.jpg
+│   │           │   ├── clippings9.jpg
+│   │           │   └── index.js
+│   │           ├── CreacionConRayosAstrales
+│   │           │   ├── creacions1.jpg
+│   │           │   ├── creacions10.jpg
+│   │           │   ├── creacions11.jpg
+│   │           │   ├── creacions12.jpg
+│   │           │   ├── creacions13.jpg
+│   │           │   ├── creacions14.jpg
+│   │           │   ├── creacions15.jpg
+│   │           │   ├── creacions16.jpg
+│   │           │   ├── creacions2.jpg
+│   │           │   ├── creacions3.jpg
+│   │           │   ├── creacions4.jpg
+│   │           │   ├── creacions5.jpg
+│   │           │   ├── creacions6.jpg
+│   │           │   ├── creacions7.jpg
+│   │           │   ├── creacions8.jpg
+│   │           │   ├── creacions9.jpg
+│   │           │   └── index.js
+│   │           ├── Horizons
+│   │           │   ├── Horizons1.png
+│   │           │   └── index.js
+│   │           ├── ImaginarySpaces
+│   │           │   ├── ImaginarySpaces1.png
+│   │           │   ├── ImaginarySpaces10.jpg
+│   │           │   ├── ImaginarySpaces11.jpg
+│   │           │   ├── ImaginarySpaces12.jpg
+│   │           │   ├── ImaginarySpaces13.jpg
+│   │           │   ├── ImaginarySpaces14.jpg
+│   │           │   ├── ImaginarySpaces15.jpg
+│   │           │   ├── ImaginarySpaces16.jpg
+│   │           │   ├── ImaginarySpaces2.png
+│   │           │   ├── ImaginarySpaces3.png
+│   │           │   ├── ImaginarySpaces4.png
+│   │           │   ├── ImaginarySpaces5.png
+│   │           │   ├── ImaginarySpaces6.png
+│   │           │   ├── ImaginarySpaces7.png
+│   │           │   ├── ImaginarySpaces8.png
+│   │           │   ├── ImaginarySpaces9.jpg
+│   │           │   └── index.js
+│   │           └── Tela
+│   │               ├── index.js
+│   │               ├── tela1.jpg
+│   │               ├── tela10.jpg
+│   │               ├── tela11.jpg
+│   │               ├── tela2.jpg
+│   │               ├── tela3.png
+│   │               ├── tela4.jpg
+│   │               ├── tela5.jpg
+│   │               ├── tela6.jpg
+│   │               ├── tela8.jpg
+│   │               └── tela9.jpg
+│   ├── components
+│   │   ├── Footer.js
+│   │   ├── Header.js
+│   │   ├── HomeContent.js
+│   │   ├── HoverCard.js
+│   │   ├── TranslateButton.js
+│   │   └── styles.css
+│   ├── data
+│   │   └── dataProjectDetails
+│   │       ├── dataBau.js
+│   │       ├── dataBlanca.js
+│   │       ├── dataClippings.js
+│   │       ├── dataCreacionConRayosAstrales.js
+│   │       ├── dataDefault.js
+│   │       ├── dataHorizons.js
+│   │       ├── dataImaginarySpaces.js
+│   │       ├── dataTela.js
+│   │       └── index.js
+│   ├── index.css
+│   ├── index.js
+│   ├── locales
+│   │   ├── en.json
+│   │   └── pt.json
+│   ├── logo.svg
+│   ├── pages
+│   │   ├── AboutMeVisualArts.js
+│   │   ├── Home.js
+│   │   ├── ProjectsPerformingArts.js
+│   │   ├── ProjectsVisualArts.js
+│   │   └── ProjectsVisualArtsOldVersion.js
+│   ├── reportWebVitals.js
+│   ├── setupTests.js
+│   └── util
+│       ├── i18next.js
+│       ├── importAll.js
+│       └── language.js
+└── tasks.txt
