@@ -5,6 +5,7 @@ import ProjectsVisualArts from "./pages/ProjectsVisualArts";
 import ProjectsPerformingArts from "./pages/ProjectsPerformingArts";
 import AboutMe from "./pages/AboutMeVisualArts";
 import "./App.css";
+import ProjectPage from "./pages/ProjectPage";
 
 function App() {
     return (
@@ -25,6 +26,7 @@ function App() {
                     path="/ProjectsPerformingArts"
                     element={<ProjectsPerformingArts />}
                 />
+                <Route patch="/projects/:projectid" element={<ProjectPage />} />
             </Routes>
         </Router>
     );

@@ -31,6 +31,7 @@ export default function ProjectsVisualArts() {
                             interval={1200}
                             text={project.title}
                             onHover={handleOnHover}
+                            projectKey={project.key}
                         />
                     ))}
                 </div>
