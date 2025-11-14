@@ -1,8 +1,2 @@
-Home:
-- Implementar Darkmode + Botão funcional
-
-ProjectsVisualArts:
-- Layout da página 
-- Resolver como adicionar conteúdos diferentes para diferentes HoverCards
-- Criar rota para para interação com HoverCard
-- 
+construir pagina ProjectPage usando o component ProjectContent 
+Adicionar um carrossel ou algo do genero para exibir a galeria de imagens nessa página
