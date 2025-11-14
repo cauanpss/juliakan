@@ -22,19 +22,17 @@ export default function HoverCard({ images, text, interval, onHover }) {
 
         clearInterval(intervalRef.current);
         intervalRef.current = null;
-
     }
-
     useEffect(() => {
         const handleContextMenu = (e) => e.preventDefault();
         document.addEventListener("contextmenu", handleContextMenu);
-        document.removeEventListener("contextmenu", handleContextMenu);
-        stopSlideshow();
 
-        
-    }, [isActiveCard]);
+        return () => {
+            document.removeEventListener("contextmenu", handleContextMenu);
+        };
+    }, []);
 
-    const imageRef = useRef()
+    const imageRef = useRef();
 
     return (
         <div
