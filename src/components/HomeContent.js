@@ -13,22 +13,25 @@ export default function HomeContent() {
                 <h1>Julia Kan</h1>
             </Link>
             <div class="home-menu" style={{backgroundImage: `url(${bau})`}}>
-                <div class="button-container">
-                    <Link to="/ProjectsVisualArts">
-                        <button class="visual-arts">
-                        {t("arts")}
-                        </button>
-                        
-                    </Link>
-
-                    <div class="separador">/</div>
-
-                    <Link to="/ProjectsPerformingArts">
-                        <button class="performing-arts">
-                            {" "}
-                            {t("performing")}
-                        </button>
-                    </Link>
+            
+                <div class="home-menu-content">     
+                    <div class="button-container">
+                        <Link to="/ProjectsVisualArts">
+                            <button class="visual-arts">
+                            {t("arts")}
+                            </button>
+                            
+                        </Link>
+    
+                        <div class="separador">/</div>
+    
+                        <Link to="/ProjectsPerformingArts">
+                            <button class="performing-arts">
+                                {" "}
+                                {t("performing")}
+                            </button>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </main>

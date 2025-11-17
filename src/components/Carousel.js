@@ -41,7 +41,7 @@ export default function Carousel({ images }) {
     // Controle automático do autoplay
     useEffect(() => {
         if (!fullscreen) {
-            startAutoplay(); 
+            startAutoplay();
         } else {
             stopAutoplay();
         }

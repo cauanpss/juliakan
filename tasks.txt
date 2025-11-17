@@ -1,4 +1,3 @@
-construir pagina ProjectPage usando o component ProjectContent 
 
 
 Adicionar atributo de link de vídeo aos objetos data
