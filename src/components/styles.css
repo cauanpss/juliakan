@@ -13,9 +13,7 @@
     --font-accent: 'DM Mono','Courier New', Courier, monospace;
 
     --hover-card-height: 300px;
-    /* --hover-card-height: 480px; */
     --hover-card-width: 500px;
-    /* --hover-card-width: 720px; */
 }
 
 * {
@@ -226,7 +224,7 @@ footer {
 }
 
 /* HoverCard z-index com 1 digito */
-/* main */
+/*---------------- main --------------------*/
 .hoverCard-containers {
     /* border: 2px solid red ; */
     width: 100%;
@@ -266,7 +264,7 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: opacity 0.5s ease-out; /* suaviza a troca de imagens */
+    transition: opacity 0.5s ease-out; 
     opacity: 0;
     z-index: 2
 }
@@ -351,9 +349,7 @@ main.project-content p {
     width: 100%;
 }
 
-/* ---------------------------------------------------
-   Carousel
---------------------------------------------------- */
+/* ----------------------------- Carousel -------------------------- */
 
 .carousel {
     width: 100%;
@@ -370,10 +366,10 @@ main.project-content p {
     height: 480px;
     border-radius: 10px;
     overflow: hidden;
+    position: relative;
     /* display: flex; */
     /* justify-content: center;
     align-items: center; */
-    position: relative;
 }
 
 .carousel-image {
@@ -412,9 +408,7 @@ main.project-content p {
     background: black;
 }
 
-/* ----------------------------------------
-   FULLSCREEN LIGHTBOX
----------------------------------------- */
+/* ----------------------- Fullscreen -------------------------- */
 
 .fullscreen-overlay {
     position: fixed;
@@ -499,7 +493,7 @@ main.project-content p {
     max-height: 100%;
     object-fit: contain;
     opacity: 0;
-    transition: opacity 0.8s ease-in-out; /* 🌟 MESMA TRANSIÇÃO DO CAROUSEL */
+    transition: opacity 0.8s ease-in-out; 
     border-radius: 10px;
 }
 
@@ -511,12 +505,10 @@ main.project-content p {
 
 /* ------------------RESPONSIVIDADE-------------------- */
 
-/* -----------------------------------------------------
-   MOBILE GERAL – até 768px
-------------------------------------------------------*/
+/* --------- MOBILE GERAL – até 768px-------------------*/
 @media (max-width: 768px) {
 
-    /* HEADER */
+    /* Header */
     header {
         padding: 10px 20px;
         height: auto;
@@ -538,7 +530,7 @@ main.project-content p {
         font-size: 18px;
     }
 
-    /* HOME MENU */
+    /* Home Menu */
     .home-menu {
         padding-top: 100px;
         padding-bottom: 100px;
@@ -570,7 +562,7 @@ main.project-content p {
     font-size: 18px
     }
 
-    /* HOVER CARDS */
+    /* Hover Cards*/
     .hoverCard-containers {
         grid-template-columns: 1fr;
         padding: 0 5%;
@@ -586,7 +578,7 @@ main.project-content p {
         font-size: 1.2rem;
     }
 
-    /* PROJECT PAGE */
+    /* ProjectPage*/
     main.project-content {
         width: 90%;
         margin-top: 110px;
@@ -611,7 +603,7 @@ main.project-content p {
     }
 
     .carousel-window {
-        height: 55vw; /* mobile-friendly */
+        height: 55vw; 
         max-height: 360px;
     }
 
@@ -630,9 +622,7 @@ main.project-content p {
     }
 }
 
-/* -----------------------------------------------------
-   VERY SMALL DEVICES – até 480px
-------------------------------------------------------*/
+/* ---------- VERY SMALL DEVICES – até 480px ------------------*/
 @media (max-width: 480px) {
 
     .home-menu {
