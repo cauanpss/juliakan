@@ -290,7 +290,7 @@ footer {
     opacity: 0.6;
 }
 
-/* ProjectPage */
+/*--------------- ProjectPage ----------------*/
 
 .project-page-container {
     /* border: 2px solid  red; */
@@ -378,36 +378,6 @@ main.project-content p {
 
 .carousel-image.active {
     opacity: 1;
-}
-
-/* Botões */
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-30%);
-    font-size: 2rem;
-    background: rgba(0, 0, 0, 0);
-    border: none;
-    border-radius: 15px;
-    color: rgba(255, 255, 255, 0.219);
-    padding: 10px;
-    cursor: pointer;
-    padding-bottom: 15px;
-    z-index: 10;
-    transition: background 0.2s;
-}
-
-.carousel-btn:hover {
-    background: rgba(0, 0, 0, 0.288);
-    color: white;
-}
-
-.carousel-btn.left {
-    left: 10px;
-}
-
-.carousel-btn.right {
-    right: 10px;
 }
 
 /* Dots */

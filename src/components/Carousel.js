@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./styles.css";
 
 export default function Carousel({ images }) {
     const [current, setCurrent] = useState(0);
     const [fullscreen, setFullscreen] = useState(false);
+
+    const autoplayRef = useRef(null);
+
+    const AUTOPLAY_INTERVAL = 8000; // tempo ms
 
     const next = () => setCurrent((prev) => (prev + 1) % images.length);
     const prev = () =>
@@ -16,14 +20,40 @@ export default function Carousel({ images }) {
 
     const closeFullscreen = () => setFullscreen(false);
 
+    /* -----------------------------------------------------
+       AUTOPLAY — SOMENTE NO MODO NORMAL
+    ----------------------------------------------------- */
+
+    const startAutoplay = () => {
+        stopAutoplay(); // evita duplicação
+        autoplayRef.current = setInterval(() => {
+            setCurrent((prev) => (prev + 1) % images.length);
+        }, AUTOPLAY_INTERVAL);
+    };
+
+    const stopAutoplay = () => {
+        if (autoplayRef.current) {
+            clearInterval(autoplayRef.current);
+            autoplayRef.current = null;
+        }
+    };
+
+    // Controle automático do autoplay
+    useEffect(() => {
+        if (!fullscreen) {
+            startAutoplay(); 
+        } else {
+            stopAutoplay();
+        }
+
+        // limpar interval quando o componente desmontar
+        return () => stopAutoplay();
+    }, [fullscreen]);
+
     return (
         <>
             {/* NORMAL CAROUSEL */}
             <div className="carousel">
-                <button className="carousel-btn left" onClick={prev}>
-                    ‹
-                </button>
-
                 <div className="carousel-window">
                     {images.map((img, index) => (
                         <img
@@ -38,10 +68,6 @@ export default function Carousel({ images }) {
                     ))}
                 </div>
 
-                <button className="carousel-btn right" onClick={next}>
-                    ›
-                </button>
-
                 <div className="carousel-dots">
                     {images.map((_, index) => (
                         <div
@@ -55,7 +81,7 @@ export default function Carousel({ images }) {
                 </div>
             </div>
 
-            {/* FULLSCREEN MODE  */}
+            {/* FULLSCREEN MODE */}
             {fullscreen && (
                 <div className="fullscreen-overlay" onClick={closeFullscreen}>
                     <span className="close-btn" onClick={closeFullscreen}>
