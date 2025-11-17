@@ -35,6 +35,8 @@ export default function HoverCard({
 
         clearInterval(intervalRef.current);
         intervalRef.current = null;
+
+        setCurrentIndex(0);
     }
     useEffect(() => {
         const handleContextMenu = (e) => e.preventDefault();
