@@ -9,7 +9,7 @@ import ProjectPage from "./pages/ProjectPage";
 
 function App() {
     return (
-        <Router>
+        <Router basename="/juliakan">
             {" "}
             {/* faz o browser reconhecer a rota como parte do projeto */}
             <Routes>

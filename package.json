@@ -1,7 +1,7 @@
 {
     "name": "jukan-react",
     "version": "0.1.0",
-    "homepage": "https://github.com/cauanpss/juliakan",
+    "homepage": "https://cauanpss.github.io/juliakan",
     "private": true,
     "dependencies": {
         "@testing-library/dom": "^10.4.1",
