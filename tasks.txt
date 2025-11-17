@@ -1,3 +1,3 @@
-
+Adicionar interações com touchscreen para os componmentes quando em mobile 
 
 Adicionar atributo de link de vídeo aos objetos data
