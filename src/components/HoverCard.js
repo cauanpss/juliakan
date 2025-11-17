@@ -16,7 +16,7 @@ export default function HoverCard({
     const navigate = useNavigate();
 
     const handleClick = () => {
-        navigate(`/project/${projectKey}`);
+        navigate(`/projects/${projectKey}`);
     };
 
     function startSlideshow() {

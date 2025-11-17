@@ -1,2 +1,4 @@
 construir pagina ProjectPage usando o component ProjectContent 
-Adicionar um carrossel ou algo do genero para exibir a galeria de imagens nessa página
+
+
+Adicionar atributo de link de vídeo aos objetos data

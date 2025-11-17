@@ -26,7 +26,7 @@ function App() {
                     path="/ProjectsPerformingArts"
                     element={<ProjectsPerformingArts />}
                 />
-                <Route patch="/projects/:projectid" element={<ProjectPage />} />
+                <Route path="/projects/:projectid" element={<ProjectPage />} />
             </Routes>
         </Router>
     );

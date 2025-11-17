@@ -23,11 +23,11 @@ const hoverCardData = [
 export default function ProjectsPerformingArts() {
     const { t } = useTranslation();
     const mainContainer = useRef();
-    
+
     function handleOnHover(isHovering) {
-        isHovering ?
-        mainContainer.current?.classList.add("onHover") :
-        mainContainer.current?.classList.remove("onHover");
+        isHovering
+            ? mainContainer.current?.classList.add("onHover")
+            : mainContainer.current?.classList.remove("onHover");
     }
 
     return (
