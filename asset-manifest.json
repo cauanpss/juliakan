@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/juliakan/static/css/main.05c022d9.css",
-    "main.js": "/juliakan/static/js/main.144d9a6f.js",
+    "main.css": "/juliakan/static/css/main.0aff6a2b.css",
+    "main.js": "/juliakan/static/js/main.1bdeb320.js",
     "static/js/453.d83071af.chunk.js": "/juliakan/static/js/453.d83071af.chunk.js",
     "static/media/ImaginarySpaces9.jpg": "/juliakan/static/media/ImaginarySpaces9.87231c25bbab0e978d27.jpg",
     "static/media/ImaginarySpaces14.jpg": "/juliakan/static/media/ImaginarySpaces14.55449391531bb0ec41b4.jpg",
@@ -88,12 +88,12 @@
     "static/media/xurek1.jpg": "/juliakan/static/media/xurek1.c3d4967cb160a6fca624.jpg",
     "static/media/hp5.png": "/juliakan/static/media/hp5.22ee4421941e26bc5a06.png",
     "index.html": "/juliakan/index.html",
-    "main.05c022d9.css.map": "/juliakan/static/css/main.05c022d9.css.map",
-    "main.144d9a6f.js.map": "/juliakan/static/js/main.144d9a6f.js.map",
+    "main.0aff6a2b.css.map": "/juliakan/static/css/main.0aff6a2b.css.map",
+    "main.1bdeb320.js.map": "/juliakan/static/js/main.1bdeb320.js.map",
     "453.d83071af.chunk.js.map": "/juliakan/static/js/453.d83071af.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.05c022d9.css",
-    "static/js/main.144d9a6f.js"
+    "static/css/main.0aff6a2b.css",
+    "static/js/main.1bdeb320.js"
   ]
 }
