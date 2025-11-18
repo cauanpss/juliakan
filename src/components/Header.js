@@ -16,7 +16,7 @@ export default function Header() {
                 <h1>Julia Kan</h1>
             </Link>
 
-            <button className="mobile-menu-btn" onclick={toggleMenu}>
+            <button className="mobile-menu-btn" onClick={toggleMenu}>
                 <svg
                     width="24"
                     height="24"
