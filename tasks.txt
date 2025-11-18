@@ -1,3 +1,17 @@
-Adicionar interações com touchscreen para os componmentes quando em mobile 
+Adicionar interações com touchscreen para os componmentes quando em mobile :
+swipe para navegar no carousel eno carousel full screen,
 
-Adicionar atributo de link de vídeo aos objetos data
+
+
+CORRIGIR:
+-pensar em como formatar imagens muito largas no hovercard
+-fazer uma forma de mostrar o título do hovercard no mobile de forma diferente (no pc tem que colocar o mouse em cima, no celular isso não é exatamente confortável -- quando coloca o dedo, 
+ele clica)
+-links estavam ficando azuis no mobile, agora estão sobrescrevendo algumas coisas estéticas, como o link de página ativa da navbar (que antes ficava marcando em qual página estava)
+
+fazer página sobre mim
+fazer página de contato (formulário talvez?)
+
+incluir textos descritivos dos objetos data
+
+resolver WWARNINGS que aparecem no dedploy

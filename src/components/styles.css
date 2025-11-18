@@ -22,14 +22,6 @@ body {
     align-content: center;
 }
 
-a {
-    color: var(--color-black);
-    text-decoration: none;
-}
-
-a:hover {
-    color: rgba(0,0,0,0.74);
-}
 
 /* Header z-index com 2 digitos */ 
 header {
@@ -720,4 +712,17 @@ main.project-content p {
     .project-video iframe {
         height: 350px; 
     }
+}
+
+/* ---------RESET LINKS MOBILE------------- */
+a,
+a:visited,
+a:active,
+a:focus {
+    color: var(--color-black) !important;
+    text-decoration: none !important;
+}
+
+.button-container a button {
+    color: var(--color-black) !important;
 }
