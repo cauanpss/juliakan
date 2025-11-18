@@ -13,31 +13,14 @@ export default function HoverCard({
     const [currentIndex, setCurrentIndex] = useState(0);
     const intervalRef = useRef(null);
     const imageRef = useRef();
+    const cardRef = useRef();
     const navigate = useNavigate();
-
+    const [scrollNeeded, setScrollNeeded] = useState(false);
+    const scrollRef = useRef(0);
     const handleClick = () => {
         navigate(`/projects/${projectKey}`);
     };
 
-    function startSlideshow() {
-        onHover(true);
-        setAsActiveCard(true);
-        if (!intervalRef.current) {
-            intervalRef.current = setInterval(() => {
-                setCurrentIndex((prev) => (prev + 1) % images.length);
-            }, interval);
-        }
-    }
-
-    function stopSlideshow() {
-        onHover(false);
-        setAsActiveCard(false);
-
-        clearInterval(intervalRef.current);
-        intervalRef.current = null;
-
-        setCurrentIndex(0);
-    }
     useEffect(() => {
         const handleContextMenu = (e) => e.preventDefault();
         document.addEventListener("contextmenu", handleContextMenu);
@@ -47,9 +30,60 @@ export default function HoverCard({
         };
     }, []);
 
+    useEffect(() => {
+        const img = imageRef.current;
+        const card = cardRef.current;
+        if (img && card) {
+            setScrollNeeded(img.naturalWidth > card.offsetWidth);
+        }
+    }, [images]);
+
+    function startSlideshow() {
+        onHover(true);
+        setAsActiveCard(true);
+
+        if (scrollNeeded) {
+            const img = imageRef.current;
+            const card = cardRef.current;
+            let direction = 1;
+            const step = 1;
+
+            intervalRef.current = setInterval(() => {
+                if (!img) return;
+                scrollRef.current += step * direction;
+
+                if (scrollRef.current > img.offsetWidth - card.offsetWidth)
+                    direction = -1;
+                if (scrollRef.current < 0) direction = 1;
+
+                img.style.transform = `translateX(-${scrollRef.current}px)`;
+            }, 16);
+        } else {
+            if (!intervalRef.current) {
+                intervalRef.current = setInterval(() => {
+                    setCurrentIndex((prev) => (prev + 1) % images.length);
+                }, interval);
+            }
+        }
+    }
+
+    function stopSlideshow() {
+        onHover(false);
+        setAsActiveCard(false);
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+
+        if (scrollNeeded && imageRef.current) {
+            imageRef.current.style.transform = `translateX(0)`;
+        } else {
+            setCurrentIndex(0);
+        }
+    }
+
     return (
         <div
             className={`hover-card ${isActiveCard ? " hovered" : ""}`}
+            ref={cardRef}
             onMouseEnter={startSlideshow}
             onMouseLeave={stopSlideshow}
             onClick={handleClick}
