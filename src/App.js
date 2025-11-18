@@ -6,11 +6,13 @@ import ProjectsPerformingArts from "./pages/ProjectsPerformingArts";
 import AboutMe from "./pages/AboutMeVisualArts";
 import "./App.css";
 import ProjectPage from "./pages/ProjectPage";
+import ScrollToTop from "./util/useScrollToTop";
 
 function App() {
     return (
         <Router basename="/juliakan">
             {" "}
+            <ScrollToTop />
             {/* faz o browser reconhecer a rota como parte do projeto */}
             <Routes>
                 {" "}
