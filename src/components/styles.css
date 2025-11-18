@@ -115,7 +115,15 @@ main {
     gap: 20px;
 }
 
-
+.mobile-menu-btn {
+    display: none;
+    margin-top: 5%;
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--color-black);
+}
 
 .button-container {
     display: flex;
@@ -563,6 +571,31 @@ main.project-content p {
         font-size: 48px;
         margin-bottom: 10px;
     }
+    
+    .nav-desktop {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        z-index: 100;
+    }
+
+    .nav-desktop.open {
+        display: flex; 
+    }
+
+    .mobile-menu-btn {
+        display: block; 
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
 
     .visual-arts,
     .performing-arts{
@@ -587,7 +620,7 @@ main.project-content p {
     .overlay {
         font-size: 1.2rem;
     }
-
+    
     /* ProjectPage*/
     main.project-content {
         width: 90%;

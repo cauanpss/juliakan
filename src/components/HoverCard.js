@@ -89,6 +89,8 @@ export default function HoverCard({
             ref={cardRef}
             onMouseEnter={startSlideshow}
             onMouseLeave={stopSlideshow}
+            onTouchStart={startSlideshow}
+            onTouchLeave={stopSlideshow}
             onClick={handleClick}
         >
             {images.map((img, index) => (

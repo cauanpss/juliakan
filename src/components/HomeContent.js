@@ -5,28 +5,27 @@ import { bau } from "../assets/images/PerformingArts/Projeto_1_NomeDoProjeto";
 
 export default function HomeContent() {
     // const { t, i18n } = useTranslation();
-    const {t} = useTranslation();
-    
+    const { t } = useTranslation();
+
     return (
         <main>
             <Link to="/" className="logo">
                 <h1>Julia Kan</h1>
             </Link>
-            <div class="home-menu" style={{backgroundImage: `url(${bau})`}}>
-            
-                <div class="home-menu-content">     
-                    <div class="button-container">
+            <div
+                className="home-menu"
+                style={{ backgroundImage: `url(${bau})` }}
+            >
+                <div class="home-menu-content">
+                    <div className="button-container">
                         <Link to="/ProjectsVisualArts">
-                            <button class="visual-arts">
-                            {t("arts")}
-                            </button>
-                            
+                            <button className="visual-arts">{t("arts")}</button>
                         </Link>
-    
-                        <div class="separador">/</div>
-    
+
+                        <div className="separador">/</div>
+
                         <Link to="/ProjectsPerformingArts">
-                            <button class="performing-arts">
+                            <button className="performing-arts">
                                 {" "}
                                 {t("performing")}
                             </button>
