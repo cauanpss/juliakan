@@ -14,42 +14,35 @@ export default function HoverCard({
     const intervalRef = useRef(null);
     const imageRef = useRef();
     const cardRef = useRef();
-    const navigate = useNavigate();
-    const [scrollNeeded, setScrollNeeded] = useState(false);
     const scrollRef = useRef(0);
+    const navigate = useNavigate();
+
     const handleClick = () => {
         navigate(`/projects/${projectKey}`);
     };
 
-    useEffect(() => {
-        const handleContextMenu = (e) => e.preventDefault();
-        document.addEventListener("contextmenu", handleContextMenu);
+    const resetScroll = () => {
+        scrollRef.current = 0;
+        if (imageRef.current)
+            imageRef.current.style.transform = `translateX(0)`;
+    };
 
-        return () => {
-            document.removeEventListener("contextmenu", handleContextMenu);
-        };
-    }, []);
-
-    useEffect(() => {
-        const img = imageRef.current;
-        const card = cardRef.current;
-        if (img && card) {
-            setScrollNeeded(img.naturalWidth > card.offsetWidth);
-        }
-    }, [images]);
-
-    function startSlideshow() {
+    const startSlideshow = () => {
         onHover(true);
         setAsActiveCard(true);
 
-        if (scrollNeeded) {
+        let direction = 1;
+        const step = 1;
+        let elapsedTime = 0;
+
+        intervalRef.current = setInterval(() => {
             const img = imageRef.current;
             const card = cardRef.current;
-            let direction = 1;
-            const step = 1;
+            if (!img || !card) return;
 
-            intervalRef.current = setInterval(() => {
-                if (!img) return;
+            const needsScroll = img.naturalWidth > card.offsetWidth;
+
+            if (needsScroll) {
                 scrollRef.current += step * direction;
 
                 if (scrollRef.current > img.offsetWidth - card.offsetWidth)
@@ -57,28 +50,38 @@ export default function HoverCard({
                 if (scrollRef.current < 0) direction = 1;
 
                 img.style.transform = `translateX(-${scrollRef.current}px)`;
-            }, 16);
-        } else {
-            if (!intervalRef.current) {
-                intervalRef.current = setInterval(() => {
-                    setCurrentIndex((prev) => (prev + 1) % images.length);
-                }, interval);
-            }
-        }
-    }
 
-    function stopSlideshow() {
+                // quando scroll volta ao início, passa para próxima imagem
+                if (direction === 1 && scrollRef.current === 0) {
+                    setCurrentIndex((prev) => {
+                        resetScroll();
+                        direction = 1; // reinicia direção
+                        elapsedTime = 0; // reinicia contador
+                        return (prev + 1) % images.length;
+                    });
+                }
+            } else {
+                elapsedTime += 16;
+                if (elapsedTime >= interval) {
+                    setCurrentIndex((prev) => {
+                        resetScroll();
+                        direction = 1; // reinicia direção
+                        elapsedTime = 0; // reinicia contador
+                        return (prev + 1) % images.length;
+                    });
+                }
+            }
+        }, 16);
+    };
+
+    const stopSlideshow = () => {
         onHover(false);
         setAsActiveCard(false);
         clearInterval(intervalRef.current);
         intervalRef.current = null;
-
-        if (scrollNeeded && imageRef.current) {
-            imageRef.current.style.transform = `translateX(0)`;
-        } else {
-            setCurrentIndex(0);
-        }
-    }
+        resetScroll();
+        setCurrentIndex(0);
+    };
 
     return (
         <div
@@ -93,7 +96,7 @@ export default function HoverCard({
                     key={index}
                     src={img}
                     alt={text}
-                    ref={imageRef}
+                    ref={index === currentIndex ? imageRef : null} // ref apenas para a imagem atual
                     className={index === currentIndex ? "active" : ""}
                 />
             ))}
