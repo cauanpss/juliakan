@@ -341,12 +341,22 @@ main.project-content p {
     max-width: 900px;
 }
 
-.gallery {
-    max-width: 800px ;
+
+.project-video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
-.gallery igm{
+.project-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 /* ----------------------------- Carousel -------------------------- */
@@ -378,7 +388,7 @@ main.project-content p {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     opacity: 0 ;
     transition: opacity 0.8s ease-in-out;
 
@@ -408,7 +418,7 @@ main.project-content p {
     background: black;
 }
 
-/* ----------------------- Fullscreen -------------------------- */
+/* ----------------------- Carousel Fullscreen -------------------------- */
 
 .fullscreen-overlay {
     position: fixed;
@@ -620,11 +630,18 @@ main.project-content p {
     .close-btn {
         font-size: 2.5rem;
     }
+    
+    /* VIDEO */
+    .project-video iframe {
+        height: 350px; 
+    }
+    
 }
 
-/* ---------- VERY SMALL DEVICES – até 480px ------------------*/
+/* ----------– até 480px ------------------*/
 @media (max-width: 480px) {
 
+    /*--- Home Menu ---*/
     .home-menu {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -640,6 +657,7 @@ main.project-content p {
         font-size: 36px;
     }
 
+    /*--- hover Cards ---*/
     .hover-card {
         height: 170px;
     }
@@ -647,7 +665,9 @@ main.project-content p {
     .overlay {
         font-size: 1rem;
     }
-
+    
+    /* --- Carousel --- */
+    
     .carousel-window {
         height: 220px;
     }
@@ -659,5 +679,10 @@ main.project-content p {
     .close-btn {
         font-size: 2rem;
         right: 20px;
+    }
+    
+    /*--- Video --- */
+    .project-video iframe {
+        height: 350px; 
     }
 }
