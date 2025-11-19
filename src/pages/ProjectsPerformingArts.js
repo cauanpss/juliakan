@@ -35,7 +35,7 @@ export default function ProjectsPerformingArts() {
             <TranslateButtons />
             <Header />
 
-            <div className="hoverCard-containers">
+            <div className="hoverCard-page-containers">
                 {hoverCardData.map((props, index) => (
                     <HoverCard
                         key={index}

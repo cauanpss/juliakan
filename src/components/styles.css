@@ -26,12 +26,14 @@ body {
 /* Header z-index com 2 digitos */ 
 header {
     /* border: 2px solid red; */
+    background:linear-gradient(to bottom, rgba(255, 255, 255, 0.849), rgba(255, 255, 255, 0));
     display: flex;
     position: fixed;
     flex-direction: column;
     flex-wrap: wrap;
     display: flex;
     width: 100%;
+    height: 15%;
     justify-content: space-between;
     z-index: 10;
 }
@@ -227,24 +229,19 @@ footer {
 
 /* HoverCard z-index com 1 digito */
 /*---------------- main --------------------*/
-.hoverCard-containers {
+.hoverCard-page-containers {
     /* border: 2px solid red ; */
-    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin-top:200px;
-    justify-items: center;
+    margin-top:10%;
     padding: 0 10%;
     gap: 2.5em 4em;
-    gap: 20px;
-    justify-self: center;
 }
-
 
 /* Hover Card */
 .hover-card {
-    display: flex;
     border: solid 1px rgba(0, 0, 0, 0.171);
+    display: flex;
     position: relative;
     width: 100%;
     height: 100%;
@@ -258,25 +255,37 @@ footer {
 }
 
 .hover-card:hover {
-    transform: scale(1.02); 
+    transform: scale(1.06); 
 }
 
-.hover-card img {
-    position: absolute;
-    height: 100%;
-    width: auto;
-    object-fit: cover;
-    transition: transform 0.5s ease; 
-    opacity: 0;
-    z-index: 2
-}
-
-.hover-card img.active {
+.hover-card-img-container img.active {
     opacity: 1;
     z-index: 3;
 }
 
-.overlay {
+.hover-card-img-container {
+    width:100%;
+    height: 100%;
+    padding-left: 6%;
+    padding-right: 6%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+.hover-card-img-container img {
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+    transition: transform 0.5s ease; 
+    opacity: 0;
+    z-index: 2;
+    display: block;
+    
+}
+
+
+.hover-card .overlay {
     opacity: 0;
     z-index: 12;
     position: absolute;
@@ -301,6 +310,7 @@ footer {
 .hover-card:hover .overlay {
     opacity: 0.6;
 }
+
 
 /*--------------- ProjectPage ----------------*/
 
@@ -599,21 +609,7 @@ main.project-content p {
     font-size: 18px
     }
 
-    /* Hover Cards*/
-    .hoverCard-containers {
-        grid-template-columns: 1fr;
-        padding: 0 5%;
-        margin-top: 120px;
-    }
 
-    .hover-card {
-        width: 100%;
-        height: 200px;
-    }
-
-    .overlay {
-        font-size: 1.2rem;
-    }
     
     /* ProjectPage*/
     main.project-content {

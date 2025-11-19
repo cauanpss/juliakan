@@ -23,7 +23,7 @@ export default function ProjectsVisualArts() {
             <TranslateButtons />
             <Header />
             <main ref={mainContainer}>
-                <div className="hoverCard-containers">
+                <div className="hoverCard-page-containers">
                     {projectList.map((project) => (
                         <HoverCard
                             key={project.key}

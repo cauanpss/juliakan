@@ -27,6 +27,8 @@
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "generate-indexes": "node scripts/generateAllIndexes.js",
+        "generate-structure": "node scripts/generateStructure.js",
+        "generate-data-files": "node scripts/generateDataFiles.js",
         "predeploy": "npm run build",
         "deploy": "gh-pages -d build"
     },

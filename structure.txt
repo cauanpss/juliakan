@@ -243,19 +243,22 @@ JULIAKAN/
 │   │               ├── tela8.jpg
 │   │               └── tela9.jpg
 │   ├── components
+│   │   ├── Carousel.js
 │   │   ├── Footer.js
 │   │   ├── Header.js
 │   │   ├── HomeContent.js
 │   │   ├── HoverCard.js
+│   │   ├── ProjectContent.js
 │   │   ├── TranslateButton.js
 │   │   └── styles.css
 │   ├── data
-│   │   └── dataProjectDetails
+│   │   ├── dataDefault.js
+│   │   ├── dataProjectVisualArtsDetail
+│   │   └── dataProjectVisualArtsDetails
 │   │       ├── dataBau.js
 │   │       ├── dataBlanca.js
 │   │       ├── dataClippings.js
 │   │       ├── dataCreacionConRayosAstrales.js
-│   │       ├── dataDefault.js
 │   │       ├── dataHorizons.js
 │   │       ├── dataImaginarySpaces.js
 │   │       ├── dataTela.js
@@ -269,6 +272,7 @@ JULIAKAN/
 │   ├── pages
 │   │   ├── AboutMeVisualArts.js
 │   │   ├── Home.js
+│   │   ├── ProjectPage.js
 │   │   ├── ProjectsPerformingArts.js
 │   │   ├── ProjectsVisualArts.js
 │   │   └── ProjectsVisualArtsOldVersion.js
@@ -277,5 +281,7 @@ JULIAKAN/
 │   └── util
 │       ├── i18next.js
 │       ├── importAll.js
-│       └── language.js
+│       ├── language.js
+│       └── useScrollToTop.js
+├── structure.txt
 └── tasks.txt
