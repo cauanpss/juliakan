@@ -2,7 +2,7 @@ import projetoCreacionConRayosAstrales from "../../assets/images/VisualArts/Crea
 
 const dataCreacionConRayosAstrales = {
     key: "creacionConRayosAstrales",
-    title: "Creación con Rayos Astrales",
+    title: "Creacion Con Rayos Astrales",
     year: "",
     category: "Visual Arts",
     participants: ["Julia Kan"],
@@ -12,3 +12,4 @@ const dataCreacionConRayosAstrales = {
 };
 
 export default dataCreacionConRayosAstrales;
+

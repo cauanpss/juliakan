@@ -12,3 +12,4 @@ const dataTela = {
 };
 
 export default dataTela;
+

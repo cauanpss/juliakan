@@ -12,3 +12,4 @@ const dataHorizons = {
 };
 
 export default dataHorizons;
+

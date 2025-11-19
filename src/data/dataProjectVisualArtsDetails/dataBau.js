@@ -15,3 +15,4 @@ const dataBau = {
 };
 
 export default dataBau;
+

@@ -286,6 +286,7 @@ footer {
 
 
 .hover-card .overlay {
+    
     opacity: 0;
     z-index: 12;
     position: absolute;
@@ -609,7 +610,31 @@ main.project-content p {
     font-size: 18px
     }
 
+    /*hovercard*/
+    
+    .hoverCard-page-containers {
+        grid-template-columns: 1fr;
+        padding: 0 5%;             
+        gap: 1.5em;                
+        margin-top: 20%;           
+    }
 
+    .hover-card {
+        width: 100%;               
+        aspect-ratio: 16/9;        
+    }
+    
+    .hover-card .overlay {
+        color: #161616bd;
+        opacity: 0.8 !important;        
+        background: rgba(233, 233, 233, 0.164); 
+        z-index: 10;
+    }
+
+    /* Desativa o efeito do hover no mobile */
+    .hover-card:hover {
+        transform: none;
+    }
     
     /* ProjectPage*/
     main.project-content {

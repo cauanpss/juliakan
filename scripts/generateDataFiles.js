@@ -1,8 +1,6 @@
-// scripts/generateDataFiles.js
 const fs = require("fs");
 const path = require("path");
 
-// Caminhos base
 const BASE_IMAGES = path.join(
     __dirname,
     "..",
@@ -19,7 +17,6 @@ const TARGET_DATA = path.join(
     "dataProjectVisualArtsDetails"
 );
 
-// Utilidades
 function toCamelCase(str) {
     return str
         .replace(/[-_ ]+(.)/g, (_, c) => c.toUpperCase())
@@ -35,91 +32,76 @@ function toTitleCase(str) {
         .replace(/^./, (c) => c.toUpperCase());
 }
 
-function parseObjectFromFile(content) {
-    // Extrai tudo entre {}
-    const match = content.match(/const data[\s\S]+?=\s*({[\s\S]*?});/);
-
-    if (!match) return null;
-
-    try {
-        return eval("(" + match[1] + ")");
-    } catch {
-        console.error("Erro ao fazer parse do objeto existente.");
-        return null;
-    }
-}
-
 function updateOrCreateDataFile(folderName) {
     const key = toCamelCase(folderName);
     const title = toTitleCase(folderName);
-    const importVarName = key;
+    const importVarName = `projeto${folderName}`;
     const importPath = `../../assets/images/VisualArts/${folderName}`;
     const fileName = `data${folderName}.js`;
     const filePath = path.join(TARGET_DATA, fileName);
 
-    let existingData = null;
-    let existingFileContent = null;
+    let finalContent = "";
 
-    const fileExists = fs.existsSync(filePath);
+    const importLine = `import ${importVarName} from "${importPath}";`;
 
-    if (fileExists) {
-        existingFileContent = fs.readFileSync(filePath, "utf-8");
-        existingData = parseObjectFromFile(existingFileContent);
+    // arquivo existente → atualizar apenas campo images e manter tudo
+    if (fs.existsSync(filePath)) {
+        let content = fs.readFileSync(filePath, "utf-8");
+
+        // substitui import antigo se existir
+        content = content.replace(/import .*? from .*?;/, importLine);
+
+        // substitui campo images mantendo variáveis existentes:
+        content = content.replace(
+            /images:\s*.*?(,|\n)/,
+            `images: ${importVarName},`
+        );
+
+        // substitui key
+        content = content.replace(/key:\s*".*?"/, `key: "${key}"`);
+
+        // substitui title
+        content = content.replace(/title:\s*".*?"/, `title: "${title}"`);
+
+        finalContent = content;
+        console.log("✔ Atualizado:", fileName);
     }
 
-    // TEMPLATE base
-    const finalObject = {
-        key,
-        title,
-        year: existingData?.year ?? "",
-        category: existingData?.category ?? "Visual Arts",
-        participants: existingData?.participants ?? ["Julia Kan"],
-        description: existingData?.description ?? "",
-        images: importVarName,
-        video: existingData?.video ?? undefined,
-        location: existingData?.location ?? undefined,
-        ...existingData, // preserva novos campos manuais
-    };
+    // arquivo novo → gerar template básico
+    else {
+        finalContent = `
+${importLine}
 
-    // Remove undefined (caso não existam)
-    Object.keys(finalObject).forEach(
-        (k) => finalObject[k] === undefined && delete finalObject[k]
-    );
-
-    const jsObjectString = JSON.stringify(finalObject, null, 4)
-        .replace(/"([^"]+)":/g, "$1:") // remove aspas das chaves
-        .replace(/"([^"]+)"/g, '"$1"'); // mantém aspas só em strings
-
-    const finalJs = `
-import ${importVarName} from "${importPath}";
-
-const data${folderName} = ${jsObjectString};
+const data${folderName} = {
+    key: "${key}",
+    title: "${title}",
+    year: "",
+    category: "Visual Arts",
+    participants: ["Julia Kan"],
+    description: "",
+    images: ${importVarName},
+};
 
 export default data${folderName};
 `.trim();
 
-    fs.writeFileSync(filePath, finalJs + "\n");
+        console.log("✔ Criado:", fileName);
+    }
 
-    console.log(
-        fileExists
-            ? `✔ Atualizado sem sobrescrever: ${fileName}`
-            : `✔ Criado novo arquivo: ${fileName}`
-    );
+    fs.writeFileSync(filePath, finalContent + "\n");
 }
 
 function run() {
     const folders = fs.readdirSync(BASE_IMAGES).filter((f) => {
-        const fullPath = path.join(BASE_IMAGES, f);
-        return fs.statSync(fullPath).isDirectory();
+        const full = path.join(BASE_IMAGES, f);
+        return fs.statSync(full).isDirectory();
     });
 
-    console.log("Gerando arquivos de dados...\n");
+    console.log("Gerando data files...\n");
 
     folders.forEach(updateOrCreateDataFile);
 
-    console.log(
-        "\n🏁 Pronto! Todos os arquivos foram gerados/atualizados sem perder dados."
-    );
+    console.log("\n🏁 Concluído!");
 }
 
 run();
