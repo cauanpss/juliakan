@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { projectDetails } from "../data/dataProjectVisualArtsDetails";
+import { projectDetails } from "../data/dataProjectsVisualArtsDetails";
 import ProjectContent from "../components/ProjectContent";
 import "../components/styles.css";
 import Header from "../components/Header";
