@@ -266,8 +266,8 @@ footer {
 .hover-card-img-container {
     width:100%;
     height: 100%;
-    padding-left: 6%;
-    padding-right: 6%;
+    /* padding-left: 6%; */
+    /* padding-right: 6%; */
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -309,7 +309,7 @@ footer {
     justify-content: center;
 }
 .hover-card:hover .overlay {
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 

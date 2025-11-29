@@ -4,10 +4,12 @@ import "./styles.css";
 export default function Carousel({ images }) {
     const [current, setCurrent] = useState(0);
     const [fullscreen, setFullscreen] = useState(false);
-
+    const touchStartX = useRef(0);
+    const touchEndX = useRef(0);
+    const SWIPE_THRESHOLD = 50;
     const autoplayRef = useRef(null);
 
-    const AUTOPLAY_INTERVAL = 8000; // tempo ms
+    const AUTOPLAY_INTERVAL = 6000; // tempo ms
 
     const next = () => setCurrent((prev) => (prev + 1) % images.length);
     const prev = () =>
@@ -20,6 +22,7 @@ export default function Carousel({ images }) {
 
     const closeFullscreen = () => setFullscreen(false);
 
+    
     /* -----------------------------------------------------
        AUTOPLAY — SOMENTE NO MODO NORMAL
     ----------------------------------------------------- */
@@ -50,11 +53,34 @@ export default function Carousel({ images }) {
         return () => stopAutoplay();
     }, [fullscreen]);
 
+    //swipe mobile
+    const handleTouchStart = (e) => {
+        touchStartX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchMove = (e) => {
+        touchEndX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchEnd = () => {
+        const distance = touchStartX.current - touchEndX.current;
+
+        if (Math.abs(distance) > SWIPE_THRESHOLD) {
+            if (distance > 0) {
+                next(); // arrastou para esquerda → próxima imagem
+            } else {
+                prev(); // arrastou para direita → imagem anterior
+            }
+        }
+    }
     return (
         <>
             {/* NORMAL CAROUSEL */}
             <div className="carousel">
-                <div className="carousel-window">
+                <div className="carousel-window"
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}>
                     {images.map((img, index) => (
                         <img
                             key={index}
@@ -68,6 +94,8 @@ export default function Carousel({ images }) {
                     ))}
                 </div>
 
+                
+                
                 <div className="carousel-dots">
                     {images.map((_, index) => (
                         <div
@@ -126,3 +154,4 @@ export default function Carousel({ images }) {
         </>
     );
 }
+

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "./styles.css";
 
 export default function Header() {
@@ -10,8 +10,39 @@ export default function Header() {
 
     const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
+    const touchStartX = useRef(0);
+    const touchEndX = useRef(0);
+
+    const SWIPE_THRESHOLD = 80;
+
+    const handleTouchStart = (e) => {
+        touchStartX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchMove = (e) => {
+        touchEndX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchEnd = () => {
+        const distance = touchEndX.current - touchStartX.current;
+
+        // swipe para direita → ABRIR MENU
+        if (distance < -SWIPE_THRESHOLD && !isMobileMenuOpen) {
+            setIsMobileMenuOpen(true);
+        }
+
+        // swipe para esquerda → FECHAR MENU
+        if (distance > SWIPE_THRESHOLD && isMobileMenuOpen) {
+            setIsMobileMenuOpen(false);
+        }
+    };
+
     return (
-        <header>
+        <header 
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}>
+
             <Link to="/" className="logo">
                 <h1>Julia Kan</h1>
             </Link>
