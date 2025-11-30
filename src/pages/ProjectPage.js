@@ -17,7 +17,7 @@ export default function ProjectPage() {
 
     return (
         <>
-            <TranslateButtons />
+            {/* <TranslateButtons /> */}
             <Header />
             <ProjectContent data={data} />
         </>

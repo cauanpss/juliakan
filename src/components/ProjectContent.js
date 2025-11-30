@@ -4,11 +4,13 @@ import Carousel from "./Carousel";
 
 export default function ProjectContent({ data }) {
     const { t } = useTranslation();
-
+    
     return (
         <main className="project-content">
-            <h1>{data.title}</h1>
+            {/* <h1>{data.title}</h1> */}
 
+            <Carousel images={data.images} />
+            
             {/* :Bloco do vídeo */}
             {/* Caso seja link */}
             {data.video && (
@@ -33,7 +35,6 @@ export default function ProjectContent({ data }) {
 
             <p>{data.description}</p>
 
-            <Carousel images={data.images} />
         </main>
     );
 }

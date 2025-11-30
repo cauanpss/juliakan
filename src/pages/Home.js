@@ -6,7 +6,9 @@ import TranslateButtons from "../components/TranslateButton";
 export default function Home() {
     return (
         <div>
-            <TranslateButtons />
+            <header>
+                <TranslateButtons />
+            </header>
             <HomeContent />
         </div>
     );

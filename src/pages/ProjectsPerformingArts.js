@@ -32,7 +32,7 @@ export default function ProjectsPerformingArts() {
 
     return (
         <>
-            <TranslateButtons />
+            {/* <TranslateButtons /> */}
             <Header />
 
             <div className="hoverCard-page-containers">

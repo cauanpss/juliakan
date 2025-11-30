@@ -39,13 +39,15 @@ header {
 }
 
 .nav-desktop {
+    /* border: 1px solid red; */
     display: flex;
+    width: 90.5%;
     list-style: none;
     justify-content: flex-end;
-    margin-top: 30px;
-    padding: 15px;
+    margin-top: 16px;
+    padding: 10px;
     gap: 20px;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .nav-desktop a{
@@ -59,17 +61,20 @@ header {
 }
 
 .logo {
+    /* border: 1px solid green; */
     color:black;
-    font-size: 20px;
+    font-size: 15px;
     position: absolute;
     align-self: flex-start;
     background-color: transparent;
-    padding: 30px;
+    padding: 10px;
     text-decoration: none;
+    z-index: 100;
 }
 
 /*Julia Kan config text*/
 .logo h1 {
+    z-index: 100; 
     font-family: 'DM Mono','Courier New', Courier, monospace ;
     font-weight: bold;
     color: var(--color-black);
@@ -170,20 +175,26 @@ main {
 }
 /* Translate Button z-index com 3 digitos */
 .translate {
+    /* border: 1px solid red; */
     display: flex;
+    align-self: flex-end;
     position: fixed;
-    top: 0px;
-    right: 10px; 
+    top: 1.2%;
     gap: 3px;
     z-index: 100;
+    font-weight: bold;
+
 }
 
 .translate .separador {
     margin-top: 10px;
     font-size: 20px ;
+    /* font-weight: 500; */
 }
 
 .translate button{
+    /* font-weight: bold; */
+
     width: auto;
     border: none;
     padding: 2px 6px;
@@ -326,25 +337,22 @@ footer {
 
 main.project-content {
     /* border: 2px solid  rgb(8, 255, 8); */
-    margin-top: 140px;
+    margin-top: 3.5%;
     margin-left: auto;
     margin-right: auto;
     width: 65%;
-    padding: 0 25px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
     animation: fadeIn 0.5s ease;
 }
 
 main.project-content h1 {
     font-family: var(--font-accent);
-    align-self: center;
-    margin-left:40px;
-    font-size: 2.8rem;
+    align-self: flex-start;
+    font-size: 1rem;
     color: var(--color-black);
-    margin-bottom: 10px;
     letter-spacing: -1px;
+    z-index: 100;
 }
 
 main.project-content p {
@@ -419,8 +427,8 @@ main.project-content p {
 }
 
 .dot {
-    width: 12px;
-    height: 12px;
+    width: 6px;
+    height: 6px;
     background: #bbb;
     border-radius: 50%;
     cursor: pointer;
@@ -550,6 +558,7 @@ main.project-content p {
     }
 
     .logo h1 {
+        z-index: 100;
         font-size: 18px;
     }
 

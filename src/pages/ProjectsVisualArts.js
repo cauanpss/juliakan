@@ -20,7 +20,7 @@ export default function ProjectsVisualArts() {
 
     return (
         <>
-            <TranslateButtons />
+            {/* <TranslateButtons /> */}
             <Header />
             <main ref={mainContainer}>
                 <div className="hoverCard-page-containers">

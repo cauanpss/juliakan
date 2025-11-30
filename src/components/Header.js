@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useState, useRef } from "react";
 import "./styles.css";
+import TranslateButtons from "./TranslateButton";
 
 export default function Header() {
     const { t } = useTranslation();
@@ -67,6 +68,7 @@ export default function Header() {
                 </svg>
             </button>
 
+
             <nav className={`nav-desktop ${isMobileMenuOpen ? "open" : ""}`}>
                 <NavLink to="/ProjectsVisualArts" onClick={toggleMenu}>
                     <strong>{t("Projects")}</strong>
@@ -78,6 +80,10 @@ export default function Header() {
                     <strong>{t("contact")}</strong>
                 </NavLink>
             </nav>
+
+            <TranslateButtons />
+
+
         </header>
     );
 }
