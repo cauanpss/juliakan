@@ -1,4 +1,3 @@
-2 - Adicionar botões invisíveis no carousel
 3 - navbar de projetos (pensar em como adicionar dinamicamente novas páginas)
 4 - corrigir interações de swipe para mobile (adicionar toda lateral para interação do menu)
 5 - adicionar botão de voltar ao topo da página quando a página chegar ao fim
