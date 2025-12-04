@@ -407,9 +407,27 @@ main.project-content p {
     border-radius: 10px;
     overflow: hidden;
     position: relative;
-    /* display: flex; */
-    /* justify-content: center;
-    align-items: center; */
+}
+
+.carousel-hitbox {
+    position: absolute;
+    top: 0;
+    width: 15%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+}
+
+/* lado esquerdo */
+.carousel-hitbox.left {
+    left: 12%;
+}
+
+/* lado direito */
+.carousel-hitbox.right {
+    right: 12%;
 }
 
 .carousel-image {
@@ -682,6 +700,12 @@ main.project-content p {
         height: 55vw; 
         max-height: 360px;
     }
+
+    /* CAROUSEL */
+    .carousel-hitbox {
+        display: none;   /* remove os botões */
+    }
+    
 
     /* FULLSCREEN IMAGES */
     .fullscreen-image {

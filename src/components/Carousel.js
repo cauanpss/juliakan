@@ -22,7 +22,6 @@ export default function Carousel({ images }) {
 
     const closeFullscreen = () => setFullscreen(false);
 
-    
     /* -----------------------------------------------------
        AUTOPLAY — SOMENTE NO MODO NORMAL
     ----------------------------------------------------- */
@@ -72,15 +71,17 @@ export default function Carousel({ images }) {
                 prev(); // arrastou para direita → imagem anterior
             }
         }
-    }
+    };
     return (
         <>
             {/* NORMAL CAROUSEL */}
             <div className="carousel">
-                <div className="carousel-window"
-                onTouchStart={handleTouchStart}
-                onTouchMove={handleTouchMove}
-                onTouchEnd={handleTouchEnd}>
+                <div
+                    className="carousel-window"
+                    onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
+                    onTouchEnd={handleTouchEnd}
+                >
                     {images.map((img, index) => (
                         <img
                             key={index}
@@ -94,8 +95,23 @@ export default function Carousel({ images }) {
                     ))}
                 </div>
 
-                
-                
+                <button
+                    className="carousel-hitbox left"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        prev();
+                    }}
+                ></button>
+
+                {/* BOTÃO INVISÍVEL — LADO DIREITO */}
+                <button
+                    className="carousel-hitbox right"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        next();
+                    }}
+                ></button>
+
                 <div className="carousel-dots">
                     {images.map((_, index) => (
                         <div
@@ -154,4 +170,3 @@ export default function Carousel({ images }) {
         </>
     );
 }
-
