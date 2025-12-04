@@ -4,8 +4,8 @@ import { useTranslation } from "react-i18next";
 import { bau } from "../assets/images/PerformingArts/Projeto_1_NomeDoProjeto";
 
 export default function HomeContent() {
-    // const { t, i18n } = useTranslation();
-    const { t } = useTranslation();
+    // const { translate, i18n } = useTranslation();
+    const { translate } = useTranslation();
 
     return (
         <main>
@@ -19,7 +19,9 @@ export default function HomeContent() {
                 <div class="home-menu-content">
                     <div className="button-container">
                         <Link to="/ProjectsVisualArts">
-                            <button className="visual-arts">{t("arts")}</button>
+                            <button className="visual-arts">
+                                {translate("arts")}
+                            </button>
                         </Link>
 
                         <div className="separador">/</div>
@@ -27,7 +29,7 @@ export default function HomeContent() {
                         <Link to="/ProjectsPerformingArts">
                             <button className="performing-arts">
                                 {" "}
-                                {t("performing")}
+                                {translate("performing")}
                             </button>
                         </Link>
                     </div>

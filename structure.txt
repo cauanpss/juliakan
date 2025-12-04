@@ -15,6 +15,7 @@ JULIAKAN/
 │   └── robots.txt
 ├── scripts
 │   ├── generateAllIndexes.js
+│   ├── generateDataFiles.js
 │   └── generateStructure.js
 ├── src
 │   ├── App.css
@@ -22,6 +23,7 @@ JULIAKAN/
 │   ├── App.test.js
 │   ├── assets
 │   │   └── images
+│   │       ├── PastaTeste
 │   │       ├── PerformingArts
 │   │       │   ├── Projeto_1_NomeDoProjeto
 │   │       │   │   ├── bau.jpg
@@ -248,13 +250,15 @@ JULIAKAN/
 │   │   ├── Header.js
 │   │   ├── HomeContent.js
 │   │   ├── HoverCard.js
+│   │   ├── Navbar.js
+│   │   ├── NavbarProjects.js
 │   │   ├── ProjectContent.js
 │   │   ├── TranslateButton.js
 │   │   └── styles.css
 │   ├── data
 │   │   ├── dataDefault.js
-│   │   ├── dataProjectVisualArtsDetail
-│   │   └── dataProjectVisualArtsDetails
+│   │   ├── dataProjectsPerformingArtsDetails
+│   │   └── dataProjectsVisualArtsDetails
 │   │       ├── dataBau.js
 │   │       ├── dataBlanca.js
 │   │       ├── dataClippings.js

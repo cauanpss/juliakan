@@ -4,6 +4,7 @@ import ProjectContent from "../components/ProjectContent";
 import "../components/styles.css";
 import Header from "../components/Header";
 import TranslateButtons from "../components/TranslateButton";
+import NavbarProjects from "../components/NavbarProjects";
 
 export default function ProjectPage() {
     const { projectid } = useParams();
@@ -18,7 +19,10 @@ export default function ProjectPage() {
     return (
         <>
             {/* <TranslateButtons /> */}
-            <Header />
+            <div className="top-wrapper">
+                <Header />
+                <NavbarProjects />
+            </div>
             <ProjectContent data={data} />
         </>
     );

@@ -53,12 +53,12 @@ export default function Carousel({ images }) {
     }, [fullscreen]);
 
     //swipe mobile
-    const handleTouchStart = (e) => {
-        touchStartX.current = e.touches[0].clientX;
+    const handleTouchStart = (event) => {
+        touchStartX.current = event.touches[0].clientX;
     };
 
-    const handleTouchMove = (e) => {
-        touchEndX.current = e.touches[0].clientX;
+    const handleTouchMove = (event) => {
+        touchEndX.current = event.touches[0].clientX;
     };
 
     const handleTouchEnd = () => {
@@ -97,8 +97,8 @@ export default function Carousel({ images }) {
 
                 <button
                     className="carousel-hitbox left"
-                    onClick={(e) => {
-                        e.stopPropagation();
+                    onClick={(event) => {
+                        event.stopPropagation();
                         prev();
                     }}
                 ></button>
@@ -106,8 +106,8 @@ export default function Carousel({ images }) {
                 {/* BOTÃO INVISÍVEL — LADO DIREITO */}
                 <button
                     className="carousel-hitbox right"
-                    onClick={(e) => {
-                        e.stopPropagation();
+                    onClick={(event) => {
+                        event.stopPropagation();
                         next();
                     }}
                 ></button>
@@ -134,8 +134,8 @@ export default function Carousel({ images }) {
 
                     <button
                         className="fs-btn left"
-                        onClick={(e) => {
-                            e.stopPropagation();
+                        onClick={(event) => {
+                            event.stopPropagation();
                             prev();
                         }}
                     >
@@ -151,15 +151,15 @@ export default function Carousel({ images }) {
                                 className={`fullscreen-image ${
                                     index === current ? "active" : ""
                                 }`}
-                                onClick={(e) => e.stopPropagation()}
+                                onClick={(event) => event.stopPropagation()}
                             />
                         ))}
                     </div>
 
                     <button
                         className="fs-btn right"
-                        onClick={(e) => {
-                            e.stopPropagation();
+                        onClick={(event) => {
+                            event.stopPropagation();
                             next();
                         }}
                     >

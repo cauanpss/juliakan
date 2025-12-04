@@ -26,7 +26,6 @@ body {
 /* Header z-index com 2 digitos */ 
 header {
     /* border: 2px solid red; */
-    background:linear-gradient(to bottom, rgba(255, 255, 255, 0.849), rgba(255, 255, 255, 0));
     display: flex;
     position: fixed;
     flex-direction: column;
@@ -36,6 +35,58 @@ header {
     height: 15%;
     justify-content: space-between;
     z-index: 10;
+}
+
+.top-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 15%;
+    z-index: 99;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.849), 
+        rgba(255, 255, 255, 0));;
+}
+
+.top-wrapper header{
+    background: none;
+
+}
+
+
+/* ----------NAVBAR ----------- */
+
+.projects-navbar {
+    background: none;
+    font-size: 40px;
+    margin-top: 5%;
+    width: 200px;
+    padding: 10px;
+    position: fixed;
+    overflow-y: auto;
+}
+
+.projects-navbar ul {
+    list-style: none;
+}
+
+.project-link {
+    display: block;
+    width: 100%;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 13px;
+    transition: background 0.2s;
+}
+
+.project-link:hover {
+    background: #e3e3e36b;
+    border-radius: 15px;
+}
+
+.project-link.active {
+    font-weight: 500;
 }
 
 .nav-desktop {
@@ -392,6 +443,7 @@ main.project-content p {
 /* ----------------------------- Carousel -------------------------- */
 
 .carousel {
+    /* border: 2px solid red; */
     width: 100%;
     max-width: 900px;
     display: flex;
@@ -410,24 +462,25 @@ main.project-content p {
 }
 
 .carousel-hitbox {
+    /* border: 2px solid green; */
+    border: none;
     position: absolute;
     top: 0;
-    width: 15%;
+    width:30%;
     height: 100%;
     background: transparent;
-    border: none;
     cursor: pointer;
     z-index: 20;
 }
 
 /* lado esquerdo */
 .carousel-hitbox.left {
-    left: 12%;
+    align-self: flex-end;
 }
 
 /* lado direito */
 .carousel-hitbox.right {
-    right: 12%;
+    align-self:flex-start ;
 }
 
 .carousel-image {
@@ -568,15 +621,10 @@ main.project-content p {
 
     /* Header */
     header {
+        /* background-color:#fff ;
+        border:2px solid red; */
         padding: 10px 20px;
-        height: auto;
-    }
-
-    .nav-desktop {
-        font-size: 14px;
-        gap: 10px;
-        margin-top: 10px;
-        padding: 10px;
+        height: 20%;
     }
 
     .logo {
@@ -613,12 +661,48 @@ main.project-content p {
         margin-bottom: 10px;
     }
     
-    .nav-desktop {
+    /* NAVBAR-PROJECTS */
+    
+    
+    .projects-navbar ul {
+        display: flex;
+        gap: 18px;
+    }
+
+    .project-link {
+        font-size: 14px;
+        /* padding: 8px 0; */
+        white-space: nowrap; 
+    }
+    
+    .top-wrapper {
+        /* border: 2px solid red; */
+        background-color: #fff ;
+    }
+
+    
+    .projects-navbar {
+        /* border: 2px solid blue; */
+        top: 8%;
+        background:linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.849), 
+        rgba(255, 255, 255, 0.493));
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+
+    
+    .nav-desktop {        
         display: none;
+        font-size: 14px;
         flex-direction: column;
         gap: 20px;
         position: absolute;
         top: 60px;
+        margin-top: 10px;
         right: 20px;
         background: white;
         padding: 20px;
@@ -632,6 +716,7 @@ main.project-content p {
     }
 
     .mobile-menu-btn {
+        /* border: 2px solid red; */
         display: block; 
         position: absolute;
         top: 15px;
@@ -689,6 +774,15 @@ main.project-content p {
         font-size: 1rem;
         line-height: 1.6;
     }
+    
+    
+    
+    
+    /* CAROUSEL */
+        .carousel-hitbox {
+            display: none;   /* remove os botões */
+        }
+        
 
     /* GALLERY */
     .gallery {
@@ -700,12 +794,6 @@ main.project-content p {
         height: 55vw; 
         max-height: 360px;
     }
-
-    /* CAROUSEL */
-    .carousel-hitbox {
-        display: none;   /* remove os botões */
-    }
-    
 
     /* FULLSCREEN IMAGES */
     .fullscreen-image {

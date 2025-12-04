@@ -16,12 +16,12 @@ export default function Header() {
 
     const SWIPE_THRESHOLD = 80;
 
-    const handleTouchStart = (e) => {
-        touchStartX.current = e.touches[0].clientX;
+    const handleTouchStart = (event) => {
+        touchStartX.current = event.touches[0].clientX;
     };
 
-    const handleTouchMove = (e) => {
-        touchEndX.current = e.touches[0].clientX;
+    const handleTouchMove = (event) => {
+        touchEndX.current = event.touches[0].clientX;
     };
 
     const handleTouchEnd = () => {
@@ -39,11 +39,11 @@ export default function Header() {
     };
 
     return (
-        <header 
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}>
-
+        <header
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+        >
             <Link to="/" className="logo">
                 <h1>Julia Kan</h1>
             </Link>
@@ -68,7 +68,6 @@ export default function Header() {
                 </svg>
             </button>
 
-
             <nav className={`nav-desktop ${isMobileMenuOpen ? "open" : ""}`}>
                 <NavLink to="/ProjectsVisualArts" onClick={toggleMenu}>
                     <strong>{t("Projects")}</strong>
@@ -82,8 +81,6 @@ export default function Header() {
             </nav>
 
             <TranslateButtons />
-
-
         </header>
     );
 }
