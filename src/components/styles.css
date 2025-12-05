@@ -68,7 +68,9 @@ header {
 }
 
 .projects-navbar ul {
+    /* border: 2px solid red;gi */
     list-style: none;
+    max-width: 150px;
 }
 
 .project-link {
