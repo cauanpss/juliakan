@@ -5,7 +5,7 @@ import { bau } from "../assets/images/PerformingArts/Projeto_1_NomeDoProjeto";
 
 export default function HomeContent() {
     // const { translate, i18n } = useTranslation();
-    const { translate } = useTranslation();
+    const { t } = useTranslation();
 
     return (
         <main>
@@ -19,9 +19,7 @@ export default function HomeContent() {
                 <div class="home-menu-content">
                     <div className="button-container">
                         <Link to="/ProjectsVisualArts">
-                            <button className="visual-arts">
-                                {translate("arts")}
-                            </button>
+                            <button className="visual-arts">{t("arts")}</button>
                         </Link>
 
                         <div className="separador">/</div>
@@ -29,7 +27,7 @@ export default function HomeContent() {
                         <Link to="/ProjectsPerformingArts">
                             <button className="performing-arts">
                                 {" "}
-                                {translate("performing")}
+                                {t("performing")}
                             </button>
                         </Link>
                     </div>

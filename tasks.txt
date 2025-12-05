@@ -1,4 +1,5 @@
-3 - navbar de projetos (pensar em como adicionar dinamicamente novas páginas)
+ajustar lógica dos botoões de prev, next, carousel 
+3- AJUSTAR PUXADA DO SWIPE EXIBINDO SETA
 4 - corrigir interações de swipe para mobile (adicionar toda lateral para interação do menu)
 5 - adicionar botão de voltar ao topo da página quando a página chegar ao fim
 6 - Fazer about-me
