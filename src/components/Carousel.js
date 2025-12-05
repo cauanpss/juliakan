@@ -99,7 +99,7 @@ export default function Carousel({ images }) {
                     className="carousel-hitbox left"
                     onClick={(event) => {
                         event.stopPropagation();
-                        prev();
+                        next();
                     }}
                 ></button>
 
@@ -108,7 +108,7 @@ export default function Carousel({ images }) {
                     className="carousel-hitbox right"
                     onClick={(event) => {
                         event.stopPropagation();
-                        next();
+                        prev();
                     }}
                 ></button>
 
