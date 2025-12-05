@@ -4,7 +4,7 @@ import HoverCard from "../components/HoverCard";
 import TranslateButtons from "../components/TranslateButton";
 import { useTranslation } from "react-i18next";
 import { useRef } from "react";
-import { projectDetails } from "../data/dataProjectsPerformingArtsDetails";
+import { projectDetails as performingProjects } from "../data/dataProjectsPerformingArtsDetails";
 
 export default function ProjectsPerformingArts() {
     const { t } = useTranslation();
@@ -16,7 +16,7 @@ export default function ProjectsPerformingArts() {
             : mainContainer.current?.classList.remove("onHover");
     }
 
-    const projectList = Object.values(projectDetails);
+    const projectList = Object.values(performingProjects);
 
     return (
         <>
@@ -32,6 +32,7 @@ export default function ProjectsPerformingArts() {
                             text={project.title}
                             onHover={handleOnHover}
                             projectKey={project.key}
+                            category={project.category}
                         />
                     ))}
                 </div>

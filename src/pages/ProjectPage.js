@@ -1,15 +1,15 @@
 import { useParams } from "react-router-dom";
-import { projectDetails } from "../data/dataProjectsVisualArtsDetails";
+import { allProjects } from "../data/dataAllProjects";
 import ProjectContent from "../components/ProjectContent";
 import "../components/styles.css";
 import Header from "../components/Header";
 import NavbarProjects from "../components/NavbarProjects";
 
 export default function ProjectPage() {
-    const { projectid } = useParams();
+    const { category, projectid } = useParams();
 
-    // busca o projeto pelo ID da URL
-    const data = projectDetails[projectid];
+    // busca os projetos da categoria e depois pelo ID
+    const data = allProjects[category]?.[projectid];
 
     if (!data) {
         return <p>Projeto não encontrado.</p>;

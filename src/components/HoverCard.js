@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./styles.css";
 import { Navigate, useNavigate } from "react-router-dom";
 
-export default function HoverCard({ images, text, projectKey }) {
+export default function HoverCard({ images, text, projectKey, category }) {
     const [isActiveCard] = useState(false);
     const [currentIndex] = useState(0);
     const imageRef = useRef();
@@ -10,7 +10,7 @@ export default function HoverCard({ images, text, projectKey }) {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        navigate(`/projects/${projectKey}`);
+        navigate(`/projects/${category}/${projectKey}`);
     };
 
     return (

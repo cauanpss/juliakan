@@ -28,7 +28,10 @@ function App() {
                     path="/ProjectsPerformingArts"
                     element={<ProjectsPerformingArts />}
                 />
-                <Route path="/projects/:projectid" element={<ProjectPage />} />
+                <Route
+                    path="/projects/:category/:projectid"
+                    element={<ProjectPage />}
+                />
             </Routes>
         </Router>
     );
