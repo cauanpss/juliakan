@@ -4,9 +4,9 @@ import HoverCard from "../components/HoverCard";
 import TranslateButtons from "../components/TranslateButton";
 import { useTranslation } from "react-i18next";
 import { useRef } from "react";
-import { projectDetails } from "../data/dataProjectsVisualArtsDetails";
+import { projectDetails } from "../data/dataProjectsPerformingArtsDetails";
 
-export default function ProjectsVisualArts() {
+export default function ProjectsPerformingArts() {
     const { t } = useTranslation();
     const mainContainer = useRef();
 

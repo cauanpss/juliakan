@@ -23,34 +23,38 @@ JULIAKAN/
 │   ├── App.test.js
 │   ├── assets
 │   │   └── images
-│   │       ├── PastaTeste
 │   │       ├── PerformingArts
 │   │       │   ├── ExpografiaDiane
 │   │       │   │   ├── expografia ediane 4.jpg
-│   │       │   │   └── expografia ediane.jpg
+│   │       │   │   ├── expografia ediane.jpg
+│   │       │   │   └── index.js
 │   │       │   ├── MoraesMoreira
 │   │       │   │   ├── image (1).png
-│   │       │   │   └── image (2).png
+│   │       │   │   ├── image (2).png
+│   │       │   │   └── index.js
+│   │       │   ├── Obdr
+│   │       │   │   ├── index.js
+│   │       │   │   ├── obdr_03.png
+│   │       │   │   ├── obdr_04.png
+│   │       │   │   └── obdr_05.png
 │   │       │   ├── PedroArcanjo
 │   │       │   │   ├── DSC_4927.jpg
-│   │       │   │   ├── croqui pedro carchanjo0001 (1).tif
-│   │       │   │   └── croqui pedro carchanjo0001.tif
+│   │       │   │   ├── croqui0001.jpg
+│   │       │   │   └── index.js
 │   │       │   ├── Propaganda
 │   │       │   │   ├── Captura de tela 2021-12-21 142843.jpg
 │   │       │   │   ├── Captura de tela 2022-10-01 102929.jpg
 │   │       │   │   ├── Captura de tela 2022-11-25 163201.jpg
 │   │       │   │   ├── Captura de tela 2022-11-25 163417.jpg
 │   │       │   │   ├── Captura de tela 2022-11-25 163509.jpg
-│   │       │   │   └── Captura de tela 2022-11-25 163924.jpg
-│   │       │   ├── RemediosVard
-│   │       │   │   ├── 02 - PLANTA 2.jpg
-│   │       │   │   ├── 04-CORTE BB.jpg
-│   │       │   │   ├── 05-PORTAS.jpg
-│   │       │   │   └── geral-19.jpg
-│   │       │   └── obdr
-│   │       │       ├── 3d_ODBr_03.png
-│   │       │       ├── 3d_ODBr_04.png
-│   │       │       └── 3d_ODBr_06.png
+│   │       │   │   ├── Captura de tela 2022-11-25 163924.jpg
+│   │       │   │   └── index.js
+│   │       │   └── RemediosVard
+│   │       │       ├── cortebb04.jpg
+│   │       │       ├── geral-19.jpg
+│   │       │       ├── index.js
+│   │       │       ├── planta2.jpg
+│   │       │       └── portas05.jpg
 │   │       ├── Projetos_Pessoais
 │   │       │   └── Projetos_Pessoais
 │   │       │       ├── 00 Cenografia MASTER_compressed.pdf
@@ -239,6 +243,13 @@ JULIAKAN/
 │   ├── data
 │   │   ├── dataDefault.js
 │   │   ├── dataProjectsPerformingArtsDetails
+│   │   │   ├── dataExpografiaDiane.js
+│   │   │   ├── dataMoraesMoreira.js
+│   │   │   ├── dataObdr.js
+│   │   │   ├── dataPedroArcanjo.js
+│   │   │   ├── dataPropaganda.js
+│   │   │   ├── dataRemediosVard.js
+│   │   │   └── index.js
 │   │   └── dataProjectsVisualArtsDetails
 │   │       ├── dataBau.js
 │   │       ├── dataBlanca.js
