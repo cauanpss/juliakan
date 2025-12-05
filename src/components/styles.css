@@ -691,7 +691,7 @@ main.project-content p {
     }
     
     .top-wrapper {
-        border: 2px solid red;
+        /* border: 2px solid red; */
         background-color: #fff ;
         z-index: 500;
     }
@@ -723,13 +723,12 @@ main.project-content p {
     }
 
     .mobile-menu-btn {
-        border: 2px solid red;
+        /* border: 2px solid red; */
         /* background-color: green; */
         display: block; 
         position: absolute;
         top: 20px;
         right: 20px;
-        /* z-index: 500; */
     }
 
     .visual-arts,
@@ -756,8 +755,8 @@ main.project-content p {
     
     .hover-card .overlay {
         color: #161616bd;
-        opacity: 0.8 !important;        
-        background: rgba(233, 233, 233, 0.164); 
+        opacity: 0.8 ;        
+        background: rgba(233, 233, 233, 0.541); 
         z-index: 10;
     }
 

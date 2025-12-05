@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useState, useRef } from "react";
 import "./styles.css";
@@ -7,9 +7,17 @@ import TranslateButtons from "./TranslateButton";
 
 export default function Header() {
     const { t } = useTranslation();
+    const location = useLocation();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+
+    const isPerforming = location.pathname.toLowerCase().includes("performing");
+    const isVisual = location.pathname.toLowerCase().includes("visual");
+
+    const dynamicProjectsPath = isPerforming
+        ? "/ProjectsPerformingArts"
+        : "/ProjectsVisualArts";
 
     const touchStartX = useRef(0);
     const touchEndX = useRef(0);
@@ -69,7 +77,7 @@ export default function Header() {
             </button>
 
             <nav className={`nav-desktop ${isMobileMenuOpen ? "open" : ""}`}>
-                <NavLink to="/ProjectsVisualArts" onClick={toggleMenu}>
+                <NavLink to={dynamicProjectsPath} onClick={toggleMenu}>
                     <strong>{t("Projects")}</strong>
                 </NavLink>
                 <NavLink to="/about" onClick={toggleMenu}>
