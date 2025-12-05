@@ -14,7 +14,7 @@ export default function Header() {
     const touchStartX = useRef(0);
     const touchEndX = useRef(0);
 
-    const SWIPE_THRESHOLD = 80;
+    const SWIPE_THRESHOLD = 50;
 
     const handleTouchStart = (event) => {
         touchStartX.current = event.touches[0].clientX;
