@@ -5,6 +5,8 @@ import TranslateButtons from "../components/TranslateButton";
 import { useTranslation } from "react-i18next";
 import { useRef } from "react";
 import { projectDetails as performingProjects } from "../data/dataProjectsPerformingArtsDetails";
+import ScrollToTopButton from "../components/ScrollToTopButton";
+
 
 export default function ProjectsPerformingArts() {
     const { t } = useTranslation();
@@ -38,6 +40,7 @@ export default function ProjectsPerformingArts() {
                         />
                     ))}
                 </div>
+                <ScrollToTopButton />            
             </main>
         </>
     );

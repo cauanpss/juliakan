@@ -52,6 +52,9 @@ export default function Header() {
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
         >
+            <TranslateButtons />
+            
+            
             <Link to="/" className="logo">
                 <h1>Julia Kan</h1>
             </Link>
@@ -87,8 +90,6 @@ export default function Header() {
                     <strong>{t("contact")}</strong>
                 </NavLink>
             </nav>
-
-            <TranslateButtons />
         </header>
     );
 }

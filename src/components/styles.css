@@ -590,6 +590,31 @@ main.project-content p {
     right: 40px;
 }
 
+.scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 12px 14px;
+    border-radius: 50%;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+
+    /* invisível por padrão */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.scroll-top-btn.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+
 /* Empilha as imagens no fullscreen */
 .fullscreen-images {
     position: relative;
@@ -739,6 +764,20 @@ main.project-content p {
     font-size: 18px
     }
 
+
+    .scroll-top-btn {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        padding: 6px 7px;
+        border-radius: 50%;
+        border: none;
+        color: #000000;
+        cursor: pointer;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+        z-index: 9999;
+    }
+    
     /*hovercard*/
     
     .hoverCard-page-containers {
