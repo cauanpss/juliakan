@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-import { bau } from "../assets/images/PerformingArts/Projeto_1_NomeDoProjeto";
+import bau from "../assets/images/VisualArts/Bau/bau1.jpg";
 
 export default function HomeContent() {
     // const { translate, i18n } = useTranslation();

@@ -3,7 +3,6 @@ import { projectDetails } from "../data/dataProjectsVisualArtsDetails";
 import ProjectContent from "../components/ProjectContent";
 import "../components/styles.css";
 import Header from "../components/Header";
-import TranslateButtons from "../components/TranslateButton";
 import NavbarProjects from "../components/NavbarProjects";
 
 export default function ProjectPage() {

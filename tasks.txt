@@ -1,4 +1,7 @@
-ajustar lógica dos botoões de prev, next, carousel 
+copiar os novos  arquivos data do commit -tudo bugado , versão anterior..."
+tentar resolver a questão de setar projetos dinamicamente na página de conteúdo dos projetos, hoje foi frustrante. 2h no lixo NÃO PROGRAMAR CANSADO.!
+da uma olhada em category do data
+
 3- AJUSTAR PUXADA DO SWIPE EXIBINDO SETA
 4 - corrigir interações de swipe para mobile (adicionar toda lateral para interação do menu)
 5 - adicionar botão de voltar ao topo da página quando a página chegar ao fim
@@ -7,4 +10,8 @@ ajustar lógica dos botoões de prev, next, carousel
 8 - verificar warnings
 
 
+QUANDO ESTOU CLICANDO EM ARTES CENICAS ESTÁ INDO PARA ARTES CENICAS MAS TEM ALGO ERRADO PQ
+TA CARREGANDO AS COISAS DE ARTES VISUAIS:
 
+FIZ SCRIPT PRO DATA, MEXI NA PAGES PROJECT PERFORMING ARTES
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
