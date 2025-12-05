@@ -743,9 +743,15 @@ main.project-content p {
 
     .nav-desktop.open {
         display: flex; 
-        /* z-index: 2500; */
+        z-index: 2500;
+        /* border: 2px solid blue; */
 
     }
+    
+    .nav-desktop.open ~ .mobile-menu-btn {
+    pointer-events: none;
+    opacity: 0;
+}
 
     .mobile-menu-btn {
         /* border: 2px solid red; */

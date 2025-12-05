@@ -53,8 +53,7 @@ export default function Header() {
             onTouchEnd={handleTouchEnd}
         >
             <TranslateButtons />
-            
-            
+
             <Link to="/" className="logo">
                 <h1>Julia Kan</h1>
             </Link>
