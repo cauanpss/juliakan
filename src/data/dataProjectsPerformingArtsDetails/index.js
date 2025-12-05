@@ -14,5 +14,5 @@ export const projectDetails = {
     obdr: dataObdr,
     pedroArcanjo: dataPedroArcanjo,
     propaganda: dataPropaganda,
-    remediosVards: dataRemediosVard,
+    remediosVard: dataRemediosVard,
 };
