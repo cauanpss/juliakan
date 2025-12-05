@@ -20,8 +20,8 @@ export default function ProjectPage() {
             {/* <TranslateButtons /> */}
             <div className="top-wrapper">
                 <Header />
-                <NavbarProjects />
             </div>
+                <NavbarProjects />
             <ProjectContent data={data} />
         </>
     );

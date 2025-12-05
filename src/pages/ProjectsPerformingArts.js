@@ -21,7 +21,9 @@ export default function ProjectsPerformingArts() {
     return (
         <>
             {/* <TranslateButtons /> */}
-            <Header />
+            <div className="top-wrapper">
+                <Header />
+            </div>{" "}
             <main ref={mainContainer}>
                 <div className="hoverCard-page-containers">
                     {projectList.map((project) => (
