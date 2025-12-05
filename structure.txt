@@ -25,45 +25,40 @@ JULIAKAN/
 │   │   └── images
 │   │       ├── PastaTeste
 │   │       ├── PerformingArts
-│   │       │   ├── Projeto_1_NomeDoProjeto
-│   │       │   │   ├── bau.jpg
-│   │       │   │   ├── img1.jpg
-│   │       │   │   └── index.js
-│   │       │   ├── Projeto_2_NomeDoProjeto
-│   │       │   │   ├── hp1.jpg
-│   │       │   │   ├── hp2.jpg
-│   │       │   │   ├── hp3.jpg
-│   │       │   │   └── index.js
-│   │       │   ├── Projeto_3_NomeDoProjeto
-│   │       │   │   ├── index.js
-│   │       │   │   ├── xurek1.jpg
-│   │       │   │   └── xurek2.jpg
-│   │       │   ├── Projeto_4_NomeDoProjeto
-│   │       │   │   ├── burrodexurek1.jpg
-│   │       │   │   ├── burrodexurek3.jpg
-│   │       │   │   └── index.js
-│   │       │   ├── Projeto_5_NomeDoProjeto
-│   │       │   │   ├── hp4.png
-│   │       │   │   ├── hp5.png
-│   │       │   │   └── index.js
-│   │       │   └── Projeto_6_NomeDoProjeto
-│   │       │       ├── img2.jpg
-│   │       │       ├── img3.jpeg
-│   │       │       └── index.js
+│   │       │   ├── ExpografiaDiane
+│   │       │   │   ├── expografia ediane 4.jpg
+│   │       │   │   └── expografia ediane.jpg
+│   │       │   ├── MoraesMoreira
+│   │       │   │   ├── image (1).png
+│   │       │   │   └── image (2).png
+│   │       │   ├── PedroArcanjo
+│   │       │   │   ├── DSC_4927.jpg
+│   │       │   │   ├── croqui pedro carchanjo0001 (1).tif
+│   │       │   │   └── croqui pedro carchanjo0001.tif
+│   │       │   ├── Propaganda
+│   │       │   │   ├── Captura de tela 2021-12-21 142843.jpg
+│   │       │   │   ├── Captura de tela 2022-10-01 102929.jpg
+│   │       │   │   ├── Captura de tela 2022-11-25 163201.jpg
+│   │       │   │   ├── Captura de tela 2022-11-25 163417.jpg
+│   │       │   │   ├── Captura de tela 2022-11-25 163509.jpg
+│   │       │   │   └── Captura de tela 2022-11-25 163924.jpg
+│   │       │   ├── RemediosVard
+│   │       │   │   ├── 02 - PLANTA 2.jpg
+│   │       │   │   ├── 04-CORTE BB.jpg
+│   │       │   │   ├── 05-PORTAS.jpg
+│   │       │   │   └── geral-19.jpg
+│   │       │   └── obdr
+│   │       │       ├── 3d_ODBr_03.png
+│   │       │       ├── 3d_ODBr_04.png
+│   │       │       └── 3d_ODBr_06.png
 │   │       ├── Projetos_Pessoais
 │   │       │   └── Projetos_Pessoais
 │   │       │       ├── 00 Cenografia MASTER_compressed.pdf
-│   │       │       ├── 02 - PLANTA 2.jpg
-│   │       │       ├── 04-CORTE BB.jpg
-│   │       │       ├── 05-PORTAS.jpg
 │   │       │       ├── 18-DK9A6898.jpg
 │   │       │       ├── 1dia baixa res story-2.jpg
 │   │       │       ├── 20191107_100825.jpg
 │   │       │       ├── 20191107_100910.jpg
 │   │       │       ├── 20191109_144547.jpg
-│   │       │       ├── 3d_ODBr_03.png
-│   │       │       ├── 3d_ODBr_04.png
-│   │       │       ├── 3d_ODBr_06.png
 │   │       │       ├── 76-DK9A0380.jpg
 │   │       │       ├── 7T4A2448_FOTO_Caio_Lirio_ig_caiolirio.jpg
 │   │       │       ├── 7T4A2791_FOTO_Caio_Lirio_ig_caiolirio.jpg
@@ -72,21 +67,14 @@ JULIAKAN/
 │   │       │       ├── Captura de tela 2021-12-12 085756.jpg
 │   │       │       ├── Captura de tela 2021-12-12 090437.jpg
 │   │       │       ├── Captura de tela 2021-12-21 142531.jpg
-│   │       │       ├── Captura de tela 2021-12-21 142843.jpg
 │   │       │       ├── Captura de tela 2022-02-01 211456.jpg
 │   │       │       ├── Captura de tela 2022-02-01 212030.jpg
 │   │       │       ├── Captura de tela 2022-02-01 212151.jpg
 │   │       │       ├── Captura de tela 2022-02-01 213139.jpg
 │   │       │       ├── Captura de tela 2022-08-17 121226.jpg
-│   │       │       ├── Captura de tela 2022-10-01 102929.jpg
-│   │       │       ├── Captura de tela 2022-11-25 163201.jpg
-│   │       │       ├── Captura de tela 2022-11-25 163417.jpg
-│   │       │       ├── Captura de tela 2022-11-25 163509.jpg
-│   │       │       ├── Captura de tela 2022-11-25 163924.jpg
 │   │       │       ├── Carnaval GN_09.jpg
 │   │       │       ├── DSC06288.jpg
 │   │       │       ├── DSC06367.jpg
-│   │       │       ├── DSC_4927.jpg
 │   │       │       ├── ENTRADA CASA MICHELLINI2.png
 │   │       │       ├── ILE - Colunas surdo.jpg
 │   │       │       ├── ILE - Parede surdos.jpg
@@ -129,13 +117,6 @@ JULIAKAN/
 │   │       │       ├── WhatsApp Image 2023-11-16 at 22.13.20.jpg
 │   │       │       ├── WhatsApp Image 2023-11-16 at 22.21.52.jpg
 │   │       │       ├── aprendendo futebol01.jpg
-│   │       │       ├── croqui pedro carchanjo0001 (1).tif
-│   │       │       ├── croqui pedro carchanjo0001.tif
-│   │       │       ├── expografia ediane 4.jpg
-│   │       │       ├── expografia ediane.jpg
-│   │       │       ├── geral-19.jpg
-│   │       │       ├── image (1).png
-│   │       │       ├── image (2).png
 │   │       │       ├── image (3).png
 │   │       │       ├── image (4).png
 │   │       │       ├── image (5).png
@@ -278,6 +259,7 @@ JULIAKAN/
 │   │   ├── Home.js
 │   │   ├── ProjectPage.js
 │   │   ├── ProjectsPerformingArts.js
+│   │   ├── ProjectsPerformingArtsOldVersion.js
 │   │   ├── ProjectsVisualArts.js
 │   │   └── ProjectsVisualArtsOldVersion.js
 │   ├── reportWebVitals.js
