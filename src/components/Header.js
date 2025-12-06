@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { NavLink, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import "./styles.css";
 import TranslateButtons from "./TranslateButton";
 
@@ -19,57 +19,12 @@ export default function Header() {
         ? "/ProjectsPerformingArts"
         : "/ProjectsVisualArts";
 
-    const touchStartX = useRef(0);
-    const touchEndX = useRef(0);
-
+    
     const SWIPE_THRESHOLD = 50;
 
-        // Toque inicial
-    const handleTouchStart = (event) => {
-        // Se tocou em um botão, link ou SVG → NÃO usar swipe
-        if ( event.target.closest(".mobile-menu-btn") ||
-        event.target.closest("nav") ||
-        event.target.closest(".projects-navbar")) {
-            return;  
-        }
-
-        touchStartX.current = event.touches[0].clientX;
-        touchEndX.current = touchStartX.current;
-    };
-
-    // Movimento do dedo
-    const handleTouchMove = (event) => {
-        // Ignora se tocou em botão/menu
-        if (event.target.closest(".mobile-menu-btn") || event.target.closest("nav")) {
-            return;
-        }
-
-        touchEndX.current = event.touches[0].clientX;
-    };
-
-    // Fim do toque
-    const handleTouchEnd = (event) => {
-        // Mesma lógica de proteção
-        if (event.target.closest(".mobile-menu-btn") || event.target.closest("nav")) {
-            return;
-        }
-
-        const distance = touchEndX.current - touchStartX.current;
-
-        if (distance < -SWIPE_THRESHOLD && !isMobileMenuOpen) {
-            setIsMobileMenuOpen(true);
-        }
-
-        if (distance > SWIPE_THRESHOLD && isMobileMenuOpen) {
-            setIsMobileMenuOpen(false);
-        }
-    };
-
+    
     return (
         <header
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd}
         >
             <TranslateButtons />
 

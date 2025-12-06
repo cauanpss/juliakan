@@ -758,7 +758,7 @@ main.project-content p {
         rgba(255, 255, 255, 0.493));
         position: fixed;
         left: 50%;
-        padding-top: 5%;
+        /* padding-top: 5%; */
         /* height: 14%; */
         transform: translateX(-50%);
         width: 100%;
