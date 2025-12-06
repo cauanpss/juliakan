@@ -26,6 +26,7 @@ body {
 /* Header z-index com 2 digitos */ 
 header {
     /* border: 2px solid red; */
+    background-color: #fff;
     display: flex;
     position: fixed;
     flex-direction: column;
@@ -305,7 +306,7 @@ footer {
 
 /* Hover Card */
 .hover-card {
-    border: solid 1px rgba(0, 0, 0, 0.171);
+    /* border: solid 1px rgba(0, 0, 0, 0.171); */
     display: flex;
     position: relative;
     width: 100%;
@@ -709,6 +710,7 @@ main.project-content p {
         border:2px solid red; */
         padding: 10px 20px;
         height: 20%;
+        
     }
 
     .logo {
@@ -847,7 +849,7 @@ main.project-content p {
         grid-template-columns: 1fr;
         padding: 0 5%;             
         gap: 1.5em;                
-        margin-top: 20%;           
+        margin-top: 30%;           
     }
 
     .hover-card {

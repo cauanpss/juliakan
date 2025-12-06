@@ -16,8 +16,6 @@ export default function ProjectContent({ data }) {
 
             <p>{data.description}</p>
 
-
-
             {/* Bloco do vídeo */}
             {data.video && (
                 <div className="project-video">

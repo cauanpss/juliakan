@@ -27,7 +27,9 @@ export default function Header() {
         // Toque inicial
     const handleTouchStart = (event) => {
         // Se tocou em um botão, link ou SVG → NÃO usar swipe
-        if (event.target.closest(".mobile-menu-btn") || event.target.closest("nav")) {
+        if ( event.target.closest(".mobile-menu-btn") ||
+        event.target.closest("nav") ||
+        event.target.closest(".projects-navbar")) {
             return;  
         }
 
