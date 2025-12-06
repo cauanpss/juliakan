@@ -26,7 +26,7 @@ body {
 /* Header z-index com 2 digitos */ 
 header {
     /* border: 2px solid red; */
-    background-color: #fff;
+    /* background-color: #fff; */
     display: flex;
     position: fixed;
     flex-direction: column;
