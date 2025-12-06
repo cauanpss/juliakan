@@ -723,6 +723,12 @@ main.project-content p {
         font-size: 18px;
     }
 
+    .translate {
+        margin-right: 0;
+
+    }
+
+
     /* Home Menu */
     .home-menu {
         padding-top: 100px;
