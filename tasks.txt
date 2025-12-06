@@ -1,6 +1,5 @@
-5 - adicionar botão de voltar ao topo da página quando a página chegar ao fim
 6 - Fazer about-me
 7 - Fazer página de contato
 8 - verificar warnings
-
+9 - ajustar responsividade (botões do menu mobile ruins de clicar, e sobrepondo navbarProjects)
 
