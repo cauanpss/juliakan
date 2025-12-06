@@ -6,3 +6,5 @@
 artes visuais / cenografia
 artes cenicas -> cenografia
 mudar endereços para corresponder
+
+RESOLVER COM URGENCIA A NAVEGAÇÃO ENTRE PROJETOS NO MOBILE (tá exibindo mas os toques estão muito estranhos)
