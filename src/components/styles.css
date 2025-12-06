@@ -60,7 +60,7 @@ header {
 .projects-navbar {
     background: none;
     font-size: 40px;
-    margin-top: 5%;
+    margin-top: 4%;
     width: 200px;
     padding: 10px;
     position: fixed;
@@ -193,7 +193,7 @@ main {
     border: none;
     background-color: transparent;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 20px;
     transition: color 0.3s ease;
     padding: 6px;
     border-radius: 15px;
@@ -209,7 +209,7 @@ main {
     font-weight: 350;
     margin-bottom: 15px;
     background: transparent;
-    font-size: 85px;
+    font-size: 45px;
 }
 
 .visual-arts {
@@ -236,6 +236,7 @@ main {
     gap: 3px;
     z-index: 100;
     font-weight: bold;
+    margin-right: 30px;
 
 }
 
@@ -416,6 +417,7 @@ main.project-content p {
     color: #333;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 25px;
 }
 
 .project-video {
@@ -440,6 +442,61 @@ main.project-content p {
     width: 100%;
     height: 100%;
     border: 0;
+}
+
+/* --------------------- Video Fullscreen --------------------- */
+
+.video-fullscreen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+    animation: fadeIn 0.3s ease;
+}
+
+/* botão fechar */
+.video-close-btn {
+    position: fixed;
+    top: 25px;
+    right: 35px;
+    font-size: 3.5rem;
+    color: white;
+    cursor: pointer;
+    z-index: 3100;
+    user-select: none;
+    transition: opacity 0.2s;
+}
+
+.video-close-btn:hover {
+    opacity: 0.7;
+}
+
+/* vídeo no fullscreen */
+.video-fullscreen-frame {
+    width: 90%;
+    height: 80%;
+    max-width: 1200px;
+    border: none;
+    border-radius: 12px;
+    background: black;
+    animation: pop 0.8s ease;
+}
+
+.video-touch-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 30; /* acima do iframe */
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: transparent;
 }
 
 /* ----------------------------- Carousel -------------------------- */

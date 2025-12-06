@@ -10,24 +10,33 @@ export default function HoverCard({ images, text, projectKey, category }) {
     const navigate = useNavigate();
     
     const [showOverlay, setShowOverlay] = useState(false);
+    const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
     const longPressTimer = useRef(null);
     const touchStartTime = useRef(0);
+    const touchStartY = useRef(0);
+
     const LONG_PRESS_DURATION = 400;
 
-    const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
-
-    const handleTouchStart = () => {
+    const handleTouchStart = (e) => {
         touchStartTime.current = Date.now();
+        touchStartY.current = e.touches[0].clientY;
 
         longPressTimer.current = setTimeout(() => {
             setShowOverlay(true);
         }, LONG_PRESS_DURATION);
     };
 
-    const handleTouchEnd = () => {
+    const handleTouchEnd = (e) => {
         const touchTime = Date.now() - touchStartTime.current;
+        const endY = e.changedTouches[0].clientY;
+        const diffY = Math.abs(endY - touchStartY.current);
 
         clearTimeout(longPressTimer.current);
+
+        if (diffY > 10) {
+            setShowOverlay(false);
+            return;
+        }
 
         if (touchTime < LONG_PRESS_DURATION) {
             navigate(`/projects/${category}/${projectKey}`);
@@ -36,9 +45,14 @@ export default function HoverCard({ images, text, projectKey, category }) {
         }
     };
 
-    const handleTouchMove = () => {
-        clearTimeout(longPressTimer.current);
-        setShowOverlay(false);
+    const handleTouchMove = (e) => {
+        const currentY = e.touches[0].clientY;
+        const diffY = Math.abs(currentY - touchStartY.current);
+
+        if (diffY > 10) {
+            clearTimeout(longPressTimer.current);
+            setShowOverlay(false);
+        }
     };
 
 

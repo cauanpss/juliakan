@@ -3,3 +3,7 @@
 8 - verificar warnings
 9 - ajustar responsividade (botões do menu mobile ruins de clicar, e sobrepondo navbarProjects)
 
+responsividade:
+
+video - "subir" que nem o carousel(fullscreen)
+Diminuir fontes (principalmente barra) da primeira páginaajustar posição do TranslateButton
