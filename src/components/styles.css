@@ -799,10 +799,18 @@ main.project-content p {
     }
     
     .hover-card .overlay {
-        color: #161616bd;
-        opacity: 0.8 ;        
+        color: #000000bd;
+        opacity: 0 ;        
         background: rgba(233, 233, 233, 0.541); 
         z-index: 10;
+        pointer-events: none;
+        transition: opacity 0.3s;
+    }
+
+    .hover-card .overlay.show{
+        opacity: 1;
+        pointer-events: auto;;
+
     }
 
     /* Desativa o efeito do hover no mobile */

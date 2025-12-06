@@ -8,8 +8,41 @@ export default function HoverCard({ images, text, projectKey, category }) {
     const imageRef = useRef();
     const cardRef = useRef();
     const navigate = useNavigate();
+    
+    const [showOverlay, setShowOverlay] = useState(false);
+    const longPressTimer = useRef(null);
+    const touchStartTime = useRef(0);
+    const LONG_PRESS_DURATION = 400;
 
-    const handleClick = () => {
+    const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+
+    const handleTouchStart = () => {
+        touchStartTime.current = Date.now();
+
+        longPressTimer.current = setTimeout(() => {
+            setShowOverlay(true);
+        }, LONG_PRESS_DURATION);
+    };
+
+    const handleTouchEnd = () => {
+        const touchTime = Date.now() - touchStartTime.current;
+
+        clearTimeout(longPressTimer.current);
+
+        if (touchTime < LONG_PRESS_DURATION) {
+            navigate(`/projects/${category}/${projectKey}`);
+        } else {
+            setTimeout(() => setShowOverlay(false), 150);
+        }
+    };
+
+    const handleTouchMove = () => {
+        clearTimeout(longPressTimer.current);
+        setShowOverlay(false);
+    };
+
+
+    const handleClickDesktop = () => {
         navigate(`/projects/${category}/${projectKey}`);
     };
 
@@ -17,7 +50,10 @@ export default function HoverCard({ images, text, projectKey, category }) {
         <div
             className={`hover-card ${isActiveCard ? " hovered" : ""}`}
             ref={cardRef}
-            onClick={handleClick}
+            onClick={handleClickDesktop}
+            onTouchStart={isTouchDevice ? handleTouchStart : undefined}
+            onTouchEnd={isTouchDevice ? handleTouchEnd : undefined}
+            onTouchMove={isTouchDevice ? handleTouchMove : undefined}
         >
             <div className="hover-card-img-container">
                 {images.map((img, index) => (
