@@ -77,6 +77,7 @@ export default function HoverCard({ images, text, projectKey, category }) {
                         alt={text}
                         ref={index === currentIndex ? imageRef : null}
                         className={index === currentIndex ? "active" : ""}
+                        loading="lazy"
                     />
                 ))}
             </div>

@@ -86,6 +86,7 @@ export default function Carousel({ images }) {
                         <img
                             key={index}
                             src={img}
+                            loading="lazy"
                             alt=""
                             className={`carousel-image ${
                                 index === current ? "active" : ""

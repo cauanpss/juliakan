@@ -24,23 +24,40 @@ export default function Header() {
 
     const SWIPE_THRESHOLD = 50;
 
+        // Toque inicial
     const handleTouchStart = (event) => {
+        // Se tocou em um botão, link ou SVG → NÃO usar swipe
+        if (event.target.closest(".mobile-menu-btn") || event.target.closest("nav")) {
+            return;  
+        }
+
         touchStartX.current = event.touches[0].clientX;
+        touchEndX.current = touchStartX.current;
     };
 
+    // Movimento do dedo
     const handleTouchMove = (event) => {
+        // Ignora se tocou em botão/menu
+        if (event.target.closest(".mobile-menu-btn") || event.target.closest("nav")) {
+            return;
+        }
+
         touchEndX.current = event.touches[0].clientX;
     };
 
-    const handleTouchEnd = () => {
+    // Fim do toque
+    const handleTouchEnd = (event) => {
+        // Mesma lógica de proteção
+        if (event.target.closest(".mobile-menu-btn") || event.target.closest("nav")) {
+            return;
+        }
+
         const distance = touchEndX.current - touchStartX.current;
 
-        // swipe para direita → ABRIR MENU
         if (distance < -SWIPE_THRESHOLD && !isMobileMenuOpen) {
             setIsMobileMenuOpen(true);
         }
 
-        // swipe para esquerda → FECHAR MENU
         if (distance > SWIPE_THRESHOLD && isMobileMenuOpen) {
             setIsMobileMenuOpen(false);
         }
