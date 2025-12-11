@@ -34,12 +34,75 @@ export default function AboutContent() {
     return (
         <main className="about-content">
             <p className="description">{t(dataAbout.description)}</p>
-            <p className="curriculum">
-                {curriculumObj.collectiveExhibitions &&
-                    renderExhibitionsByYear(
-                        curriculumObj.collectiveExhibitions
+            <div className="curriculum">
+                
+                <article className="collectiveExhibitions">
+                    {curriculumObj.collectiveExhibitions &&
+                        renderExhibitionsByYear(
+                            curriculumObj.collectiveExhibitions
+                        )}
+                </article>
+
+                <article className="residences">
+                    {curriculumObj.residencies && (
+                        <section className="residencies">
+                            <h3>
+                                {curriculumObj.residencies.title ||
+                                    t("aboutData.curriculum.residencies.title")}
+                            </h3>
+                            <ul>
+                                {(curriculumObj.residencies.items || []).map(
+                                    (item, idx) => (
+                                        <li key={idx}>{item}</li>
+                                    )
+                                )}
+                            </ul>
+                        </section>
                     )}
-            </p>
+                </article>
+
+                <article className="scholarships">
+                    {curriculumObj.scholarships && (
+                        <section className="scholarships">
+                            <h3>
+                                {curriculumObj.scholarships.title ||
+                                    t(
+                                        "aboutData.curriculum.scholarships.title"
+                                    )}
+                            </h3>
+
+                            <ul>
+                                {(curriculumObj.scholarships.items || []).map(
+                                    (item, idx) => (
+                                        <li key={idx}> {item} </li>
+                                    )
+                                )}
+                            </ul>
+                        </section>
+                    )}
+                </article>
+
+                <article classname="education">
+                    {curriculumObj.education && (
+                        <section className="education">
+                            <h3>
+                                {curriculumObj.education.title ||
+                                    t("aboutData.curriculum.education.title")}
+                            </h3>
+
+                            <ul>
+                                {(curriculumObj.education.items || []).map(
+                                    (item, idx) => (
+                                        <li key={idx}> {item} </li>
+                                    )
+                                )}
+                            </ul>
+                        </section>
+                    )}
+                </article>
+            
+            
+            </div>
         </main>
     );
 }
