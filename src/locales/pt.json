@@ -1,7 +1,15 @@
 {
-    "aboutMeData": {
+    "arts": "Artes Visuais",
+    "performing": "Cenografia",
+    "home" : "Pagina Inicial",
+    "Projects" : "Projetos",
+    "about" : "Sobre",
+    "contact" : "Contato",
+    
+    
+    "aboutData": {
         "title": "Sobre Mim",
-        "description": "Julia Kan (n. 1999) é uma artista visual brasileira baseada em Salvador, Bahia. Sua prática artística é predominantemente voltada para a imagem, mas profundamente influenciada por sua formação em design espacial, criando um diálogo entre fotografia e cenografia.",
+        "description": "Julia Kan (n. 1999) é uma artista visual brasileira radicada em Salvador, Bahia. Sua prática artística é predominantemente baseada na imagem, mas profundamente influenciada por sua formação em design espacial, criando um diálogo entre fotografia e cenografia. É graduada em Artes Cênicas – Cenografia pela Universidade Federal do Rio de Janeiro (UFRJ) e, atualmente, é mestranda no Programa de Pós-Graduação em Artes Visuais da Universidade Federal da Bahia (UFBA). Seu trabalho se fundamenta na investigação da espacialidade, da percepção e do diálogo transformador entre a imagem bidimensional e o objeto tridimensional. Desde 2021, atua profissionalmente como cenógrafa e diretora de arte para cinema, teatro e exposições.",
         "curriculum": {
             "collectiveExhibitions": {
                 "title": "Exposições Coletivas",

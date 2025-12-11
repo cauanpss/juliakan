@@ -266,7 +266,7 @@ JULIAKAN/
 │   │   └── pt.json
 │   ├── logo.svg
 │   ├── pages
-│   │   ├── AboutMeVisualArts.js
+│   │   ├── aboutVisualArts.js
 │   │   ├── Home.js
 │   │   ├── ProjectPage.js
 │   │   ├── ProjectsSetDesign.js

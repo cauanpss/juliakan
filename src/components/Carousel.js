@@ -23,7 +23,7 @@ export default function Carousel({ images }) {
     const closeFullscreen = () => setFullscreen(false);
 
     /* -----------------------------------------------------
-       AUTOPLAY — SOMENTE NO MODO NORMAL
+    AUTOPLAY — SOMENTE NO MODO NORMAL
     ----------------------------------------------------- */
 
     const startAutoplay = () => {

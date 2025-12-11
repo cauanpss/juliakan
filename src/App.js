@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import ProjectsVisualArts from "./pages/ProjectsVisualArts";
 import ProjectsSetDesign from "./pages/ProjectsSetDesign";
-import AboutMe from "./pages/AboutMe";
+import About from "./pages/About";
 import ProjectPage from "./pages/ProjectPage";
 import ScrollToTop from "./util/useScrollToTop";
 
@@ -23,7 +23,7 @@ function App() {
                     path="/ProjectsVisualArts"
                     element={<ProjectsVisualArts />}
                 />
-                <Route path="/about" element={<AboutMe />} />
+                <Route path="/about" element={<About />} />
                 <Route
                     path="/ProjectsSetDesign"
                     element={<ProjectsSetDesign />}

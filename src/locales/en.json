@@ -1,89 +1,98 @@
-{
-    "aboutMeData": {
+{   
+    "arts": "Visual Arts",
+    "performing": "Set Design",
+    "home" : "Home",
+    "Projects" : "Projects",
+    "about" : "About",
+    "contact" : "Contact",
+    
+
+
+    "aboutData": {
         "title": "About Me",
-        "description": "Julia Kan (b. 1999) is a Brazilian visual artist based in Salvador, Bahia. Her artistic practice is primarily lens-based but deeply informed by her background in spatial design, creating a dialogue between photography and scenography.",
+        "description": "Julia Kan (b. 1999) is a Brazilian visual artist based in Salvador, Bahia. Her artistic practice is primarily lens-based but is profoundly informed by her background in spatial design, creating a dialogue between photography and scenography. She holds a Bachelor's degree in Performing Arts – Scenography from the Federal University of Rio de Janeiro (UFRJ) and is currently a Master's student in the Visual Arts Graduate Program at the Federal University of Bahia (UFBA). Her work is rooted in an investigation of spatiality, perception, and the transformative dialogue between the two-dimensional image and the three-dimensional object. Since 2021, she has worked professionally as a scenographer and production designer for film, theatre, and exhibitions.",
         "curriculum": {
-        "collectiveExhibitions": {
-            "title": "Collective Exhibitions",
-            "2025": [
-            "Olhares e Territórios, Museu de Arte da Bahia"
-            ],
-            "2024": [
-            "Quem alimenta o corpo da cidade?, Espaço Xisto",
-            "49th Ribeirão Preto Art Salon, Ribeirão Preto Art Museum",
-            "Circuito de Arte em Boteco II, Dois de Julho",
-            "Ocupação CAB, PIVÔ Salvador"
-            ],
-            "2023": [
-            "GlogauAIR Online Open Studios"
-            ],
-            "2022": [
-            "Zona Fluxus II Process Exhibition"
-            ]
-        },
-    
-        "residencies": {
-            "title": "Residencies",
-            "items": [
-            "2022 - Zona Fluxus (Brazil)",
-            "2023 - AADK (Spain)",
-            "2023 - GlogauAIR Berlin (Online)"
-            ]
-        },
-    
-        "scholarships": {
-            "title": "Scholarships",
-            "items": [
-            "2019 - PROART-UFRJ Scholarship"
-            ]
-        },
-    
-        "education": {
-            "title": "Education",
-            "items": [
-            "2021 - Bachelor's degree in Scenic Arts - Scenography, School of Fine Arts, Federal University of Rio de Janeiro (EBA - UFRJ)",
-            "2020 - Academic exchange at Universidad Nacional de las Artes (UNA), Argentina",
-            "2019 - Cinematography at Academia Internacional de Cinema (AIC-RJ)",
-            "2018 - 2020 - Monitor and researcher at Investigações Fotográficas (CAp - UFRJ)"
-            ]
-        },
-    
-        "artDepartment": {
-            "title": "Art Department, Set Design, Exhibition Design and More",
-            "2025": [
-            "Justino",
-            "Justíça Tarifária",
-            "O Tempo à Faca",
-            "Reino da Bahia",
-            "Iceberg"
-            ],
-            "2024": [
-            "Um Carnaval em Cada Esquina",
-            "Carnaval: Grande Negócio",
-            "Ediane do Monte: O Tempo de Stella"
-            ],
-            "2023": [
-            "Memórias do Brasil T.3",
-            "Catadoras",
-            "Encontro de Cantadores",
-            "Pontos de Força",
-            "Cantos do Mar",
-            "Malês",
-            "Memorial Dois de Julho"
-            ],
-            "2022": [
-            "Ubaque",
-            "Mancha de Dendê Não Sai",
-            "Oju Okan",
-            "Namíbia, Não!",
-            "Beleza da Noite"
-            ],
-            "2021": [
-            "Mostra de Processos Ciclo I ZF",
-            "Ilê Aiyê, Que Bloco É Esse",
-            "Mulheres nas Industrias Criativas"
-            ]
-        }
+            "collectiveExhibitions": {
+                "title": "Collective Exhibitions",
+                "2025": [
+                "Olhares e Territórios, Museu de Arte da Bahia"
+                ],
+                "2024": [
+                "Quem alimenta o corpo da cidade?, Espaço Xisto",
+                "49th Ribeirão Preto Art Salon, Ribeirão Preto Art Museum",
+                "Circuito de Arte em Boteco II, Dois de Julho",
+                "Ocupação CAB, PIVÔ Salvador"
+                ],
+                "2023": [
+                "GlogauAIR Online Open Studios"
+                ],
+                "2022": [
+                "Zona Fluxus II Process Exhibition"
+                ]
+            },
+        
+            "residencies": {
+                "title": "Residencies",
+                "items": [
+                "2022 - Zona Fluxus (Brazil)",
+                "2023 - AADK (Spain)",
+                "2023 - GlogauAIR Berlin (Online)"
+                ]
+            },
+        
+            "scholarships": {
+                "title": "Scholarships",
+                "items": [
+                "2019 - PROART-UFRJ Scholarship"
+                ]
+            },
+        
+            "education": {
+                "title": "Education",
+                "items": [
+                "2021 - Bachelor's degree in Scenic Arts - Scenography, School of Fine Arts, Federal University of Rio de Janeiro (EBA - UFRJ)",
+                "2020 - Academic exchange at Universidad Nacional de las Artes (UNA), Argentina",
+                "2019 - Cinematography at Academia Internacional de Cinema (AIC-RJ)",
+                "2018 - 2020 - Monitor and researcher at Investigações Fotográficas (CAp - UFRJ)"
+                ]
+            },
+        
+            "artDepartment": {
+                "title": "Art Department, Set Design, Exhibition Design and More",
+                "2025": [
+                "Justino",
+                "Justíça Tarifária",
+                "O Tempo à Faca",
+                "Reino da Bahia",
+                "Iceberg"
+                ],
+                "2024": [
+                "Um Carnaval em Cada Esquina",
+                "Carnaval: Grande Negócio",
+                "Ediane do Monte: O Tempo de Stella"
+                ],
+                "2023": [
+                "Memórias do Brasil T.3",
+                "Catadoras",
+                "Encontro de Cantadores",
+                "Pontos de Força",
+                "Cantos do Mar",
+                "Malês",
+                "Memorial Dois de Julho"
+                ],
+                "2022": [
+                "Ubaque",
+                "Mancha de Dendê Não Sai",
+                "Oju Okan",
+                "Namíbia, Não!",
+                "Beleza da Noite"
+                ],
+                "2021": [
+                "Mostra de Processos Ciclo I ZF",
+                "Ilê Aiyê, Que Bloco É Esse",
+                "Mulheres nas Industrias Criativas"
+                ]
+            }
         }
     }
 }

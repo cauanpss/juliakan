@@ -54,7 +54,7 @@ export default function Header() {
                     <strong>{t("Projects")}</strong>
                 </NavLink>
                 <NavLink to="/about" onClick={toggleMenu}>
-                    <strong>{t("about-me")}</strong>
+                    <strong>{t("about")}</strong>
                 </NavLink>
                 <NavLink to="/contact" onClick={toggleMenu}>
                     <strong>{t("contact")}</strong>

@@ -2,13 +2,15 @@ import React from "react";
 import "../components/styles.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import AboutMeContent from "../components/AboutMeContent";
+import AboutContent from "../components/AboutContent";
 
 export default function Home() {
     return (
         <div>
-            <Header />
-            <AboutMeContent />
+            <div className="top-wrapper">
+                <Header />
+            </div>
+            <AboutContent />
             <Footer />
         </div>
     );

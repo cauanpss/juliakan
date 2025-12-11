@@ -53,6 +53,7 @@ main {
 
 /* Header z-index com 2 dígitos */
 header {
+    /* border: 2px solid grey; */
     display: flex;
     position: fixed;
     flex-direction: column;
@@ -106,6 +107,69 @@ header {
 /* ============================================================
     ABOUT ME
    ============================================================ */
+.about-content {
+    border: 2px solid red;
+    background-color: #80948181;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    padding-top: 6%;
+    max-width: 800px;
+    font-family: "Inter", sans-serif;
+    color: #222;
+    line-height: 1.6;
+}
+
+.about-content .description {
+    /* border: 2px solid blue; */
+    text-align: justify;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* Seções do currículo */
+.about-content .curriculum {
+    border: 2px solid pink;
+    margin-bottom: 2.5rem;
+}
+
+/* Títulos principais das seções (coletivas, residências...) */
+.about-content h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    border-left: 4px solid #000;
+    padding-left: 0.6rem;
+}
+
+/* Anos dentro das exposições */
+.about-content h4 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 1rem 0 0.5rem;
+    color: #444;
+}
+
+/* Lista dos itens */
+.about-content ul {
+    list-style: disc inside;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.about-content li {
+    margin-bottom: 0.3rem;
+    font-size: 0.98rem;
+}
+
+/* Blocos por ano */
+.year-block {
+    margin-bottom: 1.5rem;
+}
+
+/* Mensagens vazias */
+.about-content p {
+    margin-bottom: 1rem;
+}
 
 
 /* ============================================================
