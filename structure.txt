@@ -230,6 +230,7 @@ JULIAKAN/
 │   │               ├── tela8.jpg
 │   │               └── tela9.jpg
 │   ├── components
+│   │   ├── AboutContent.js
 │   │   ├── Carousel.js
 │   │   ├── Footer.js
 │   │   ├── Header.js
@@ -238,9 +239,14 @@ JULIAKAN/
 │   │   ├── Navbar.js
 │   │   ├── NavbarProjects.js
 │   │   ├── ProjectContent.js
+│   │   ├── ScrollToTopButton.js
 │   │   ├── TranslateButton.js
+│   │   ├── oldstyles.css
 │   │   └── styles.css
 │   ├── data
+│   │   ├── dataAbout
+│   │   │   └── dataAbout.js
+│   │   ├── dataAllProjects.js
 │   │   ├── dataDefault.js
 │   │   ├── dataProjectsSetDesignDetails
 │   │   │   ├── dataExpografiaDiane.js
@@ -266,13 +272,11 @@ JULIAKAN/
 │   │   └── pt.json
 │   ├── logo.svg
 │   ├── pages
-│   │   ├── aboutVisualArts.js
+│   │   ├── About.js
 │   │   ├── Home.js
 │   │   ├── ProjectPage.js
 │   │   ├── ProjectsSetDesign.js
-│   │   ├── ProjectsSetDesignOldVersion.js
-│   │   ├── ProjectsVisualArts.js
-│   │   └── ProjectsVisualArtsOldVersion.js
+│   │   └── ProjectsVisualArts.js
 │   ├── reportWebVitals.js
 │   ├── setupTests.js
 │   └── util

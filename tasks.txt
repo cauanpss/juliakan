@@ -1,5 +1,8 @@
-5 - Ajustar arquitetura da traduçãao
-6 - Fazer about-me
+
+6 - Finalizar organização do aboutContent
+    -Estilizar css do componentegit
+
+
 7 - Fazer página de contato
 8 - verificar warnings
 9 - ajustar responsividade (botões do menu mobile ruins de clicar, e sobrepondo navbarProjects)
