@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { useRef } from "react";
 import { projectDetails as visualProjects } from "../data/dataProjectsVisualArtsDetails";
 import ScrollToTopButton from "../components/ScrollToTopButton";
+import Footer from "../components/Footer";
 
 export default function ProjectsVisualArts() {
     const { t } = useTranslation();
@@ -38,9 +39,10 @@ export default function ProjectsVisualArts() {
                             category={project.category}
                         />
                     ))}
-                <ScrollToTopButton />                    
+                    <ScrollToTopButton />
                 </div>
             </main>
+            <Footer />
         </>
     );
 }

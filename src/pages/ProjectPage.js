@@ -5,6 +5,7 @@ import "../components/styles.css";
 import Header from "../components/Header";
 import NavbarProjects from "../components/NavbarProjects";
 import ScrollToTopButton from "../components/ScrollToTopButton";
+import Footer from "../components/Footer";
 
 export default function ProjectPage() {
     const { category, projectid } = useParams();
@@ -25,6 +26,7 @@ export default function ProjectPage() {
             <NavbarProjects />
             <ProjectContent data={data} />
             <ScrollToTopButton />
+            <Footer />
         </>
     );
 }

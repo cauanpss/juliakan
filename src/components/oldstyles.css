@@ -1,18 +1,14 @@
-/* ============================================================
-   1. RESET / VARIÁVEIS GLOBAIS
-   ============================================================ */
-
 /* Reset geral */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--font-text);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Variáveis globais */
-:root{
-    --color-black: #161616;
+:root{     
+    --color-black: #161616; 
     --font-text: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     --font-accent: 'DM Mono','Courier New', Courier, monospace;
 
@@ -20,126 +16,47 @@
     --hover-card-width: 500px;
 }
 
-/* Corpo principal */
 body {
     display: flex;
     flex-direction: column;
     align-content: center;
 }
 
-/* Reset links mobile - aplica em qualquer viewport */
-a,
-a:visited,
-a:active,
-a:focus {
-    color: var(--color-black) !important;
-    text-decoration: none !important;
-}
 
-/* ------------------------------------------------------------
-   2. LAYOUT GERAL
-   ------------------------------------------------------------ */
-
-main {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: space-between;
-}
-
-/* ============================================================
-   3. HEADER & TOP WRAPPER
-   ============================================================ */
-
-/* Header z-index com 2 dígitos */
+/* Header z-index com 2 digitos */ 
 header {
+    /* border: 2px solid red; */
+    /* background-color: #fff; */
     display: flex;
     position: fixed;
     flex-direction: column;
     flex-wrap: wrap;
+    display: flex;
     width: 100%;
     height: 15%;
     justify-content: space-between;
     z-index: 10;
 }
 
-/* Top wrapper (sobre o header, com gradiente) */
 .top-wrapper {
     position: fixed;
     width: 100%;
     height: 15%;
     z-index: 99;
+
     background: linear-gradient(
         to bottom,
-        rgba(255, 255, 255, 0.849),
-        rgba(255, 255, 255, 0)
-    );
+        rgba(255, 255, 255, 0.849), 
+        rgba(255, 255, 255, 0));;
 }
 
-/* quando header está dentro de .top-wrapper */
-.top-wrapper header {
+.top-wrapper header{
     background: none;
+
 }
 
-/* ============================================================
-   4. LOGO E IDENTIDADE
-   ============================================================ */
 
-.logo {
-    color: black;
-    font-size: 15px;
-    position: absolute;
-    align-self: flex-start;
-    background-color: transparent;
-    padding: 10px;
-    text-decoration: none;
-    z-index: 100;
-}
-
-.logo h1 {
-    z-index: 100;
-    font-family: var(--font-accent);
-    font-weight: bold;
-    color: var(--color-black);
-}
-
-/* ============================================================
-   5. TRANSLATE (BOTÕES DE IDIOMA)
-   ============================================================ */
-
-.translate {
-    display: flex;
-    align-self: flex-end;
-    position: fixed;
-    top: 1.2%;
-    gap: 3px;
-    z-index: 100;
-    font-weight: bold;
-    margin-right: 30px;
-}
-
-.translate .separador {
-    margin-top: 10px;
-    font-size: 20px;
-}
-
-.translate button {
-    width: auto;
-    border: none;
-    padding: 2px 6px;
-    margin: 0;
-    background-color: transparent;
-    transition: color 0.5s ease;
-}
-
-.translate button:hover {
-    color: rgba(0, 0, 0, 0.616);
-    cursor: pointer;
-}
-
-/* ============================================================
-   6. NAVBAR / PROJECTS NAVBAR
-   ============================================================ */
+/* ----------NAVBAR ----------- */
 
 .projects-navbar {
     background: none;
@@ -151,13 +68,12 @@ header {
     overflow-y: auto;
 }
 
-/* lista interna */
 .projects-navbar ul {
+    /* border: 2px solid red;gi */
     list-style: none;
     max-width: 150px;
 }
 
-/* link de projeto */
 .project-link {
     display: block;
     width: 100%;
@@ -176,8 +92,8 @@ header {
     font-weight: 500;
 }
 
-/* Nav desktop principal */
 .nav-desktop {
+    /* border: 1px solid red; */
     display: flex;
     width: 90.5%;
     list-style: none;
@@ -188,18 +104,45 @@ header {
     font-size: 14px;
 }
 
-.nav-desktop a {
-    color: var(--color-black);
+.nav-desktop a{
+    
+    color:var(--color-black);
     text-decoration: none;
 }
 
-.nav-desktop a.active {
+.nav-desktop a.active{
     color: rgb(151, 0, 0);
 }
 
-/* ============================================================
-   7. HOME MENU / BOTÕES PRINCIPAIS
-   ============================================================ */
+.logo {
+    /* border: 1px solid green; */
+    color:black;
+    font-size: 15px;
+    position: absolute;
+    align-self: flex-start;
+    background-color: transparent;
+    padding: 10px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+/*Julia Kan config text*/
+.logo h1 {
+    z-index: 100; 
+    font-family: 'DM Mono','Courier New', Courier, monospace ;
+    font-weight: bold;
+    color: var(--color-black);
+}
+
+/* Main */
+
+main {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+}
 
 .home-menu {
     flex: 1;
@@ -208,10 +151,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    /* flex-direction: column; */
+    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-color: black;
+    
     padding: 0;
     gap: 20px;
 }
@@ -224,7 +170,6 @@ header {
     gap: 20px;
 }
 
-/* botão mobile menu (invisível por padrão) */
 .mobile-menu-btn {
     display: none;
     margin-top: 5%;
@@ -235,13 +180,13 @@ header {
     color: var(--color-black);
 }
 
-/* container de botões */
 .button-container {
     display: flex;
     align-items: center;
     padding: 15px;
     border-radius: 20px;
 }
+
 
 .button-container button {
     width: 330px;
@@ -259,41 +204,73 @@ header {
     color: rgba(0, 0, 0, 0.74);
 }
 
-/* separador / destaque */
 .separador {
     color: rgb(0, 0, 0);
+    font-size: 1.5rem;
     font-weight: 350;
     margin-bottom: 15px;
     background: transparent;
     font-size: 45px;
 }
 
-/* Identificadores visual/performing com fonte mono */
-.visual-arts,
-.performing-arts {
-    font-family: var(--font-accent);
+.visual-arts {
+    font-family: 'DM Mono','Courier New', Courier, monospace ;
     width: 200px;
+    text-align: right;
     padding: 26px 0;
 }
 
-.visual-arts {
-    text-align: right;
-}
-
 .performing-arts {
-    text-align: left;
+    font-family: 'DM Mono','Courier New', Courier, monospace ;
     color: var(--color-black);
+    width: 200px;
+    text-align: left;
+    padding: 26px 0;
+}
+/* Translate Button z-index com 3 digitos */
+.translate {
+    /* border: 1px solid red; */
+    display: flex;
+    align-self: flex-end;
+    position: fixed;
+    top: 1.2%;
+    gap: 3px;
+    z-index: 100;
+    font-weight: bold;
+    margin-right: 30px;
+
 }
 
-/* ============================================================
-   8. FOOTER
-   ============================================================ */
+.translate .separador {
+    margin-top: 10px;
+    font-size: 20px ;
+    /* font-weight: 500; */
+}
+
+.translate button{
+    /* font-weight: bold; */
+
+    width: auto;
+    border: none;
+    padding: 2px 6px;
+    margin: 0px;
+    background-color: transparent;
+    transition: color 0.5s ease;
+}
+
+.translate button:hover{
+    color: rgba(0, 0, 0, 0.616);
+    cursor: pointer;
+}
+
+/* Footer */
 
 footer {
     min-height: 100px;
-    border: 2px solid red; /* mantido conforme original */
+    border: 2px solid red;
     display: flex;
     justify-content: space-between;
+    /* padding: 40px; */
 }
 
 .copyright {
@@ -310,20 +287,20 @@ footer {
     gap: 20px;
 }
 
-/* ============================================================
-   9. HOVER CARDS / GRID
-   ============================================================ */
-
+/* HoverCard z-index com 1 digito */
+/*---------------- main --------------------*/
 .hoverCard-page-containers {
+    /* border: 2px solid red ; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin-top: 10%;
+    margin-top:10%;
     padding: 0 10%;
     gap: 2.5em 4em;
 }
 
-/* Hover Card geral */
+/* Hover Card */
 .hover-card {
+    /* border: solid 1px rgba(0, 0, 0, 0.171); */
     display: flex;
     position: relative;
     width: 100%;
@@ -338,26 +315,7 @@ footer {
 }
 
 .hover-card:hover {
-    transform: scale(1.06);
-}
-
-/* container de imagem */
-.hover-card-img-container {
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    overflow: hidden;
-}
-
-/* imagens no card */
-.hover-card-img-container img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-    opacity: 0;
-    z-index: 2;
-    display: block;
+    transform: scale(1.06); 
 }
 
 .hover-card-img-container img.active {
@@ -365,8 +323,30 @@ footer {
     z-index: 3;
 }
 
-/* overlay / texto do hover card */
+.hover-card-img-container {
+    width:100%;
+    height: 100%;
+    /* padding-left: 6%; */
+    /* padding-right: 6%; */
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+.hover-card-img-container img {
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+    transition: transform 0.5s ease; 
+    opacity: 0;
+    z-index: 2;
+    display: block;
+    
+}
+
+
 .hover-card .overlay {
+    
     opacity: 0;
     z-index: 12;
     position: absolute;
@@ -382,23 +362,21 @@ footer {
     font-weight: bold;
 }
 
-.hover-card:hover .overlay {
-    opacity: 0.8;
-}
-
-/* utilitário de coluna flex */
 .flex-column {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+.hover-card:hover .overlay {
+    opacity: 0.8;
+}
 
-/* ============================================================
-   10. PROJECT PAGE / CONTEÚDO
-   ============================================================ */
+
+/*--------------- ProjectPage ----------------*/
 
 .project-page-container {
+    /* border: 2px solid  red; */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -406,8 +384,8 @@ footer {
     align-items: center;
 }
 
-/* main específico para conteúdo do projeto */
 main.project-content {
+    /* border: 2px solid  rgb(8, 255, 8); */
     display: flex;
     margin-top: 3.5%;
     margin-left: auto;
@@ -428,6 +406,7 @@ main.project-content h1 {
 }
 
 main.project-content p {
+    /* border: 2px solid blue ; */
     font-size: 1.1rem;
     line-height: 1.7;
     color: #333;
@@ -436,34 +415,31 @@ main.project-content p {
     margin-bottom: 25px;
 }
 
-/* vídeo do projeto */
 .project-video {
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 3%;
+    margin-bottom:3%;
     width: 70%;
     height: 70%;
+    /* border: 2px solid red; */
     display: flex;
     justify-content: center;
     align-items: center;
-    aspect-ratio: 16/9;
+    aspect-ratio: 16/9;    
     position: relative;
     overflow: hidden;
     border-radius: 5px;
 }
 
 .project-video iframe {
+    border: 2px solid green;
     position: relative;
     width: 100%;
     height: 100%;
     border: 0;
-    /* border: 2px solid green; mantido no original, mas transformado em comentário
-       se quiser reativar, descomente a linha acima */
 }
 
-/* ============================================================
-   11. VIDEO FULLSCREEN / TOUCH OVERLAY
-   ============================================================ */
+/* --------------------- Video Fullscreen --------------------- */
 
 .video-fullscreen-overlay {
     position: fixed;
@@ -479,6 +455,7 @@ main.project-content p {
     animation: fadeIn 0.3s ease;
 }
 
+/* botão fechar */
 .video-close-btn {
     position: fixed;
     top: 25px;
@@ -495,6 +472,7 @@ main.project-content p {
     opacity: 0.7;
 }
 
+/* vídeo no fullscreen */
 .video-fullscreen-frame {
     width: 90%;
     height: 80%;
@@ -516,11 +494,10 @@ main.project-content p {
     background: transparent;
 }
 
-/* ============================================================
-   12. CAROUSEL (GALLERY / FULLSCREEN)
-   ============================================================ */
+/* ----------------------------- Carousel -------------------------- */
 
 .carousel {
+    /* border: 2px solid red; */
     width: 100%;
     max-width: 900px;
     display: flex;
@@ -538,27 +515,28 @@ main.project-content p {
     position: relative;
 }
 
-/* hitboxes laterais para navegação */
 .carousel-hitbox {
+    /* border: 2px solid green; */
     border: none;
     position: absolute;
     top: 0;
-    width: 30%;
+    width:30%;
     height: 100%;
     background: transparent;
     cursor: pointer;
     z-index: 20;
 }
 
+/* lado esquerdo */
 .carousel-hitbox.left {
     align-self: flex-end;
 }
 
+/* lado direito */
 .carousel-hitbox.right {
-    align-self: flex-start;
+    align-self:flex-start ;
 }
 
-/* imagens do carousel */
 .carousel-image {
     position: absolute;
     top: 0;
@@ -566,15 +544,16 @@ main.project-content p {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    opacity: 0;
+    opacity: 0 ;
     transition: opacity 0.8s ease-in-out;
+
 }
 
 .carousel-image.active {
     opacity: 1;
 }
 
-/* dots do carousel */
+/* Dots */
 .carousel-dots {
     display: flex;
     gap: 8px;
@@ -594,7 +573,8 @@ main.project-content p {
     background: black;
 }
 
-/* FULLSCREEN CAROUSEL */
+/* ----------------------- Carousel Fullscreen -------------------------- */
+
 .fullscreen-overlay {
     position: fixed;
     top: 0;
@@ -609,30 +589,15 @@ main.project-content p {
     animation: fadeIn 0.3s ease;
 }
 
-.fullscreen-images {
-    position: relative;
-    width: 90%;
-    height: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .fullscreen-image {
-    position: absolute;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    opacity: 0;
-    transition: opacity 0.8s ease-in-out;
+    max-width: 90%;
+    max-height: 90%;
     border-radius: 10px;
+    object-fit: contain;
+    animation: pop 0.3s ease;
 }
 
-.fullscreen-image.active {
-    opacity: 1;
-}
-
-/* controle de fechamento / navegação fullscreen */
+/* Close button */
 .close-btn {
     position: fixed;
     top: 25px;
@@ -649,6 +614,7 @@ main.project-content p {
     opacity: 0.7;
 }
 
+/* Navigation buttons */
 .fs-btn {
     position: fixed;
     top: 50%;
@@ -657,7 +623,7 @@ main.project-content p {
     background: transparent;
     color: white;
     border: none;
-    cursor: button;
+    cursor: pointer;
     padding: 10px;
     z-index: 2100;
     user-select: none;
@@ -676,7 +642,6 @@ main.project-content p {
     right: 40px;
 }
 
-/* botão de voltar ao topo */
 .scroll-top-btn {
     position: fixed;
     bottom: 30px;
@@ -688,6 +653,8 @@ main.project-content p {
     cursor: pointer;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
     z-index: 9999;
+
+    /* invisível por padrão */
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease-in-out;
@@ -698,17 +665,46 @@ main.project-content p {
     pointer-events: all;
 }
 
-/* ============================================================
-   13. RESPONSIVIDADE
-   ============================================================ */
 
-/* --------- MOBILE GERAL – até 768px -------------------*/
+
+/* Empilha as imagens no fullscreen */
+.fullscreen-images {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullscreen-image {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out; 
+    border-radius: 10px;
+}
+
+.fullscreen-image.active {
+    opacity: 1;
+}
+
+
+
+/* ------------------RESPONSIVIDADE-------------------- */
+
+/* --------- MOBILE GERAL – até 768px-------------------*/
 @media (max-width: 768px) {
 
-    /* Header ajustes */
+    /* Header */
     header {
+        /* background-color:#fff ;
+        border:2px solid red; */
         padding: 10px 20px;
         height: 20%;
+        
     }
 
     .logo {
@@ -717,25 +713,28 @@ main.project-content p {
     }
 
     .logo h1 {
+        z-index: 100;
         font-size: 18px;
     }
 
     .translate {
         margin-right: 0;
+
     }
 
-    /* Home Menu mobile */
+
+    /* Home Menu */
     .home-menu {
         padding-top: 100px;
         padding-bottom: 100px;
         min-height: 100vh;
         gap: 15px;
     }
-
+    
     .home-menu-content {
-        padding-top: 100px;
-        padding-bottom: 100px;
-    }
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
 
     .button-container button {
         width: 250px;
@@ -747,22 +746,25 @@ main.project-content p {
         font-size: 48px;
         margin-bottom: 10px;
     }
-
-    /* Projects navbar transformada em top strip */
+    
+    /* NAVBAR-PROJECTS */
+    
     .projects-navbar {
+        /* border: 2px solid blue; */
         top: 12%;
-        background: linear-gradient(
-            to bottom,
-            rgba(255, 255, 255, 0.849),
-            rgba(255, 255, 255, 0.493)
-        );
+        background:linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.849), 
+        rgba(255, 255, 255, 0.493));
         position: fixed;
         left: 50%;
+        /* padding-top: 5%; */
+        /* height: 14%; */
         transform: translateX(-50%);
         width: 100%;
         z-index: 100;
     }
-
+    
     .projects-navbar ul {
         display: flex;
         gap: 18px;
@@ -770,17 +772,20 @@ main.project-content p {
 
     .project-link {
         font-size: 14px;
-        white-space: nowrap;
+        /* padding: 8px 0; */
+        white-space: nowrap; 
     }
-
-    /* topo wrapper mobile */
+    
     .top-wrapper {
-        background-color: #fff;
+        /* border: 2px solid red; */
+        background-color: #fff ;
         z-index: 500;
     }
 
-    /* nav-desktop vira dropdown mobile */
-    .nav-desktop {
+    
+
+    
+    .nav-desktop {        
         display: none;
         font-size: 14px;
         flex-direction: column;
@@ -793,32 +798,39 @@ main.project-content p {
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        /* z-index: 1000; */
+
     }
 
     .nav-desktop.open {
-        display: flex;
+        display: flex; 
         z-index: 2500;
-    }
+        /* border: 2px solid blue; */
 
-    .nav-desktop.open ~ .mobile-menu-btn {
-        pointer-events: none;
-        opacity: 0;
     }
+    
+    .nav-desktop.open ~ .mobile-menu-btn {
+    pointer-events: none;
+    opacity: 0;
+}
 
     .mobile-menu-btn {
-        display: block;
+        /* border: 2px solid red; */
+        /* background-color: green; */
+        display: block; 
         position: absolute;
         top: 20px;
         right: 20px;
     }
 
     .visual-arts,
-    .performing-arts {
-        width: auto;
-        padding: 15px 0;
-        text-align: center;
-        font-size: 18px;
+    .performing-arts{
+    width: auto;
+    padding:15px 0;
+    text-align: center;
+    font-size: 18px
     }
+
 
     .scroll-top-btn {
         position: fixed;
@@ -826,41 +838,48 @@ main.project-content p {
         right: 10px;
         padding: 6px 7px;
         border-radius: 50%;
+        border: none;
+        color: #000000;
+        cursor: pointer;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
         z-index: 9999;
     }
-
-    /* hovercard mobile: 1 coluna, remove hover transform */
+    
+    /*hovercard*/
+    
     .hoverCard-page-containers {
         grid-template-columns: 1fr;
-        padding: 0 5%;
-        gap: 1.5em;
-        margin-top: 30%;
+        padding: 0 5%;             
+        gap: 1.5em;                
+        margin-top: 30%;           
     }
 
     .hover-card {
-        width: 100%;
-        aspect-ratio: 16/9;
+        width: 100%;               
+        aspect-ratio: 16/9;        
     }
-
+    
     .hover-card .overlay {
         color: #000000bd;
-        opacity: 0;
-        background: rgba(233, 233, 233, 0.541);
+        opacity: 0 ;        
+        background: rgba(233, 233, 233, 0.541); 
         z-index: 10;
         pointer-events: none;
         transition: opacity 0.3s;
     }
 
-    .hover-card .overlay.show {
+    .hover-card .overlay.show{
         opacity: 1;
-        pointer-events: auto;
+        pointer-events: auto;;
+
     }
 
+    /* Desativa o efeito do hover no mobile */
     .hover-card:hover {
         transform: none;
     }
-
-    /* Project page mobile */
+    
+    /* ProjectPage*/
     main.project-content {
         width: 90%;
         margin-top: 110px;
@@ -877,22 +896,28 @@ main.project-content p {
         font-size: 1rem;
         line-height: 1.6;
     }
+    
+    
+    
+    
+    /* CAROUSEL */
+        .carousel-hitbox {
+            display: none;   /* remove os botões */
+        }
+        
 
-    /* Carousel mobile adjustments */
-    .carousel-hitbox {
-        display: none;
-    }
-
+    /* GALLERY */
     .gallery {
         width: 100%;
         max-width: 100%;
     }
 
     .carousel-window {
-        height: 55vw;
+        height: 55vw; 
         max-height: 360px;
     }
 
+    /* FULLSCREEN IMAGES */
     .fullscreen-image {
         max-width: 95%;
         max-height: 70%;
@@ -905,21 +930,22 @@ main.project-content p {
     .close-btn {
         font-size: 2.5rem;
     }
-
-    /* Video mobile */
+    
+    /* VIDEO */
     .project-video iframe {
-        height: 350px;
+        height: 350px; 
     }
+    
 }
 
 /* ----------– até 480px ------------------*/
 @media (max-width: 480px) {
 
-    /* Home Menu menor */
+    /*--- Home Menu ---*/
     .home-menu {
-        padding-top: 100px;
-        padding-bottom: 100px;
-        min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    min-height: 100vh;
     }
 
     .button-container button {
@@ -931,7 +957,7 @@ main.project-content p {
         font-size: 36px;
     }
 
-    /* hover cards mais compactos */
+    /*--- hover Cards ---*/
     .hover-card {
         height: 170px;
     }
@@ -939,8 +965,9 @@ main.project-content p {
     .overlay {
         font-size: 1rem;
     }
-
-    /* Carousel reduzido */
+    
+    /* --- Carousel --- */
+    
     .carousel-window {
         height: 220px;
     }
@@ -953,20 +980,22 @@ main.project-content p {
         font-size: 2rem;
         right: 20px;
     }
-
-    /* Vídeo */
+    
+    /*--- Video --- */
     .project-video iframe {
-        height: 350px;
+        height: 350px; 
     }
 }
 
-/* ============================================================
-   14. UTILITÁRIOS ESPECIAIS (manter alterações específicas)
-   ============================================================ */
+/* ---------RESET LINKS MOBILE------------- */
+a,
+a:visited,
+a:active,
+a:focus {
+    color: var(--color-black) !important;
+    text-decoration: none !important;
+}
 
-/* preservar comportamento de links dentro de .button-container */
 .button-container a button {
     color: var(--color-black) !important;
 }
-
-/* fim do arquivo */

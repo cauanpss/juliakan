@@ -5,11 +5,15 @@
     "Projects" : "Projects",
     "about-me" : "About me",
     "contact" : "Contact",
-    "CardProjectTela" : "Tela",
-    "CardImaginarySpaces" : "Imaginary Spaces",
-    "CardCreacionConRayosAstrales" : "Creacíon con Rayos Astrales",
-    "CardHorizons": "Horizons",
-    "CardClippings" : "Clippings",
-    "CardBlanca" : "Blanca",
-    "CardBau" : "BAÚ"
+    
+    "aboutMeData" : {
+        "title": "About Me",
+        "description" : "Julia Kan (b. 1999) is a Brazilian visual artist based in Salvador, Bahia. Her artistic practice is primarily lens-based but is profoundly informed by her background in spatial design, creating a dialogue between photography and scenography. She holds a Bachelor's degree in Performing Arts – Scenography from the Federal University of Rio de Janeiro (UFRJ) and is currently a Master's student in the Visual Arts Graduate Program at the Federal University of Bahia (UFBA). Her work is rooted in an investigation of spatiality, perception, and the transformative dialogue between the two-dimensional image and the three-dimensional object. Since 2021, she has worked professionally as a scenographer and production designer for film, theatre, and exhibitions"         ,
+        "curriculum" : "Julia Kan (b. 1999) is a Brazilian visual artist based in Salvador, Bahia. Her work is primarily lens-based and deeply influenced by her background in spatial design, establishing a dialogue between photography and scenography. She holds a Bachelor’s degree in Performing Arts – Scenography from the Federal University of Rio de Janeiro (UFRJ) and is currently a Master’s student in the Visual Arts Graduate Program at the Federal University of Bahia (UFBA). Her practice investigates spatiality, perception, and the transformative relationship between the two-dimensional image and the three-dimensional object. Since 2021, she has worked professionally as a scenographer and production designer for film, theatre, and exhibitions. Her collective exhibitions include: in 2025, “Olhares e Territórios” at the Museum of Art of Bahia; in 2024, “Quem alimenta o corpo da cidade?” at Espaço Xisto, the 49th Ribeirão Preto Art Salon at the Ribeirão Preto Museum of Art, “Circuito de Arte em Boteco II” in Dois de Julho, and “Ocupação CAB” at PIVÔ Salvador; in 2023, the GlogauAIR Online Open Studios; and in 2022, “Mostra de Processos Zona Fluxus II.” She has participated in artist residencies at Zona Fluxus (Brazil, 2022), AADK (Spain, 2023), and GlogauAIR Berlin (online, 2023). She received the PROART-UFRJ scholarship in 2019. Her education also includes an academic exchange at the Universidad Nacional de las Artes (UNA), Argentina, in 2020; Cinematography studies at the Academia Internacional de Cinema (AIC-RJ) in 2019; and work as a monitor and researcher in the course “Investigações Fotográficas” at CAp-UFRJ from 2018 to 2020. Her work in art direction, set design, and exhibition design includes the following projects: in 2025, “Justino,” “Justíça Tarifária,” “O Tempo à Faca,” “Reino da Bahia,” and “Iceberg”; in 2024, “Um Carnaval em Cada Esquina,” “Carnaval: Grande Negócio,” and “Ediane do Monte: O Tempo de Stella”; in 2023, “Memórias do Brasil T.3,” “Catadoras,” “Encontro de Cantadores,” “Pontos de Força,” “Cantos do Mar,” “Malês,” and “Memorial Dois de Julho”; in 2022, “Ubaque,” “Mancha de Dendê Não Sai,” “Oju Okan,” “Namíbia, Não!” and “Beleza da Noite”; and in 2021, “Mostra de Processos Ciclo I ZF,” “Ilê Aiyê, Que Bloco É Esse,” and “Mulheres nas Indústrias Criativas.”"
+    }
+    
+    
+    
+    
+    
 }

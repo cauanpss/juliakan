@@ -1,10 +1,10 @@
 import React from "react";
+import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import ProjectsVisualArts from "./pages/ProjectsVisualArts";
 import ProjectsSetDesign from "./pages/ProjectsSetDesign";
-import AboutMe from "./pages/AboutMeVisualArts";
-import "./App.css";
+import AboutMe from "./pages/AboutMe";
 import ProjectPage from "./pages/ProjectPage";
 import ScrollToTop from "./util/useScrollToTop";
 
