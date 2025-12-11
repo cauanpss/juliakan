@@ -8,8 +8,7 @@ export default function NavbarProjects() {
 
     const projects = isPerforming
         ? Object.values(
-              require("../data/dataProjectsPerformingArtsDetails")
-                  .projectDetails
+              require("../data/dataProjectsSetDesignDetails").projectDetails
           )
         : Object.values(
               require("../data/dataProjectsVisualArtsDetails").projectDetails

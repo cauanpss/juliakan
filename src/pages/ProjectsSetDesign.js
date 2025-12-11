@@ -4,11 +4,10 @@ import HoverCard from "../components/HoverCard";
 import TranslateButtons from "../components/TranslateButton";
 import { useTranslation } from "react-i18next";
 import { useRef } from "react";
-import { projectDetails as performingProjects } from "../data/dataProjectsPerformingArtsDetails";
+import { projectDetails as performingProjects } from "../data/dataProjectsSetDesignDetails";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 
-
-export default function ProjectsPerformingArts() {
+export default function ProjectsSetDesign() {
     const { t } = useTranslation();
     const mainContainer = useRef();
 
@@ -40,7 +39,7 @@ export default function ProjectsPerformingArts() {
                         />
                     ))}
                 </div>
-                <ScrollToTopButton />            
+                <ScrollToTopButton />
             </main>
         </>
     );

@@ -16,16 +16,13 @@ export default function Header() {
     const isVisual = location.pathname.toLowerCase().includes("visual");
 
     const dynamicProjectsPath = isPerforming
-        ? "/ProjectsPerformingArts"
+        ? "/ProjectsSetDesign"
         : "/ProjectsVisualArts";
 
-    
     const SWIPE_THRESHOLD = 50;
 
-    
     return (
-        <header
-        >
+        <header>
             <TranslateButtons />
 
             <Link to="/" className="logo">

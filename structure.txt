@@ -242,7 +242,7 @@ JULIAKAN/
 │   │   └── styles.css
 │   ├── data
 │   │   ├── dataDefault.js
-│   │   ├── dataProjectsPerformingArtsDetails
+│   │   ├── dataProjectsSetDesignDetails
 │   │   │   ├── dataExpografiaDiane.js
 │   │   │   ├── dataMoraesMoreira.js
 │   │   │   ├── dataObdr.js
@@ -269,8 +269,8 @@ JULIAKAN/
 │   │   ├── AboutMeVisualArts.js
 │   │   ├── Home.js
 │   │   ├── ProjectPage.js
-│   │   ├── ProjectsPerformingArts.js
-│   │   ├── ProjectsPerformingArtsOldVersion.js
+│   │   ├── ProjectsSetDesign.js
+│   │   ├── ProjectsSetDesignOldVersion.js
 │   │   ├── ProjectsVisualArts.js
 │   │   └── ProjectsVisualArtsOldVersion.js
 │   ├── reportWebVitals.js

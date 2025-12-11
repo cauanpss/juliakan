@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import ProjectsVisualArts from "./pages/ProjectsVisualArts";
-import ProjectsPerformingArts from "./pages/ProjectsPerformingArts";
+import ProjectsSetDesign from "./pages/ProjectsSetDesign";
 import AboutMe from "./pages/AboutMeVisualArts";
 import "./App.css";
 import ProjectPage from "./pages/ProjectPage";
@@ -25,8 +25,8 @@ function App() {
                 />
                 <Route path="/about" element={<AboutMe />} />
                 <Route
-                    path="/ProjectsPerformingArts"
-                    element={<ProjectsPerformingArts />}
+                    path="/ProjectsSetDesign"
+                    element={<ProjectsSetDesign />}
                 />
                 <Route
                     path="/projects/:category/:projectid"

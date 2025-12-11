@@ -45,7 +45,7 @@ src/
 │ └── styles.css
 │
 ├── data/
-│ ├── dataProjectsPerformingArtsDetails.js
+│ ├── dataProjectsSetDesignDetails.js
 │ ├── dataProjectsVisualArtsDetails.js
 │ ├── dataAllProjects.js
 │ └── ...
@@ -104,7 +104,7 @@ No arquivo dataAllProjects.js:
 
         js
         Copy code
-        import performing from "./dataProjectsPerformingArtsDetails";
+        import performing from "./dataProjectsSetDesignDetails";
         import visual from "./dataProjectsVisualArtsDetails";
         
         export const allProjects = {
@@ -166,7 +166,7 @@ Criar index.js:
 2. Criar arquivo de dados
 bash
 Copy code
-data/dataProjectsPerformingArtsDetails/dataNovoProjeto.js
+data/dataProjectsSetDesignDetails/dataNovoProjeto.js
         
         js
         Copy code
@@ -183,7 +183,7 @@ data/dataProjectsPerformingArtsDetails/dataNovoProjeto.js
 3. Registrar no arquivo da categoria
 Editar:
 
-dataProjectsPerformingArtsDetails.js
+dataProjectsSetDesignDetails.js
     
         js
         Copy code

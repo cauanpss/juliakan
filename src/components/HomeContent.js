@@ -24,7 +24,7 @@ export default function HomeContent() {
 
                         <div className="separador">/</div>
 
-                        <Link to="/ProjectsPerformingArts">
+                        <Link to="/ProjectsSetDesign">
                             <button className="performing-arts">
                                 {" "}
                                 {t("performing")}
