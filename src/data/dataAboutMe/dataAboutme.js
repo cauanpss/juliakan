@@ -7,6 +7,7 @@ const dataAboutMe = {
     category: "abouteMe",
     participants: [""],
     description: "aboutMeData.description",
+    
 
     // images: ,
     // video: URL ou LOCAL (caso seja video local, importar no cabeçalho)

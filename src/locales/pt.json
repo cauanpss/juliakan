@@ -1,16 +1,89 @@
 {
-    "arts": "Artes Visuais",
-    "performing": "Cenografia",
-    "home" : "Pagina Inicial",
-    "Projects" : "Projetos",
-    "about-me" : "Sobre mim",
-    "contact" : "Contato",
-    
-    "aboutMeData" : {
+    "aboutMeData": {
         "title": "Sobre Mim",
-        "description" : "Julia Kan (n. 1999) é uma artista visual brasileira residente em Salvador, Bahia. Sua prática artística tem como base principal a imagem fotográfica, mas é profundamente influenciada por sua formação em cenografia, criando um diálogo constante entre fotografia e cenografia. É graduada em Artes Cênicas – Cenografia pela Universidade Federal do Rio de Janeiro (UFRJ) e atualmente é mestranda no Programa de Pós-Graduação em Artes Visuais da Universidade Federal da Bahia (UFBA). Sua produção se concentra na investigação da espacialidade, da percepção e das transformações que surgem no encontro entre a imagem bidimensional e o objeto tridimensional. Desde 2021, atua profissionalmente como cenógrafa e diretora de arte em projetos de cinema, teatro e exposições.",
-        "curriculum" : "Julia Kan (n. 1999) é uma artista visual brasileira baseada em Salvador, Bahia. Sua prática é majoritariamente voltada para a imagem, profundamente influenciada pela sua formação em design espacial, estabelecendo um diálogo entre fotografia e cenografia. É graduada em Artes Cênicas – Cenografia pela Universidade Federal do Rio de Janeiro (UFRJ) e atualmente é mestranda no Programa de Pós-Graduação em Artes Visuais da Universidade Federal da Bahia (UFBA). Seu trabalho investiga espacialidade, percepção e a relação transformadora entre a imagem bidimensional e o objeto tridimensional. Desde 2021, atua profissionalmente como cenógrafa e diretora de arte em cinema, teatro e exposições. Entre suas exposições coletivas estão: em 2025, “Olhares e Territórios” no Museu de Arte da Bahia; em 2024, “Quem alimenta o corpo da cidade?” no Espaço Xisto, o 49º Salão de Artes de Ribeirão Preto no Museu de Arte de Ribeirão Preto, “Circuito de Arte em Boteco II” no Dois de Julho e “Ocupação CAB” no PIVÔ Salvador; em 2023, o GlogauAIR Online Open Studios; e em 2022, a “Mostra de Processos Zona Fluxus II”. Participou de residências artísticas na Zona Fluxus (Brasil, 2022), AADK (Espanha, 2023) e GlogauAIR Berlim (online, 2023). Recebeu a bolsa PROART-UFRJ em 2019. Sua formação também inclui intercâmbio acadêmico na Universidad Nacional de las Artes (UNA), Argentina, em 2020; estudos em Cinematografia na Academia Internacional de Cinema (AIC-RJ) em 2019; e atuação como monitora e pesquisadora no curso “Investigações Fotográficas” do CAp-UFRJ entre 2018 e 2020. Seu trabalho em direção de arte, cenografia e design de exposições inclui os seguintes projetos: em 2025, “Justino”, “Justíça Tarifária”, “O Tempo à Faca”, “Reino da Bahia” e “Iceberg”; em 2024, “Um Carnaval em Cada Esquina”, “Carnaval: Grande Negócio” e “Ediane do Monte: O Tempo de Stella”; em 2023, “Memórias do Brasil T.3”, “Catadoras”, “Encontro de Cantadores”, “Pontos de Força”, “Cantos do Mar”, “Malês” e “Memorial Dois de Julho”; em 2022, “Ubaque”, “Mancha de Dendê Não Sai”, “Oju Okan”, “Namíbia, Não!” e “Beleza da Noite”; e em 2021, “Mostra de Processos Ciclo I ZF”, “Ilê Aiyê, Que Bloco É Esse” e “Mulheres nas Indústrias Criativas.”" 
-    }
-
+        "description": "Julia Kan (n. 1999) é uma artista visual brasileira baseada em Salvador, Bahia. Sua prática artística é predominantemente voltada para a imagem, mas profundamente influenciada por sua formação em design espacial, criando um diálogo entre fotografia e cenografia.",
+        "curriculum": {
+            "collectiveExhibitions": {
+                "title": "Exposições Coletivas",
+                "2025": [
+                "Olhares e Territórios, Museu de Arte da Bahia"
+                ],
+                "2024": [
+                "Quem alimenta o corpo da cidade?, Espaço Xisto",
+                "49º Salão de Artes de Ribeirão Preto, Museu de Arte de Ribeirão Preto",
+                "Circuito de Arte em Boteco II, Dois de Julho",
+                "Ocupação CAB, PIVÔ Salvador"
+                ],
+                "2023": [
+                "GlogauAIR Online Open Studios"
+                ],
+                "2022": [
+                "Mostra de Processos Zona Fluxus II"
+                ]
+            },
+        
+            "residencies": {
+                "title": "Residências",
+                "items": [
+                "2022 - Zona Fluxus (Brasil)",
+                "2023 - AADK (Espanha)",
+                "2023 - GlogauAIR Berlin (Online)"
+                ]
+            },
+            
+            "scholarships": {
+                "title": "Bolsas",
+                "items": [
+                "2019 - Bolsa PROART-UFRJ"
+                ]
+            },
+        
+            "education": {
+                "title": "Formação",
+                "items": [
+                "2021 - Bacharelado em Artes Cênicas - Cenografia, pela Escola de Belas Artes da Universidade Federal do Rio de Janeiro (EBA - UFRJ)",
+                "2020 - Intercâmbio acadêmico na Universidad Nacional de las Artes (UNA), Argentina",
+                "2019 - Cinematografia na Academia Internacional de Cinema (AIC-RJ)",
+                "2018 - 2020 - Monitora e pesquisadora no curso Investigações Fotográficas (CAp - UFRJ)"
+                ]
+            },
+        
+            "artDepartment": {
+                "title": "Departamento de Arte, Cenografia, Design Expositivo e Mais",
+                "2025": [
+                "Justino",
+                "Justíça Tarifária",
+                "O Tempo à Faca",
+                "Reino da Bahia",
+                "Iceberg"
+                ],
+                "2024": [
+                "Um Carnaval em Cada Esquina",
+                "Carnaval: Grande Negócio",
+                "Ediane do Monte: O Tempo de Stella"
+                ],
+                "2023": [
+                "Memórias do Brasil T.3",
+                "Catadoras",
+                "Encontro de Cantadores",
+                "Pontos de Força",
+                "Cantos do Mar",
+                "Malês",
+                "Memorial Dois de Julho"
+                ],
+                "2022": [
+                "Ubaque",
+                "Mancha de Dendê Não Sai",
+                "Oju Okan",
+                "Namíbia, Não!",
+                "Beleza da Noite"
+                ],
+                "2021": [
+                "Mostra de Processos Ciclo I ZF",
+                "Ilê Aiyê, Que Bloco É Esse",
+                "Mulheres nas Industrias Criativas"
+                ]
+                }
+            }
+        }
 }
-
