@@ -1,16 +1,9 @@
 
 6 - Finalizar organização do aboutContent
-    -Estilizar css do componentegit
-
+    -Estilizar css do componente
 
 7 - Fazer página de contato
 8 - verificar warnings
 9 - ajustar responsividade (botões do menu mobile ruins de clicar, e sobrepondo navbarProjects)
-
-
-
-artes visuais / cenografia
-artes cenicas -> cenografia
-mudar endereços para corresponder
 
 RESOLVER COM URGENCIA A NAVEGAÇÃO ENTRE PROJETOS NO MOBILE (tá exibindo mas os toques estão muito estranhos)

@@ -6,12 +6,15 @@ import AboutContent from "../components/AboutContent";
 
 export default function Home() {
     return (
-        <div>
-            <div className="top-wrapper">
+    <div>    
+        <div className="top-wrapper">
                 <Header />
-            </div>
+        </div>
+        
+        <div className="about-page">
             <AboutContent />
             <Footer />
         </div>
+    </div>    
     );
 }

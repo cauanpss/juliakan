@@ -12,9 +12,11 @@
 
 /* Variáveis globais */
 :root{
+    --color-alternative: #c0b4b4c9;
     --color-black: #161616;
     --font-text: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     --font-accent: 'DM Mono','Courier New', Courier, monospace;
+    
 
     --hover-card-height: 300px;
     --hover-card-width: 500px;
@@ -107,58 +109,114 @@ header {
 /* ============================================================
     ABOUT ME
    ============================================================ */
+.about-page {
+    background-image:url(../assets/images/Projetos_Pessoais/insta.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.about-page > * {
+    position: relative;
+}
+
+.about-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #ffffffa6;
+    
+}
+/* 
+.about-img{
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    align-self: center;
+} */
+
 .about-content {
-    border: 2px solid red;
-    background-color: #80948181;
+    /* border: 2px solid red; */
+    font-family: "Inter", sans-serif;
     margin: 0 auto;
     padding: 2rem 1.5rem;
-    padding-top: 6%;
+    padding-top: 10%;
     max-width: 800px;
-    font-family: "Inter", sans-serif;
     color: #222;
     line-height: 1.6;
+    align-items: center;
 }
 
 .about-content .description {
     /* border: 2px solid blue; */
+    max-width: 90%;
     text-align: justify;
     font-size: 1.1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 60px;
 }
 
 /* Seções do currículo */
 .about-content .curriculum {
-    border: 2px solid pink;
-    margin-bottom: 2.5rem;
+    /* border: 2px solid rgb(253, 109, 133); */
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 2rem;
+    margin-bottom: 2.5rem;}
+
+/* Coluna da esquerda */
+.curriculum-left {
+    display: flex;
+    flex-direction: column;
 }
 
-/* Títulos principais das seções (coletivas, residências...) */
+/* Coluna da direita */
+.curriculum-right {
+    /* border: 2px solid red; */
+    padding-left: 12%;
+    align-self: flex-start;
+    justify-self: end;
+}
+
+/* Títulos principais das seções (exposições coletivas, residências...) */
 .about-content h3 {
+    font-family: var(--font-accent);
     font-size: 1.3rem;
     font-weight: 600;
     margin-bottom: 0.8rem;
-    border-left: 4px solid #000;
     padding-left: 0.6rem;
 }
 
 /* Anos dentro das exposições */
 .about-content h4 {
+    font-family: var(--font-accent);
     font-size: 1.1rem;
     font-weight: 500;
     margin: 1rem 0 0.5rem;
-    color: #444;
+    color: #000000;
 }
 
 /* Lista dos itens */
 .about-content ul {
-    list-style: disc inside;
-    padding-left: 1rem;
+    list-style: none;            /* remove o disc */
+    padding-left: 0;
     margin-bottom: 1rem;
 }
 
 .about-content li {
+    position: relative;
+    padding-left: 1rem;          /* espaço pro "-" */
     margin-bottom: 0.3rem;
     font-size: 0.98rem;
+}
+
+.about-content li::before {
+    content: "–";                /* marcador */
+    position: absolute;
+    left: 0;
+    top: 0.1em;
+    color: #555;
 }
 
 /* Blocos por ano */
@@ -170,7 +228,6 @@ header {
 .about-content p {
     margin-bottom: 1rem;
 }
-
 
 /* ============================================================
     TRANSLATE (BOTÕES DE IDIOMA)
@@ -359,22 +416,28 @@ header {
    ============================================================ */
 
 footer {
+    background: none;
+    display: flex;
     min-height: 100px;
     border: 2px solid red; /* mantido conforme original */
     display: flex;
-    justify-content: space-between;
+    align-items: start;
+    flex-direction: row;
 }
 
 .copyright {
+    display: flex;
     background-color: green;
     padding-top: 30px;
     padding-bottom: 30px;
+    align-self: flex-start;
+    justify-content: space-between;
 }
 
 .footer-social {
     background-color: pink;
     display: flex;
-    justify-content: flex-end;
+    align-self: flex-end;
     padding-right: 70px;
     gap: 20px;
 }
@@ -497,6 +560,8 @@ main.project-content h1 {
 }
 
 main.project-content p {
+    max-width: 70%;
+    text-align:justify ;
     font-size: 1.1rem;
     line-height: 1.7;
     color: #333;

@@ -1,8 +1,12 @@
+import { useTranslation } from "react-i18next";
+
 export default function Footer() {
+    const { t } = useTranslation();
+    
     return (
-        <footer>
+        <footer>z
             <div class="copyright">
-                <h4>© 2023 Julia Kan. Todos os direitos reservados</h4>
+                <h4>© 2023 Julia Kan. {t("copyright")}</h4>
             </div>
             <div className="footer-social">
                 <a
@@ -14,9 +18,9 @@ export default function Footer() {
                 <a className="facebook" href="facebook">
                     face
                 </a>
-                <a className="hotglue" href="https://juliakan.hotglue.me/">
+                {/* <a className="hotglue" href="https://juliakan.hotglue.me/">
                     hotglue
-                </a>
+                </a> */}
             </div>
         </footer>
     );
