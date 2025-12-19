@@ -14,7 +14,7 @@ export default function ProjectContent({ data }) {
         <main className="project-content">
             <Carousel images={data.images} />
 
-            <p>{data.description}</p>
+            <p>{t(`projects.${data.key}.description`)}</p>
 
             {/* Bloco do vídeo */}
             {data.video && (
@@ -28,7 +28,7 @@ export default function ProjectContent({ data }) {
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
                                 allowFullScreen
                             ></iframe>
-                            
+
                             {/* overlay clicável por cima do iframe */}
                             {isMobile && (
                                 <div
@@ -36,8 +36,6 @@ export default function ProjectContent({ data }) {
                                     onClick={openVideoFullscreen}
                                 ></div>
                             )}
-                                            
-                    
                         </>
                     ) : (
                         <video controls onClick={openVideoFullscreen}>
@@ -49,7 +47,10 @@ export default function ProjectContent({ data }) {
 
             {/* FULLSCREEN DO VÍDEO */}
             {videoFullscreen && (
-                <div className="video-fullscreen-overlay" onClick={closeVideoFullscreen}>
+                <div
+                    className="video-fullscreen-overlay"
+                    onClick={closeVideoFullscreen}
+                >
                     <span className="video-close-btn">×</span>
 
                     {/* Para Youtube */}
@@ -75,7 +76,6 @@ export default function ProjectContent({ data }) {
                     )}
                 </div>
             )}
-
         </main>
     );
 }

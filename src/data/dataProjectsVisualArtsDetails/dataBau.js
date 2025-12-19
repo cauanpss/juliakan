@@ -6,8 +6,7 @@ const dataBau = {
     year: "",
     category: "visual",
     participants: ["Julia Kan"],
-    description:
-        " Baú Mussum Ipsum, cacilds vidis litro abertis. Mais vale um bebadis conhecidiss, que um alcoolatra anonimiss. Cevadis im ampola pa arma uma pindureta. Viva Forevis aptent taciti sociosqu ad litora torquent Detraxit consequat et quo num tendi nada.",
+    description: "projects.bau.description",
     images: projetoBau,
     video: "https://www.youtube.com/watch?v=cu71GJlMHzY",
     // location:""
@@ -15,4 +14,3 @@ const dataBau = {
 };
 
 export default dataBau;
-
