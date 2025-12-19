@@ -10,8 +10,11 @@ export default function Contact() {
             <div className="top-wrapper">
                 <Header />
             </div>
-            <ContactContent />
-            <Footer />
+
+            <div className="contact-page">
+                <ContactContent />
+                <Footer />
+            </div>
         </div>
     );
 }

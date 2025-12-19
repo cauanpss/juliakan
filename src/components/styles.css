@@ -229,6 +229,60 @@ header {
 }
 
 /* ============================================================
+    Contact
+   ============================================================ */
+.contact-page {
+    background-image:url("../assets/images/Projetos_Pessoais/insta.jpg") ;
+    min-height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.contact-page > * {
+    position: relative;
+}
+
+.contact-content{
+    /* border: 2px solid blue; */
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    
+    font-family: "Inter", sans-serif;
+    margin: 0 auto;
+    padding:120px 2rem 1.5rem;
+    max-width: 600px;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+.contact-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #ffffff8f;
+    
+}
+
+.contact-logos {
+    display:flex;
+    /* border: 2px solid red; */
+    justify-content: center;
+    gap: 30px;
+}
+
+.contact-content p {
+    font-weight: 700;
+    
+}
+
+
+/* ============================================================
     TRANSLATE (BOTÕES DE IDIOMA)
    ============================================================ */
 
