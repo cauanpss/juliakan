@@ -3,6 +3,7 @@ import "../components/styles.css";
 import ContactContent from "../components/ContactContent";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 export default function Contact() {
     return (
@@ -14,6 +15,7 @@ export default function Contact() {
             <div className="contact-page">
                 <ContactContent />
                 <Footer />
+                <ScrollToTopButton />
             </div>
         </div>
     );

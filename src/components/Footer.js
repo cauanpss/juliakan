@@ -6,7 +6,7 @@ export default function Footer() {
     return (
         <footer>
             <div className="copyright">
-                <h4>© 2023 Julia Kan. {t("copyright")}</h4>
+                <h1>© 2023 Julia Kan. {t("copyright")}</h1>
             </div>
 
             <div className="footer-social">

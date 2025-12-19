@@ -481,17 +481,24 @@ footer {
 }
 
 .copyright {
-    display: flex;
     /* background-color: green; */
-    padding-top: 50px;
-   }
+    display: flex;
+    padding-top: 3%;
+    padding-left: 10%;
+    }
+
+.copyright h1 {
+    font-size: 12px;
+    font-weight: 100;
+    color: #555;
+}
 
 .footer-social {
     /* background-color: pink; */
     display: flex;    
     gap: 20px;
     padding-top: 50px;
-    padding-right: 30px;
+    padding-right: 10%;
 }
 
 .instagram {
