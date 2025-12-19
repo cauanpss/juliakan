@@ -3,18 +3,20 @@ import "../components/styles.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import AboutContent from "../components/AboutContent";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 export default function Home() {
     return (
-    <div>    
-        <div className="top-wrapper">
+        <div>
+            <div className="top-wrapper">
                 <Header />
+            </div>
+
+            <div className="about-page">
+                <AboutContent />
+                <Footer />
+                <ScrollToTopButton />
+            </div>
         </div>
-        
-        <div className="about-page">
-            <AboutContent />
-            <Footer />
-        </div>
-    </div>    
     );
 }

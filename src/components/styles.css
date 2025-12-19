@@ -110,7 +110,6 @@ header {
     ABOUT ME
    ============================================================ */
 .about-page {
-    background-image:url(../assets/images/Projetos_Pessoais/insta.jpg) ;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -125,7 +124,7 @@ header {
     content: "";
     position: absolute;
     inset: 0;
-    background: #ffffffa6;
+    background: #ffffff96;
     
 }
 /* 
@@ -416,31 +415,53 @@ header {
    ============================================================ */
 
 footer {
+    /* border: 2px solid red; */
     background: none;
     display: flex;
     min-height: 100px;
-    border: 2px solid red; /* mantido conforme original */
     display: flex;
     align-items: start;
     flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .copyright {
     display: flex;
-    background-color: green;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    align-self: flex-start;
-    justify-content: space-between;
-}
+    /* background-color: green; */
+    padding-top: 50px;
+   }
 
 .footer-social {
-    background-color: pink;
-    display: flex;
-    align-self: flex-end;
-    padding-right: 70px;
+    /* background-color: pink; */
+    display: flex;    
     gap: 20px;
+    padding-top: 50px;
+    padding-right: 30px;
 }
+
+.instagram {
+    display: flex;
+    align-items: center;
+}
+
+.instagram svg {
+    transform: scale(0.80);
+    width:30px;
+    height: 30px;
+}
+
+.facebook {
+    display: flex;
+    align-items: center;
+}
+
+.facebook svg {
+    transform: scale(0.80);
+    width:30px;
+    height: 30px;
+}
+
 
 /* ============================================================
     HOVER CARDS / GRID
