@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/juliakan/static/css/main.8b7bee65.css",
-    "main.js": "/juliakan/static/js/main.5015db98.js",
+    "main.css": "/juliakan/static/css/main.5fe411d6.css",
+    "main.js": "/juliakan/static/js/main.d12f9845.js",
     "static/js/453.d83071af.chunk.js": "/juliakan/static/js/453.d83071af.chunk.js",
     "static/media/geral-19.jpg": "/juliakan/static/media/geral-19.7984fc33386ac5191638.jpg",
     "static/media/ImaginarySpaces9.jpg": "/juliakan/static/media/ImaginarySpaces9.87231c25bbab0e978d27.jpg",
@@ -99,12 +99,12 @@
     "static/media/Captura de tela 2022-11-25 163201.jpg": "/juliakan/static/media/Captura de tela 2022-11-25 163201.2d7ee89e85c41bca636c.jpg",
     "static/media/expografia ediane 4.jpg": "/juliakan/static/media/expografia ediane 4.63beff219fbd1c8c3308.jpg",
     "index.html": "/juliakan/index.html",
-    "main.8b7bee65.css.map": "/juliakan/static/css/main.8b7bee65.css.map",
-    "main.5015db98.js.map": "/juliakan/static/js/main.5015db98.js.map",
+    "main.5fe411d6.css.map": "/juliakan/static/css/main.5fe411d6.css.map",
+    "main.d12f9845.js.map": "/juliakan/static/js/main.d12f9845.js.map",
     "453.d83071af.chunk.js.map": "/juliakan/static/js/453.d83071af.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8b7bee65.css",
-    "static/js/main.5015db98.js"
+    "static/css/main.5fe411d6.css",
+    "static/js/main.d12f9845.js"
   ]
 }
