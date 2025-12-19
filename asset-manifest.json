@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/juliakan/static/css/main.ac218e47.css",
-    "main.js": "/juliakan/static/js/main.26542d8d.js",
+    "main.css": "/juliakan/static/css/main.8b7bee65.css",
+    "main.js": "/juliakan/static/js/main.5015db98.js",
     "static/js/453.d83071af.chunk.js": "/juliakan/static/js/453.d83071af.chunk.js",
     "static/media/geral-19.jpg": "/juliakan/static/media/geral-19.7984fc33386ac5191638.jpg",
     "static/media/ImaginarySpaces9.jpg": "/juliakan/static/media/ImaginarySpaces9.87231c25bbab0e978d27.jpg",
@@ -95,15 +95,16 @@
     "static/media/expografia ediane.jpg": "/juliakan/static/media/expografia ediane.5d0b1934df5e8330db65.jpg",
     "static/media/Captura de tela 2022-11-25 163924.jpg": "/juliakan/static/media/Captura de tela 2022-11-25 163924.765c9f0ec0459d227001.jpg",
     "static/media/tela2.jpg": "/juliakan/static/media/tela2.dbed516ac2f7702b33ae.jpg",
+    "static/media/insta.jpg": "/juliakan/static/media/insta.72f75e9dc9a50bd585f1.jpg",
     "static/media/Captura de tela 2022-11-25 163201.jpg": "/juliakan/static/media/Captura de tela 2022-11-25 163201.2d7ee89e85c41bca636c.jpg",
     "static/media/expografia ediane 4.jpg": "/juliakan/static/media/expografia ediane 4.63beff219fbd1c8c3308.jpg",
     "index.html": "/juliakan/index.html",
-    "main.ac218e47.css.map": "/juliakan/static/css/main.ac218e47.css.map",
-    "main.26542d8d.js.map": "/juliakan/static/js/main.26542d8d.js.map",
+    "main.8b7bee65.css.map": "/juliakan/static/css/main.8b7bee65.css.map",
+    "main.5015db98.js.map": "/juliakan/static/js/main.5015db98.js.map",
     "453.d83071af.chunk.js.map": "/juliakan/static/js/453.d83071af.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ac218e47.css",
-    "static/js/main.26542d8d.js"
+    "static/css/main.8b7bee65.css",
+    "static/js/main.5015db98.js"
   ]
 }
