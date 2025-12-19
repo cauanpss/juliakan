@@ -6,6 +6,7 @@ import ProjectsVisualArts from "./pages/ProjectsVisualArts";
 import ProjectsSetDesign from "./pages/ProjectsSetDesign";
 import About from "./pages/About";
 import ProjectPage from "./pages/ProjectPage";
+import Contact from "./pages/Contact";
 import ScrollToTop from "./util/useScrollToTop";
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
                     path="/projects/:category/:projectid"
                     element={<ProjectPage />}
                 />
+                <Route path="/contact" element={<Contact />} />
             </Routes>
         </Router>
     );
