@@ -4,7 +4,7 @@ const dataProjetoPropaganda = {
     key: "propaganda",
     title: "Propaganda",
     year: "",
-    category: "performing",
+    category: "setDesign",
     participants: [""],
     description: "",
 

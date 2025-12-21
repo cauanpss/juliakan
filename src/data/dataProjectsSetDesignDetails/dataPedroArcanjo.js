@@ -4,7 +4,7 @@ const dataPedroArcanjo = {
     key: "pedroArcanjo",
     title: "Pedro Arcanjo",
     year: "",
-    category: "performing",
+    category: "setDesign",
     participants: [""],
     description: "",
 

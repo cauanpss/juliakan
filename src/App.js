@@ -19,12 +19,17 @@ function App() {
                 {" "}
                 {/* DIV de rotas ("Container")  */}
                 {/* Cada rota se comporta como um caminho do projeto e reonhece como página (index é "/" )  */}
+                
                 <Route path="/" element={<Home />} />{" "}
+                
+                
                 <Route
                     path="/ProjectsVisualArts"
                     element={<ProjectsVisualArts />}
                 />
                 <Route path="/about" element={<About />} />
+                
+                
                 <Route
                     path="/ProjectsSetDesign"
                     element={<ProjectsSetDesign />}

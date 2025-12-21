@@ -4,7 +4,7 @@ const dataRemediosVard = {
     key: "remediosVard",
     title: "Remedios Vard",
     year: "",
-    category: "performing",
+    category: "setDesign",
     participants: [""],
     description: "",
 

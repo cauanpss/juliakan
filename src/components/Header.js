@@ -1,23 +1,33 @@
 import { Link } from "react-router-dom";
 import { NavLink, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./styles.css";
 import TranslateButtons from "./TranslateButton";
 
 export default function Header() {
     const { t } = useTranslation();
     const location = useLocation();
+    useEffect(() => {
+        if (location.pathname.includes("/projects/visual")) {
+            localStorage.setItem("lastProjectCategory", "visual");
+        }
+
+        if (location.pathname.includes("/projects/performing")) {
+            localStorage.setItem("lastProjectCategory", "performing");
+        }
+    }, [location.pathname]);
+    const lastCategory =
+        localStorage.getItem("lastProjectCategory") || "visual";
+
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
-    const isPerforming = location.pathname.toLowerCase().includes("performing");
-    const isVisual = location.pathname.toLowerCase().includes("visual");
-
-    const dynamicProjectsPath = isPerforming
-        ? "/ProjectsSetDesign"
-        : "/ProjectsVisualArts";
+    const dynamicProjectsPath =
+        lastCategory === "performing"
+            ? "/ProjectsSetDesign"
+            : "/ProjectsVisualArts";
 
     const SWIPE_THRESHOLD = 50;
 

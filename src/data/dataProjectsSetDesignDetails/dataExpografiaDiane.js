@@ -4,7 +4,7 @@ const dataExpografiaDiane = {
     key: "expografiaDiane",
     title: "Expografia Diane",
     year: "",
-    category: "performing",
+    category: "setDesign",
     participants: [""],
     description: "",
 

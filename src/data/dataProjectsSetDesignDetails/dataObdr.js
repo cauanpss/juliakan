@@ -4,7 +4,7 @@ const dataObdr = {
     key: "obdr",
     title: "Obdr",
     year: "",
-    category: "performing",
+    category: "setDesign",
     participants: [""],
     description: "",
 

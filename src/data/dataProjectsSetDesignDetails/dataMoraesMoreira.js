@@ -4,7 +4,7 @@ const dataMoraesMoreira = {
     key: "moraesMoreira",
     title: "Expografia Moraes Moreira",
     year: "",
-    category: "performing",
+    category: "setDesign",
     participants: [""],
     description: "",
 
