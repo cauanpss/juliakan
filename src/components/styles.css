@@ -319,8 +319,52 @@ header {
 /* ============================================================
     NAVBAR / PROJECTS NAVBAR
    ============================================================ */
+.nav-item {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.dropdown-title {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+}
+
+.dropdown-menu {
+    background: rgba(255, 255, 255, 0.596);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: max-content;       /* 🔑 largura = conteúdo */
+    min-width: 190px;         /* remove o travamento */
+    white-space: nowrap;      /* evita quebra */
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 0 0 15px 15px;
+    z-index: 100;
+}
+
+.dropdown-menu a {
+    padding: 8px 16px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+    transform: translateX(6px);
+}
 
 .projects-navbar {
+    font-family: var(--font-text);
     background: none;
     font-size: 40px;
     margin-top: 4%;
@@ -357,6 +401,7 @@ header {
 
 /* Nav desktop principal */
 .nav-desktop {
+    /* border: 2px solid red; */
     display: flex;
     width: 90.5%;
     list-style: none;

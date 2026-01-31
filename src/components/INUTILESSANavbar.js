@@ -1,3 +1,6 @@
+// ESSA NAVBAR NÃO TÁ SENDO USADA EM NADA, TÁ TODA ERRADA, EU TO RENDERIZANDO UMA NAVBAR 
+// DENTRO DO HEADER
+
 import React from "react";
 import { useTranslate } from "react-i18next";
 

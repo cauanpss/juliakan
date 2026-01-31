@@ -1,3 +1,5 @@
+1- Baú na navbarProjects está bugado( algo sobrepondo, sei lá)
+
 
 6 - Finalizar organização do aboutContent
     -Estilizar css do componente
@@ -6,4 +8,9 @@
 8 - verificar warnings
 9 - ajustar responsividade (botões do menu mobile ruins de clicar, e sobrepondo navbarProjects)
 
-RESOLVER COM URGENCIA A NAVEGAÇÃO ENTRE PROJETOS NO MOBILE (tá exibindo mas os toques estão muito estranhos)
+RESOLVER COM URGENCIA A NAVEGAÇÃO ENTRE PROJETOS NO MOBILE (tá exibindo mas os toques estão muito estranhos)[11:41, 24/12/2025] 
+ 
+ Fonte da barra de navegação corrigir para root:—font
+Corrigir barra de navegação por baixo da logo em project page
+Projects-> drop down para visual/setDesign
+ Se clicar na interacao com carousel, reinicia contagem da passagem

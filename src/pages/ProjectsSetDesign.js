@@ -4,7 +4,7 @@ import HoverCard from "../components/HoverCard";
 import TranslateButtons from "../components/TranslateButton";
 import { useTranslation } from "react-i18next";
 import { useRef } from "react";
-import { projectDetails as performingProjects } from "../data/dataProjectsSetDesignDetails";
+import { projectDetails as setDesigngProjects } from "../data/dataProjectsSetDesignDetails";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 import Footer from "../components/Footer";
 
@@ -18,7 +18,7 @@ export default function ProjectsSetDesign() {
             : mainContainer.current?.classList.remove("onHover");
     }
 
-    const projectList = Object.values(performingProjects);
+    const projectList = Object.values(setDesigngProjects);
 
     return (
         <>

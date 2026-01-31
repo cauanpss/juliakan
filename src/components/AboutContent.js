@@ -16,18 +16,22 @@ export default function AboutContent() {
             <section className="exhibitions">
                 {title && <h3>{title}</h3>}
                 {Object.keys(years).length === 0 && <p>Nenhuma entrada</p>}
-                {Object.entries(years).map(([year, items]) => (
-                    <div key={year} className="year-block">
-                        <h4>{year}</h4>
-                        <ul>
-                            {Array.isArray(items) ? (
-                                items.map((it, idx) => <li key={idx}>{it}</li>)
-                            ) : (
-                                <li>{String(items)}</li>
-                            )}
-                        </ul>
-                    </div>
-                ))}
+                {Object.entries(years)
+                    .sort(([a], [b]) => Number(b) - Number(a))
+                    .map(([year, items]) => (
+                        <div key={year} className="year-block">
+                            <h4>{year}</h4>
+                            <ul>
+                                {Array.isArray(items) ? (
+                                    items.map((it, idx) => (
+                                        <li key={idx}>{it}</li>
+                                    ))
+                                ) : (
+                                    <li>{String(items)}</li>
+                                )}
+                            </ul>
+                        </div>
+                    ))}
             </section>
         );
     };

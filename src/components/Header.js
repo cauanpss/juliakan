@@ -14,7 +14,7 @@ export default function Header() {
         }
 
         if (location.pathname.includes("/projects/performing")) {
-            localStorage.setItem("lastProjectCategory", "performing");
+            localStorage.setItem("lastProjectCategory", "setdesign");
         }
     }, [location.pathname]);
     const lastCategory =
@@ -24,12 +24,9 @@ export default function Header() {
 
     const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
-    const dynamicProjectsPath =
-        lastCategory === "performing"
-            ? "/ProjectsSetDesign"
-            : "/ProjectsVisualArts";
+    // const SWIPE_THRESHOLD = 50;
 
-    const SWIPE_THRESHOLD = 50;
+    const [isProjectsOpen, setIsProjectsOpen] = useState(false);
 
     return (
         <header>
@@ -60,9 +57,48 @@ export default function Header() {
             </button>
 
             <nav className={`nav-desktop ${isMobileMenuOpen ? "open" : ""}`}>
-                <NavLink to={dynamicProjectsPath} onClick={toggleMenu}>
-                    <strong>{t("Projects")}</strong>
-                </NavLink>
+                {/* PROJECTS DROPDOWN */}
+                <div
+                    className="nav-item dropdown"
+                    onMouseEnter={() =>
+                        !isMobileMenuOpen && setIsProjectsOpen(true)
+                    }
+                    onMouseLeave={() =>
+                        !isMobileMenuOpen && setIsProjectsOpen(false)
+                    }
+                >
+                    <button
+                        className="dropdown-title"
+                        onClick={() => setIsProjectsOpen(!isProjectsOpen)}
+                    >
+                        <strong>{t("Projects")}</strong>
+                    </button>
+
+                    {isProjectsOpen && (
+                        <div className="dropdown-menu">
+                            <NavLink
+                                to="/ProjectsVisualArts"
+                                onClick={() => {
+                                    setIsProjectsOpen(false);
+                                    toggleMenu();
+                                }}
+                            >
+                                {t("arts")}
+                            </NavLink>
+
+                            <NavLink
+                                to="/ProjectsSetDesign"
+                                onClick={() => {
+                                    setIsProjectsOpen(false);
+                                    toggleMenu();
+                                }}
+                            >
+                                {t("performing")}
+                            </NavLink>
+                        </div>
+                    )}
+                </div>
+
                 <NavLink to="/about" onClick={toggleMenu}>
                     <strong>{t("about")}</strong>
                 </NavLink>
